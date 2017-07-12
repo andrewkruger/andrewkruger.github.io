@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Putting Your .bash_profile To Work
-tags: [bash], [command line], [scripts]
+tags: [blog]
 description: >
 This post demonstrates how to create aliases, functions, and scripts in your .bash_profile file.
 author: Andrew
