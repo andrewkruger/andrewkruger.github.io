@@ -67,12 +67,12 @@ At the bottom of .bash_profile, we can write the line `source $HOME/git_scripts.
       git_scripts.sh has been sourced!
 ~~~
 
-Now that we know it's working, let's remove that line in git_scripts.sh and have the file clear.
+Now that we know it's working, remove the `echo` line in git_scripts.sh.
 
 
 ## Aliases
 
-An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn` (thanks Seth!)
+An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut with the line `alias jn="jupyter notebook"`, and it will let you open a notebook by simply typing `jn` (thanks Seth!)
 
 You can also use an alias to run a string of commands.  Let's say that every morning you need to pull changes from a github repository with the commands:
 
@@ -94,7 +94,9 @@ The `&` is a list construct that separates the commands and continues after each
 
 ## Functions
 
-Bash also has functions that can take in parameters.  For example, to push changes to your local repository to github, you would use the commands
+#### Parameters
+
+Bash scripts can have functions that can take in parameters.  For example, to push changes to your local repository to github, you would use the commands
 
 ~~~sh
     $ git add .
@@ -102,14 +104,9 @@ Bash also has functions that can take in parameters.  For example, to push chang
     $ git push
 ~~~
 
-
-#### Parameters
-
-You can create a function that does all three commands (like an alias) but takes in an parameter to use for the commit message.  In the .bash_profile, you can write the function
+You can create a function that does all three commands (like an alias) but takes in an parameter to use for the commit message.  In the git_scripts.sh file, you can write the function
 
 ~~~
-    #~/.bash_profile
-
     function gpush(){
         git add .
         git commit -m "$1"
@@ -126,8 +123,6 @@ The `$1` takes the first argument you use with `gpush`.  This means you can now 
 and the "edit comments" will be used as the commit comment.  If you want more parameters, you just iterate the numbers.  For example, the following would create a function that would switch two files.
 
 ~~~
-    #~/.bash_profile
-
     function switch(){
         mv "$1" "$1.backup"
         mv "$2" "$1"
@@ -138,7 +133,7 @@ and the "edit comments" will be used as the commit comment.  If you want more pa
 Then to switch two filenames, you can just use
 
 ~~~sh
-    $ switch file1.txt file2.txt
+    $ switch filename1 filename2
 ~~~
 
 
@@ -157,5 +152,7 @@ A function can have an optional variable with a default value.  For example, the
 ~~~
 
 With this, you can still add a comment to the commit by `gpush "edit comments"`, but using just the command `gpush` by itself is equivalent to `gpush "default comment"`.  This way you have the option to just use a default comment or put in a new comment if needed.
+
+
 
 
