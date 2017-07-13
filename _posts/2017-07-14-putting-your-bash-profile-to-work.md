@@ -50,7 +50,7 @@ You can now use this variable in python.
 
 An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn`.
 
-You can also use an alias to run a string of commands.  Let's say that every morning you need to pull changes from a github repository with:
+You can also use an alias to run a string of commands.  Let's say that every morning you need to pull changes from a github repository with the commands:
 
 ~~~sh
     $ git checkout master
@@ -59,10 +59,10 @@ You can also use an alias to run a string of commands.  Let's say that every mor
     $ git merge master
 ~~~
 
-You can use `alias gp="git checkout master & git pull & git checkout andrew-kruger & git merge master"`.  Then to update the local repo you can just use
+You can use `alias gpull="git checkout master & git pull & git checkout andrew-kruger & git merge master"`.  Then to update the local repo you can just use
 
 ~~~sh
-    $ gp
+    $ gpull
 ~~~
 
 The `&` separates the commands and continues when each successive command is completed.  If an error occurs, it will stop the string of commands.  If you want the string of commands to continue even if there is an error, use `&&` instead.
@@ -70,4 +70,29 @@ The `&` separates the commands and continues when each successive command is com
 
 ## Functions
 
-Bash also has functions that can take in parameters.  
+Bash also has functions that can take in parameters.  For example, to push changes to your local repository to github, you would use the commands
+
+~~~sh
+    $ git add .
+    $ git commit -m "edit comments"
+    $ git push
+~~~
+
+You can create a function that does all three commands (like an alias) but takes in a parameter to use for the commit message.  In the .bash_profile, you can write the function
+
+~~~
+    function gpush(){
+        git add .
+        git commit -m "$1"
+        git push
+    }
+~~~
+
+The `$1` takes the first argument you use with `gpush`.  This means you can now use the command
+
+~~~sh
+    $ gpush "edit comments"
+~~~
+
+and the "edit comments" will be supplied to the commit.
+
