@@ -11,7 +11,6 @@ The .bash_profile file is located in your home directory and is used to configur
 ~~~js
     $ cd ~
     $ cat .bash_profile
-
       # Setting PATH for Python 3.6
       # The orginal version is saved in .bash_profile.pysave
       PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
@@ -28,7 +27,6 @@ The "export" creates an environment variable that can be used by other processes
 
 ~~~js
     $ sh -c 'echo $HOME'
-        
       /Users/andrew
-
 ~~~
+
