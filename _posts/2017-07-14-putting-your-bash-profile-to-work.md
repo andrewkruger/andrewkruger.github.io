@@ -6,7 +6,11 @@ tags: [blog]
 description: >
 ---
 
-The .bash_profile file is located in your home directory and is used to configure your shell.  In there, you can create aliases, shortcut commands, and functions to use in the command line or your python program.  For the following terminal commands, be in the home directory.  Print out in the .bash_profile file and you will probably see some exports, or aliases, or settings being made.
+# Putting Your .bash_profile To Work
+
+### Exports
+
+The .bash_profile file is located in your home directory and is used to configure your shell.  In there, you can create aliases, shortcut commands, and functions to use in the command line or your python program.  For the following terminal commands, be in the home directory.  Print out in the .bash_profile file and you will probably see some exports, aliases, and/or settings.
 
 ~~~sh
     $ cd ~
@@ -38,10 +42,14 @@ You can create new environment variables by putting them into the .bash_profile 
 
 You can now use this variable in python.
 
-~~~py
+~~~python
     >>>> import os
     >>>> os.environ['MY_NAME']
         'andrew-kruger'
 ~~~
+
+### Aliases
+
+An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn`.  You can also 
 
 
