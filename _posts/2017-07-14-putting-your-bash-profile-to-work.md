@@ -23,22 +23,22 @@ The .bash_profile file is located in your home directory and is used to configur
         ...
 ~~~
 
-The "export" creates an environment variable that can be used by other processes.  An example of an environment variable is `$HOME`.  You can use the command `sh -c` to view your HOME variable:
+The "export" creates an environment variable that can be used by other processes.  An example of an environment variable is `$HOME`.  You can use the command `echo` to view your `$HOME` variable:
 
 ~~~sh
-    $ sh -c 'echo $HOME'
+    $ echo $HOME
       /Users/andrew
 ~~~
 
-You can create new environment variables by putting them into the .bash_profile file.  For example, the line `export MY_NAME="andrew-kruger"` will create the variable `MY_NAME` that's available to other processes.  If you've added an environment variable, you need to source the file for it to be available.
+You can create new environment variables by putting them into the .bash_profile file.  For example, the line `export MY_NAME="andrew-kruger"` will create the variable `$MY_NAME` that's available to other processes.  If you've added an environment variable, you need to source the file for it to be available.
 
 ~~~sh
     $ source .bash_profile
-    $ sh -c 'echo $MY_NAME'
+    $ echo $MY_NAME
       andrew-kruger
 ~~~
 
-You can now use this variable in python.
+You can also use this environemnt variable in python.
 
 ~~~python
     >>>> import os
@@ -65,7 +65,7 @@ You can use `alias gpull="git checkout master & git pull & git checkout andrew-k
     $ gpull
 ~~~
 
-The `&` separates the commands and continues when each successive command is completed.  If an error occurs, it will stop the string of commands.  If you want the string of commands to continue even if there is an error, use `&&` instead.
+The `&` is a list construct that separates the commands and continues after each successive command is executed.  If an error occurs, it will stop the string of commands.  If you want the string of commands to continue even if there is an error, use `&&` instead, and it will execute the first command with an error last.
 
 
 ## Functions
@@ -81,6 +81,8 @@ Bash also has functions that can take in parameters.  For example, to push chang
 You can create a function that does all three commands (like an alias) but takes in a parameter to use for the commit message.  In the .bash_profile, you can write the function
 
 ~~~
+    #~/.bash_profile
+
     function gpush(){
         git add .
         git commit -m "$1"
@@ -97,6 +99,8 @@ The `$1` takes the first argument you use with `gpush`.  This means you can now 
 and the "edit comments" will be used as the commit comment.  If you want more parameters, you just iterate the numbers.  For example, the following would create a function that would switch two files.
 
 ~~~
+    #~/.bash_profile
+
     function switch(){
         mv "$1" "$1.backup"
         mv "$2" "$1"
@@ -109,3 +113,6 @@ Then to switch two filenames, you can just use
 ~~~sh
     $ switch file1.txt file2.txt
 ~~~
+
+
+
