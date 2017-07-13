@@ -30,3 +30,12 @@ The "export" creates an environment variable that can be used by other processes
       /Users/andrew
 ~~~
 
+You can create new environment variables by putting them into the .bash_profile file.  For example, the line `export MY_NAME="andrew-kruger"` will create the variable `MY_NAME` that's available to other processes.  If you've added an environment variable, you need to source the file for it to be available.
+
+~~~sh
+    $ source .bash_profile
+    $ sh -c 'echo $MY_NAME'
+      andrew-kruger
+~~~
+
+
