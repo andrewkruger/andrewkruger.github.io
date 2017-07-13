@@ -25,7 +25,7 @@ The .bash_profile file is located in your home directory and is used to configur
 
 The "export" creates an environment variable that can be used by other processes.  An example of an environment variable is `$HOME`.  You can use the command `sh -c` to view your HOME variable:
 
-~~~js
+~~~bash
     $ sh -c 'echo $HOME'
       /Users/andrew
 ~~~
