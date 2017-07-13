@@ -18,7 +18,9 @@ The .bash_profile file is located in your home directory and is used to configur
 
       # added by Anaconda3 4.1.1 installer
       export PATH="/Users/andrew/anaconda/bin:$PATH"
-        ...
+        .
+        .
+        .
 ~~~
 
 The "export" creates an environment variable that can be used by other processes.  An example of an environment variable is `$HOME`.  You can use the command `sh -c` to view your HOME variable:
