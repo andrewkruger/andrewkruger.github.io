@@ -6,6 +6,7 @@ tags: [blog]
 description: >
 ---
 
+
 ## Exports
 
 The .bash_profile file is located in your home directory and is used to configure your shell.  In there, you can create aliases, shortcut commands, and functions to use in the command line or your python program.  For the following terminal commands, be in the home directory.  Print out in the .bash_profile file and you will probably see some exports, aliases, and/or settings.
@@ -46,6 +47,7 @@ You can also use this environemnt variable in python.
         'andrew-kruger'
 ~~~
 
+
 ## Aliases
 
 An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn`.
@@ -78,7 +80,10 @@ Bash also has functions that can take in parameters.  For example, to push chang
     $ git push
 ~~~
 
-You can create a function that does all three commands (like an alias) but takes in a parameter to use for the commit message.  In the .bash_profile, you can write the function
+
+#### Parameters
+
+You can create a function that does all three commands (like an alias) but takes in an parameter to use for the commit message.  In the .bash_profile, you can write the function
 
 ~~~
     #~/.bash_profile
@@ -115,5 +120,20 @@ Then to switch two filenames, you can just use
 ~~~
 
 
+#### Optional Parameters
+
+A function can have an optional variable with a default value.  For example, the function `gpush` above takes in a message parameter, but you can make it optional by
+
+~~~
+    #~/.bash_profile
+
+    function gpush(){
+        git add .
+        git commit -m {1:-"default comment"}
+        git push
+    }
+~~~
+
+With this, you can still add a comment to the commit by `gpush "edit comments"`, but using just the command `gpush` by itself is equivalent to `gpush "default comment"`.
 
 
