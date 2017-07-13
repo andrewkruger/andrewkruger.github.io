@@ -142,8 +142,6 @@ Then to switch two filenames, you can just use
 A function can have an optional variable with a default value.  For example, the function `gpush` above takes in a message parameter, but you can make it optional by
 
 ~~~
-    #~/.bash_profile
-
     function gpush(){
         git add .
         git commit -m {1:-"default comment"}
@@ -152,6 +150,45 @@ A function can have an optional variable with a default value.  For example, the
 ~~~
 
 With this, you can still add a comment to the commit by `gpush "edit comments"`, but using just the command `gpush` by itself is equivalent to `gpush "default comment"`.  This way you have the option to just use a default comment or put in a new comment if needed.
+
+You can also make two optional parameters, one for the filename of the file you want to push and the second for the comment.
+
+~~~
+    function gpush(){ 
+        ARG1=${1:-.}
+        ARG2=${2:-"default comment"}
+        git add $ARG1
+        git commit -m $ARG2
+        git push
+    }
+~~~
+
+In order to files, you can the commands `gpush`, or `gpush filename "commit comment"`, or `gpush filename`. But you can *not* use `gpush "commit comment"` because it will interpret the `"commit comment"` as the first parameter and use it as `ARG1`.  So you need to remember the order of parameters and know which you need.
+
+
+#### If Statements
+
+Another option is to use a flag for which parameters the inputs are for.  For example, it would be nice to be able to use `gpush "commit comment"` for when you want to do all files, and `gpush -f filename "commit comment"` when you want to push a specific file.  To do this, we can see how many parameters there are with `$#` and check for flags.
+
+Looking at the following function:
+
+~~~
+    function gpush(){
+        if [ $# -gt 1 ]
+            then
+                ARG1=$1
+                ARG2=$2
+            else
+                ARG1=.
+                ARG2=${1:-"default comment"}
+        fi
+        git add $ARG1
+        git commit -m $ARG2
+        git push
+    }
+~~~
+
+The `if [ $# -gt 1 ]` sees if there are more than one parameter (the count of parameters is given by `$#`).  If there are, it uses `ARG1` as the filename, and `ARG2` as the commit comment.  If there aren't more than two parameters, it makes `ARG1=.` to push all files.  It then makes `ARG2` an optional parameter like before, where if there is a parameter, it will use it as the commit comment, otherwise it usees "default comment".  The `fi` closes out the `if` statement."
 
 
 
