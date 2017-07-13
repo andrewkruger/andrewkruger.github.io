@@ -12,13 +12,22 @@ The .bash_profile file is located in your home directory and is used to configur
     $ cd ~
     $ cat .bash_profile
 
-      # Setting PATH for Python 3.4
+      # Setting PATH for Python 3.6
       # The orginal version is saved in .bash_profile.pysave
-      PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+      PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
       export PATH
 
       # added by Anaconda3 4.1.1 installer
       export PATH="/Users/andrew/anaconda/bin:$PATH"
 
         ...
+~~~
+
+The "export" creates an environment variable that can be used by other processes.  An example of an environment variable is HOME.  You can use the command "sh -c" to view your HOME variable:
+
+~~~js
+    $ sh -c 'echo $HOME'
+        
+      /Users/andrew
+
 ~~~
