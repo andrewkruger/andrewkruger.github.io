@@ -6,9 +6,16 @@ tags: [blog]
 description: >
 ---
 
-The .bash_profile file is located in your home directory and is used to configure your shell.
-
+The .bash_profile file is located in your home directory and is used to configure your shell.  In there, you can create aliases, shortcut commands, and functions to use in the command line or your python program.  For the following terminal commands, be in the home directory.  Print out in the .bash_profile file and you will probably see some exports, or aliases, or settings being made.
 
 ~~~js
-    source ~/.bash_profile
+$ cd ~
+$ cat .bash_profile
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+
+# added by Anaconda3 4.1.1 installer
+export PATH="/Users/andrew/anaconda/bin:$PATH"
 ~~~
