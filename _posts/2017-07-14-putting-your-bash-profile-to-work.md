@@ -81,6 +81,8 @@ Bash also has functions that can take in parameters.  For example, to push chang
 You can create a function that does all three commands (like an alias) but takes in a parameter to use for the commit message.  In the .bash_profile, you can write the function
 
 ~~~
+    .bash_profile:
+
     function gpush(){
         git add .
         git commit -m "$1"
@@ -94,5 +96,14 @@ The `$1` takes the first argument you use with `gpush`.  This means you can now 
     $ gpush "edit comments"
 ~~~
 
-and the "edit comments" will be supplied to the commit.
+and the "edit comments" will be used as the commit comment.  If you want more parameters, you just iterate the numbers.  For example, the following would create a function that would switch two files.
 
+~~~
+    .bash_profile:
+
+    function switch(){
+        mv "$1" "$1.backup"
+        mv "$2" "$1"
+        mv "$1.backup" "$2"
+    }
+~~~
