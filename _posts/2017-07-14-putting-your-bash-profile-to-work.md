@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "bash"
+title: "Putting Your .bash_profile To Work"
 author: andrew
 tags: [blog]
 description: >
 ---
-
-# Putting Your .bash_profile To Work
 
 ## Exports
 
@@ -50,6 +48,16 @@ You can now use this variable in python.
 
 ## Aliases
 
-An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn`.  You can also 
+An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn`.
 
+You can also use an alias to run a string of commands.  Let's say that every morning you need to pull changes from a github repository.  You can use `alias gp="git checkout master & git pull & git checkout andrew-kruger & git merge master"`.  Then to update the local repo you can just use
+
+~~~sh
+    $ gp
+~~~
+
+The `&` separates the commands and continues when each successive command is completed.  If an error occurs, it will stop the string of commands.  If you want the string of commands to continue even if there is an error, use `&&` instead.
+
+
+## Functions
 
