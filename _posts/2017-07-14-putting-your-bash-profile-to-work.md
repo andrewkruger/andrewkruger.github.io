@@ -7,9 +7,12 @@ description: >
 ---
 
 
+I'm going to show you how to use bash scripts to create custom git commands and shortcuts.  This also demonstrates how to create and use bash scripts so you make make your own custom scripts and functions for other projects.
+
+
 ## Exports
 
-The .bash_profile file is located in your home directory and is used to configure your shell.  In there, you can create aliases, shortcut commands, and functions to use in the command line or your python program.  For the following terminal commands, be in the home directory.  Print out in the .bash_profile file and you will probably see some exports, aliases, and/or settings.
+The .bash_profile file is located in your home directory and is used to configure your bash shell.  In that file, you can create aliases, shortcut commands, and functions that you can use in the command line or even in your python program.  For the following terminal commands, be in the home directory.  Print out the content in the .bash_profile file and you will probably see some exports, aliases, and/or settings.
 
 ~~~sh
     $ cd ~
@@ -48,9 +51,28 @@ You can also use this environemnt variable in python.
 ~~~
 
 
+
+## Shell Scripts
+
+A shell script is a file that contains commands just like .bash_profile.  Rather than editing .bash_profile with the functions below, let's instead create a file called git_scripts.sh so we can keep .bash_profile clean.
+
+~~~sh
+    $ touch git_scripts.sh
+~~~
+
+At the bottom of .bash_profile, we can write the line `source $HOME/git_scripts.sh`.  If you want to keep git_scripts.sh in another directory, you need to replace `$HOME` with that directory path.  Now when .bash_profile is sourced, so will our git_scripts.sh.  To test that this is working you can add the line `echo "git_scripts.sh has been sourced!"` to git_scripts.sh, and you should see the following:
+
+~~~sh
+    $ source .bash_profile
+      git_scripts.sh has been sourced!
+~~~
+
+Now that we know it's working, let's remove that line in git_scripts.sh and have the file clear.
+
+
 ## Aliases
 
-An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn`.
+An alias is a shortcut for a longer command.  As an example, the command `jupyter notebook` will open a Jupyter Notebook.  If you frequently open notebooks, you can create a shortcut by adding the line `alias jn="jupyter notebook"` to .bash_profile will let you open a notebook by simply typing `jn` (thanks Seth!)
 
 You can also use an alias to run a string of commands.  Let's say that every morning you need to pull changes from a github repository with the commands:
 
@@ -134,6 +156,6 @@ A function can have an optional variable with a default value.  For example, the
     }
 ~~~
 
-With this, you can still add a comment to the commit by `gpush "edit comments"`, but using just the command `gpush` by itself is equivalent to `gpush "default comment"`.
+With this, you can still add a comment to the commit by `gpush "edit comments"`, but using just the command `gpush` by itself is equivalent to `gpush "default comment"`.  This way you have the option to just use a default comment or put in a new comment if needed.
 
 
