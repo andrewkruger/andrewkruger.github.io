@@ -36,9 +36,9 @@ You can create new environment variables by putting them into the .bash_profile 
       andrew-kruger
 ~~~
 
-You can now use this variable in your python scripts.
+You can now use this variable in python.
 
-~~~python
+~~~py
     >>>> import os
     >>>> os.environ['MY_NAME']
         'andrew-kruger'
