@@ -156,7 +156,7 @@ You can also make two optional parameters, one for the filename of the file you 
         ARG1=${1:-.}
         ARG2=${2:-"default comment"}
         git add $ARG1
-        git commit -m $ARG2
+        git commit -m "$ARG2"
         git push
     }
 ~~~
