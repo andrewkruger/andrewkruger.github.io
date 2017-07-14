@@ -181,7 +181,7 @@ Looking at the following function:
                 ARG2=${1:-"default comment"}
         fi
         git add $ARG1
-        git commit -m $ARG2
+        git commit -m "$ARG2"
         git push
     }
 ~~~
