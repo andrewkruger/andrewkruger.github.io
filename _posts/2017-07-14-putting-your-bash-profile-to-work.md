@@ -200,8 +200,23 @@ Looking at the following function:
 
 The `if [ $# -gt 1 ]` sees if there are more than one parameter (the count of parameters is given by `$#`).  If there are, it uses `ARG1` as the filename, and `ARG2` as the commit comment.  If there aren't more than two parameters, it makes `ARG1=.` to push all files.  It then makes `ARG2` an optional parameter like before, where if there is a parameter, it will use it as the commit comment, otherwise it usees "default comment".  The `fi` closes out the `if` statement.
 
+Now you can use the following commands.  To push a specific file with a specific comment:
 
+~~~sh
+    $ gpush filename.ext "Here's my specific comment"
+~~~
 
+To push all files with a specific comment:
+
+~~~sh
+$ gpush "Here's my specific comment"
+~~~
+
+To push all files with a default comment:
+
+~~~sh
+$ gpush
+~~~
 
 
 
