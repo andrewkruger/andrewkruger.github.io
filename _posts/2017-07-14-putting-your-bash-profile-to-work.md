@@ -9,6 +9,7 @@ description: >
 
 I'm going to show you how to use bash scripts to create custom git commands and shortcuts.  This also demonstrates how to create and use bash scripts so you make make your own custom scripts and functions for other projects.
 
+<br>
 
 ## Exports
 
@@ -51,6 +52,7 @@ You can also use this environment variable in python.
 ~~~
 
 
+<br>
 
 ## Shell Scripts
 
@@ -69,6 +71,8 @@ At the bottom of .bash_profile, we can write the line `source $HOME/git_scripts.
 
 Now that we know it's working, remove the `echo` line in git_scripts.sh.
 
+
+<br>
 
 ## Aliases
 
@@ -91,6 +95,8 @@ You can use `alias gpull="git checkout master & git pull & git checkout andrew-k
 
 The `&` is a list construct that separates the commands and continues after each successive command is executed.  If an error occurs, it will stop the string of commands.  If you want the string of commands to continue even if there is an error, use `&&` instead, and it will execute the first command with an error last.
 
+
+<br>
 
 ## Functions and Parameters
 
@@ -147,6 +153,8 @@ Then to switch two filenames, you can just use
 ~~~
 
 
+<br>
+
 ## Optional Parameters
 
 A function can have an optional variable with a default value.  For example, the function `gpush` above takes in a message parameter, but you can make it optional by
@@ -175,6 +183,8 @@ You can also make two optional parameters, one for the filename of the file you 
 
 In order to files, you can the commands `gpush`, or `gpush filename "commit comment"`, or `gpush filename`. But you can *not* use `gpush "commit comment"` because it will interpret the `"commit comment"` as the first parameter and use it as `ARG1`.  So you need to remember the order of parameters and know which you need.
 
+
+<br>
 
 ## If Statements
 
@@ -209,13 +219,13 @@ Now you can use the following commands.  To push a specific file with a specific
 To push all files with a specific comment:
 
 ~~~sh
-$ gpush "Here's my specific comment"
+    $ gpush "Here's my specific comment"
 ~~~
 
 To push all files with a default comment:
 
 ~~~sh
-$ gpush
+    $ gpush
 ~~~
 
 

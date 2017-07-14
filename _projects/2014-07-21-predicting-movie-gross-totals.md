@@ -1,7 +1,7 @@
 ---
 layout: project
-title: "Mapping Title Locations"
-author: emmamadarasz
+title: "Predicting Movie Gross Totals"
+author: andrew
 tags: [projects]
 img: titlesmap.png
 description: >
