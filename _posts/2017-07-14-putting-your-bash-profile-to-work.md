@@ -42,7 +42,7 @@ You can create new environment variables by putting them into the .bash_profile 
       andrew-kruger
 ~~~
 
-You can also use this environemnt variable in python.
+You can also use this environment variable in python.
 
 ~~~python
     >>>> import os
