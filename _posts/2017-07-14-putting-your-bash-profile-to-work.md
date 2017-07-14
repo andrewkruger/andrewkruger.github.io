@@ -92,9 +92,7 @@ You can use `alias gpull="git checkout master & git pull & git checkout andrew-k
 The `&` is a list construct that separates the commands and continues after each successive command is executed.  If an error occurs, it will stop the string of commands.  If you want the string of commands to continue even if there is an error, use `&&` instead, and it will execute the first command with an error last.
 
 
-## Functions
-
-#### Parameters
+## Functions and Parameters
 
 Bash scripts can have functions that can take in parameters.  For example, to push changes to your local repository to github, you would use the commands
 
@@ -137,7 +135,7 @@ Then to switch two filenames, you can just use
 ~~~
 
 
-#### Optional Parameters
+## Optional Parameters
 
 A function can have an optional variable with a default value.  For example, the function `gpush` above takes in a message parameter, but you can make it optional by
 
@@ -166,9 +164,9 @@ You can also make two optional parameters, one for the filename of the file you 
 In order to files, you can the commands `gpush`, or `gpush filename "commit comment"`, or `gpush filename`. But you can *not* use `gpush "commit comment"` because it will interpret the `"commit comment"` as the first parameter and use it as `ARG1`.  So you need to remember the order of parameters and know which you need.
 
 
-#### If Statements
+## If Statements
 
-Another option is to use a flag for which parameters the inputs are for.  For example, it would be nice to be able to use `gpush "commit comment"` for when you want to do all files, and `gpush -f filename "commit comment"` when you want to push a specific file.  To do this, we can see how many parameters there are with `$#` and check for flags.
+Another option is to use a flag for which parameters the inputs are for.  For example, it would be nice to be able to use `gpush "commit comment"` for when you want to do all files, and `gpush filename "commit comment"` when you want to push a specific file.  To do this, we can see how many parameters there are with `$#`, and then decide what to do with the arguments based on how many there are.
 
 Looking at the following function:
 
@@ -188,7 +186,16 @@ Looking at the following function:
     }
 ~~~
 
-The `if [ $# -gt 1 ]` sees if there are more than one parameter (the count of parameters is given by `$#`).  If there are, it uses `ARG1` as the filename, and `ARG2` as the commit comment.  If there aren't more than two parameters, it makes `ARG1=.` to push all files.  It then makes `ARG2` an optional parameter like before, where if there is a parameter, it will use it as the commit comment, otherwise it usees "default comment".  The `fi` closes out the `if` statement."
+The `if [ $# -gt 1 ]` sees if there are more than one parameter (the count of parameters is given by `$#`).  If there are, it uses `ARG1` as the filename, and `ARG2` as the commit comment.  If there aren't more than two parameters, it makes `ARG1=.` to push all files.  It then makes `ARG2` an optional parameter like before, where if there is a parameter, it will use it as the commit comment, otherwise it usees "default comment".  The `fi` closes out the `if` statement.
+
+
+## Flags and While Statements
+
+Another option is to use a flag to tell the function which parameter is being input.  We can decide that for each parameter, there will be a flag preceding it such as `gpush -f filename -c "commit comment"` or `gpush -c "commit comment"`.  This means there will actually be a multiple of two number of parameters including the flags (the examples had 4 parameters and 2 parameters respectively).  You can iterate through the parameters, using the odd parameters as the flags and the even parameters as the inputs.
+
+... will do this soon.
+
+
 
 
 
