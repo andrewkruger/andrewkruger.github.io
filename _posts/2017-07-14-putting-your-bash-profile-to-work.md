@@ -122,9 +122,9 @@ and the "edit comments" will be used as the commit comment.  If you want more pa
 
 ~~~
     function switch(){
-        mv "$1" "$1.backup"
-        mv "$2" "$1"
-        mv "$1.backup" "$2"
+        mv $1 $1.backup
+        mv $2 $1
+        mv $1.backup $2
     }
 ~~~
 
