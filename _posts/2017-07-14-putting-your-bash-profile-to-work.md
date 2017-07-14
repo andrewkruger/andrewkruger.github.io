@@ -94,7 +94,19 @@ The `&` is a list construct that separates the commands and continues after each
 
 ## Functions and Parameters
 
-Bash scripts can have functions that can take in parameters.  For example, to push changes to your local repository to github, you would use the commands
+Bash scripts can have functions in which are a list of commands.  The shortcut `gpull` above would look more clean in a function:
+
+~~~
+    function gpull(){
+        git checkout master
+        git pull
+        git checkout andrew-kruger
+        git merge master
+        git branch
+    }
+~~~
+
+Functions can also take in parameters.  For example, to push changes to your local repository to github, you would use the commands
 
 ~~~sh
     $ git add .
