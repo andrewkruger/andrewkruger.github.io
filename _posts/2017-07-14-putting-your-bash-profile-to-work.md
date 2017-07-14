@@ -189,12 +189,6 @@ Looking at the following function:
 The `if [ $# -gt 1 ]` sees if there are more than one parameter (the count of parameters is given by `$#`).  If there are, it uses `ARG1` as the filename, and `ARG2` as the commit comment.  If there aren't more than two parameters, it makes `ARG1=.` to push all files.  It then makes `ARG2` an optional parameter like before, where if there is a parameter, it will use it as the commit comment, otherwise it usees "default comment".  The `fi` closes out the `if` statement.
 
 
-## Flags and While Statements
-
-Another option is to use a flag to tell the function which parameter is being input.  We can decide that for each parameter, there will be a flag preceding it such as `gpush -f filename -c "commit comment"` or `gpush -c "commit comment"`.  This means there will actually be a multiple of two number of parameters including the flags (the examples had 4 parameters and 2 parameters respectively).  You can iterate through the parameters, using the odd parameters as the flags and the even parameters as the inputs.
-
-... will do this soon.
-
 
 
 
