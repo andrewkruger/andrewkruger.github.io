@@ -1,4 +1,4 @@
 ---
 layout: teamfrontpage
-title: People
+title: About Me
 ---

@@ -1,4 +1,4 @@
 ---
 layout: projects-ordered
-title: Student Projects
+title: Projects
 ---
