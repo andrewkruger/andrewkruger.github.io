@@ -22,7 +22,7 @@ paginate_path:       '/page-:num/'
 
 # Markdown enabled, however don't use more than one paragraph (enforced by `>`)
 description:         >
-  Slow metadata for old novels.
+  Data Science and Programming
 
 # The tags listed as entries in the sidebar
 sidebar_tags:        [blog]
