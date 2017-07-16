@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Putting Your .bash_profile To Work"
+title: "Using bash scripts to make git shortcuts"
 author: andrew
 tags: [blog]
 description: >
 ---
+
+
 
 
 I'm going to show you how to use bash scripts to create custom git commands and shortcuts.  This also demonstrates how to create and use bash scripts so you make make your own custom scripts and functions for other projects.

@@ -20,3 +20,7 @@ Next, I start finding information on the people.  For each actor/actress, I find
 This process is sped up by not checking a person's financial information more than once when they are in multiple movies in multiple roles.  As I go through the actors/actresses, I check if they have had other roles for which I need information in other movies and scrape that information as well.'
 
 After I have scraped the information about the movies, I start going through the list of cast and find the acting credits for each.  I see how many movies they've been a part of, and the total gross for those movies (both are provided on the page).'
+
+
+
+Number of theaters: The movie Gran Torino tarted in 6 theaters in December 2016, expanded to 84 theaters on Christmas two weeks later, then to 2,808 in the beginning of January.  The movie had a total domestic gross of $148 million, but only made $271,720 its first weekend.
