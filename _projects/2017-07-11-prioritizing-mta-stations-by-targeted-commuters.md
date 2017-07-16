@@ -144,7 +144,7 @@ Now that we had the coordinates of each station, we could find the stations with
 ![Silicon Alley and Lower Manhattan](/public/img/New_York_2.png){: .center-image }
 
 
-To get stations near tech hubs, we used coordinate boxes that encompassed those areas, and did a search of stations within that area.  For example, to search the area of dense tech companies just south of Central Park, we limited the search to staitons with longitudes between -73.994992 and -73.975443, and latitudes between 40.735691 and 40.759721.
+To get stations near tech hubs, we used coordinate boxes that encompassed those areas, and did a search of stations within that area.  For example, to search the area of dense tech companies just south of Central Park, we limited the search to staitons with longitudes between -73.994992&deg; and -73.975443&deg;, and latitudes between 40.735691&deg; and 40.759721&deg;.
 
 ~~~py
     latitude = [40.735691, 40.759721]
