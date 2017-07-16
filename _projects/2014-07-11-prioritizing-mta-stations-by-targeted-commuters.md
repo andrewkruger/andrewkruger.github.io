@@ -33,7 +33,7 @@ The demographic information included sex, highest degree attained, and area of p
 #### Turnstile and Station Identifiers
 
 
-![MTA dataframe](/public/img/MTA_df.png)
+![MTA dataframe](/public/img/MTA_df.png){: .center-image }
 
 
 The turnstile data was created by audits of the turnstiles every 4 hours.  The turnstile data includes
@@ -52,7 +52,7 @@ The turnstile data was created by audits of the turnstiles every 4 hours.  The t
 Below is a sample of the data for stations with the name 135th St (135 ST).
 
 
-![Station and Turnstile identifiers](/public/img/Station_Info.png)
+![Station and Turnstile identifiers](/public/img/Station_Info.png){: .center-image }
 
 
 Because stations are identified by the stop, there were multiple stations with the same name (there is a 135th St. stop for lines 2/3, and lines B/C).  Thus, we needed to identify stations by both the "Station" value and the "Linename":
@@ -81,9 +81,9 @@ Some counts were unrealistically high.  To fix this, we made an upper limit of c
 
 
 
-![Histogram of all turnstile counts](/public/img/Turnstile_Hist_1.png)
+![Histogram of all turnstile counts](/public/img/Turnstile_Hist_1.png){: .center-image }
 
-![Histogram of higher turnstile counts](/public/img/Turnstile_Hist_2.png)
+![Histogram of higher turnstile counts](/public/img/Turnstile_Hist_2.png){: .center-image }
 
 
 
@@ -110,7 +110,7 @@ We totaled up these counts to find the traffic by day.
 
 
 
-![Top 10 Stations](/public/img/Station_Rank.png)
+![Top 10 Stations](/public/img/Station_Rank.png){: .center-image }
 
 
 
@@ -139,10 +139,10 @@ The table of coordinates for stations provided by web.mta.info has Station ID nu
 Now that we had the coordinates of each station, we could find the stations within a targeted region.  We found that the tech startups on digital.nyc did trace out the tech hubs in Silicon Alley and Lower Manhattan.  
 
 
-![Startups used to trace tech hubs](/public/img/New_York.png)
+![Startups used to trace tech hubs](/public/img/New_York.png){: .center-image }
 
 
-![Silicon Alley and Lower Manhattan](/public/img/New_York_2.png)
+![Silicon Alley and Lower Manhattan](/public/img/New_York_2.png){: .center-image }
 
 
 To get stations near tech hubs, we used coordinate boxes that encompassed those areas, and did a search of stations within that area.  For example, to search the area of dense tech companies just south of Central Park, we limited the search to staitons with longitudes between -73.994992 and -73.975443, and latitudes between 40.735691 and 40.759721.
