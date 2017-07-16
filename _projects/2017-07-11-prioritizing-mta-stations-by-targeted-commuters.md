@@ -177,6 +177,10 @@ We compared the top 10 busiest stations with the top 10 suggested stations based
 These demographics are for the residents, and doesn't include the commuters from other communities who would be coming to those stations for their jobs.  Since we have also targeted stations near tech hubs, this would further increase the percentage of people who would likely be interested in the WTWY gala.
 
 
+![10 top stations meeting demographics](/public/img/MTA_Station_Locations.png){: .center-image }
+
+
+
 
 ## Overview
 
