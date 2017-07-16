@@ -3,12 +3,11 @@ layout: project
 title: "Prioritizing MTA Stations by Targeted Commuters"
 author: andrew
 tags: [projects]
-img: titlesmap.png
+img: New_York.png
 description: >
 ---
 
 
-tractenberg method
 
 ## MTA Subway Commuter Analysis
 
