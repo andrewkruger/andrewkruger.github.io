@@ -14,7 +14,7 @@ url:                 'https://andrewkruger.github.io'
 baseurl:             'https://andrewkruger.github.io'
 # baseurl:             /hydejack
 
-title:               Andrew Kruger
+title:               Andrew Kruger, PhD
 
 # Pagination
 paginate:            5
@@ -81,7 +81,6 @@ author:
     # npm:             _username_
     # hackernews:      _username_
     # trello:          _firstname__lastname_
-    # linkedin:        _firstname_-_lastname_-_string_
     linkedin:          andrewkruger
     # xing:            _firstname___lastname__counter_
     # blogger:         _number_
