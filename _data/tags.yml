@@ -14,9 +14,9 @@
 projects:
   name: Projects
   description: >
-    Projects by student researchers.
+    Project outlines and discussions.
 
 blog:
   name: Blog
   description: >
-    Updates from the END team.
+    Updates, smaller projects, and various findings.
