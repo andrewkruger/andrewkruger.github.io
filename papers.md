@@ -1,4 +1,4 @@
 ---
-layout: papers
+layout: project
 title: Papers
 ---
