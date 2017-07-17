@@ -107,11 +107,7 @@ We totaled up these counts to find the traffic by day.
     df_turnstile_day = df_turnstile_day.rename(columns={'Counts_Hour':'Counts_Day'})
 ~~~
 
-
-
 ![Top 10 Stations](/public/img/Station_Rank.png){: .center-image }
-
-
 
 
 
