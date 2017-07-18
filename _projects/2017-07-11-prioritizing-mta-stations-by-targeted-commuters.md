@@ -40,7 +40,8 @@ The demographic information included sex, highest degree attained, and area of p
 
 ![MTA dataframe](/public/img/MTA_df.png)
 
-
+NOOOO, didn't finish this explanation, look away!!!
+'
 The turnstile data was created by audits of the turnstiles every 4 hours.  The turnstile data includes
 
 - Control Area (C/A), 
