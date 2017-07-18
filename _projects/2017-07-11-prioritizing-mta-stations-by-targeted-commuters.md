@@ -24,9 +24,9 @@ In order to acheive this, we wanted to maximize not just the number of commuters
 
 We gathered numeric information from multiple sources, including:
 
-1. Subway station commuter entrance and exit counts for turnstiles and GPS coordinates of subway stations from the website http://web.mta.info/.  
-1. Demographics of the surrounding neighborhood in which the subway station is located from https://opendata.cityofnewyork.us/.
-1. Locations of technology startups from http://www.digital.nyc/.
+1. Subway station commuter entrance and exit counts for turnstiles and GPS coordinates of subway stations from the website [http://web.mta.info/](http://web.mta.info/).  
+1. Demographics of the surrounding neighborhood in which the subway station is located from [https://opendata.cityofnewyork.us/](https://opendata.cityofnewyork.us/).
+1. Locations of technology startups from [http://www.digital.nyc/](http://www.digital.nyc/).
 
 The demographic information included sex, highest degree attained, and area of profession.  The technology startups could be used as a tracer for tech hubs, and then the GPS coordinates of the stations could be used to isolate stations near those hubs.  By combining this information, we sought to increase the likelihood of canvassing female employees of technology companies.
 
