@@ -13,7 +13,7 @@ description: >
 
 ## MTA Subway Commuter Analysis
 
-We were given the project of working with a mock non-profit called WomenTechWomenYes (WTWY) who is planning on going to New York MTA subway stations to pass out pamphlets advertising their Women in Technology gala.  The gala was planned for the end of May, so they would be canvassing in April and May.  Their goal was to increase participation in the gala and to spread awareness of WTWY.  Our plan was to optimize the time of the street times passing out pamphlets by showing them the best times and stations to go to.  
+As part of the Metis Data Science Bootcamp, we were given the project of working with a mock non-profit called WomenTechWomenYes (WTWY) who is planning on going to New York MTA subway stations to pass out pamphlets advertising their Women in Technology gala.  The gala was planned for the end of May, so they would be canvassing in April and May.  Their goal was to increase participation in the gala and to spread awareness of WTWY.  Our plan was to optimize the time of the street times passing out pamphlets by showing them the best times and stations to go to.  
 
 
 <br>
@@ -78,6 +78,8 @@ Some counts were unrealistically high.  To fix this, we made an upper limit of c
 
 
 ![Histogram of all turnstile counts](/public/img/Turnstile_Hist_1.png)
+
+
 
 ![Histogram of higher turnstile counts](/public/img/Turnstile_Hist_2.png)
 
