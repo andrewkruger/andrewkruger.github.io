@@ -162,7 +162,6 @@ The following is the dataframe created showing the top stations in the target ar
 ![Dataframe of top silicon alley stations](/public/img/Silicon_Alley_df.png)
 
 
-
 <br>
 
 ## Targeting Demographics
@@ -178,6 +177,7 @@ These demographics are for the residents, and doesn't include the commuters from
 
 ![10 top stations for target demographics](/public/img/MTA_Station_Locations.png){: .center-image }
 
+Given our target demographics, the stations near NYU, Cornell University, and Georgetown University were included.  This means the academic community will also be included with these stations. 
 
 <br>
 
@@ -205,7 +205,7 @@ Going to the stations showing this second traffic pattern may not make a differe
 
 ## Overview
 
-By using commuter rates, demographic information, and location data for MTA subway stations, we were able to create a priority list of stations that would most likely have commuters who are famales with higher education degrees and careers in tech industries.  While these stations did show 5% less traffic, they actually resulted in an increase of 1-2% females in science/technical professions and 5% more females with graduate degrees.  We were also able to identify optimal times for WTWY to be convassing for their gala, and showed that station priorities would change between morning and afternoon rush hours as some stations would have higher traffic in the afternoon while others showed little difference.  
+By using commuter rates, demographic information, and location data for MTA subway stations, we were able to create a priority list of stations that would most likely have commuters who are famales with higher education degrees and careers in tech industries, as well as the academic community from top-tier universities.  While these stations did show 5% less traffic, they actually resulted in an increase of 1-2% females in science/technical professions and 5% more females with graduate degrees.  We were also able to identify optimal times for WTWY to be convassing for their gala, and showed that station priorities would change between morning and afternoon rush hours as some stations would have higher traffic in the afternoon while others showed little difference.  
 
 With this information, we would be able to create a canvassing schedule based on the availability of WTWY street teams and the number of days they are able to work.  Using the methods shown above, if the workers were available on more days, we could expand their work to new priority stations in parts of tech hubs not yet covered.
 
