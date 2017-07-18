@@ -48,6 +48,7 @@ The turnstile data was created by audits of the turnstiles every 4 hours.  The t
 - Subunit Control Positions (SCP)
 - Station, the name of the stop
 - Linenames of subway lines served by the station
+- Division (original subway line)
 - Date of audit
 - Time of audit
 - Description of audit (usually "Regular")
