@@ -37,11 +37,10 @@ The demographic information included sex, highest degree attained, and area of p
 
 #### Turnstile and Station Identifiers
 
+For reference, here is a sample of the data taken from web.mta.info:
 
 ![MTA dataframe](/public/img/MTA_df.png)
 
-NOOOO, didn't finish this explanation, look away!!!
-'
 The turnstile data was created by audits of the turnstiles every 4 hours.  The turnstile data includes
 
 - Control Area (C/A), 
@@ -51,9 +50,9 @@ The turnstile data was created by audits of the turnstiles every 4 hours.  The t
 - Linenames of subway lines served by the station
 - Date of audit
 - Time of audit
-- DESC
-- Entries
-- Exits
+- Description of audit (usually "Regular")
+- Cumulative entries
+- Cumulative exits
 
 Below is a sample of the data for stations with the name 135th St (135 ST).
 
