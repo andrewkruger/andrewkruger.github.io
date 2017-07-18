@@ -9,10 +9,14 @@ description: >
 
 
 
+<br>
+
 ## MTA Subway Commuter Analysis
 
 We were given the project of working with a mock non-profit called WomenTechWomenYes (WTWY) who is planning on going to New York MTA subway stations to pass out pamphlets advertising their Women in Technology gala.  The gala was planned for the end of May, so they would be canvassing in April and May.  Their goal was to increase participation in the gala and to spread awareness of WTWY.  Our plan was to optimize the time of the street times passing out pamphlets by showing them the best times and stations to go to.  
 
+
+<br>
 
 ## Data Resources
 
@@ -27,12 +31,14 @@ We gathered numeric information from multiple sources, including:
 The demographic information included sex, highest degree attained, and area of profession.  The technology startups could be used as a tracer for tech hubs, and then the GPS coordinates of the stations could be used to isolate stations near those hubs.  By combining this information, we sought to increase the likelihood of canvassing female employees of technology companies.
 
 
+<br>
+
 ## Data Processing
 
 #### Turnstile and Station Identifiers
 
 
-![MTA dataframe](/public/img/MTA_df.png){: .center-image }
+![MTA dataframe](/public/img/MTA_df.png)
 
 
 The turnstile data was created by audits of the turnstiles every 4 hours.  The turnstile data includes
@@ -51,23 +57,14 @@ The turnstile data was created by audits of the turnstiles every 4 hours.  The t
 Below is a sample of the data for stations with the name 135th St (135 ST).
 
 
-![Station and Turnstile identifiers](/public/img/Station_Info.png){: .center-image }
+![Station and Turnstile identifiers](/public/img/Station_Info.png)
 
 
-Because stations are identified by the stop, there were multiple stations with the same name (there is a 135th St. stop for lines 2/3, and lines B/C).  Thus, we needed to identify stations by both the "Station" value and the "Linename":
-
-~~~py
-    df_day['STATION-LINE'] = df_day['STATION'] + ' ' + df_day['LINENAME']
-~~~
-
-
-(A station could also be identified by its Unit number, although we found that was not descriptive enough for our needs below.)  
+Because stations are identified by the stop, there were multiple stations with the same name (there is a 135th St. stop for lines 2/3, and lines B/C).  Thus, we needed to identify stations by both the "Station" value and the "Linename".  (A station could also be identified by its Unit number, although we found that was not descriptive enough for our needs below.)  
 
 Within each station, there can be multiple C/A's, all of which have a unique identifier (Line 2/3, 135th St. station has C/A's R306 and R307).  Each C/A has multiple turnstiles identified by it's SCP, but the SCP number is not necessarily unique across different C/A's (N024 and R306 both have a turnstile with SCP number 00-00-00).  Thus, a unique turnstile needed to be identified by both the C/A and SCP (or C/A and Unit).
 
-~~~py
-    df['Turnstile'] = df['C/A']+' '+df['SCP']
-~~~
+
 
 
 #### Turnstile Data
@@ -80,13 +77,15 @@ Some counts were unrealistically high.  To fix this, we made an upper limit of c
 
 
 
-![Histogram of all turnstile counts](/public/img/Turnstile_Hist_1.png){: .center-image }
+![Histogram of all turnstile counts](/public/img/Turnstile_Hist_1.png)
 
-![Histogram of higher turnstile counts](/public/img/Turnstile_Hist_2.png){: .center-image }
+![Histogram of higher turnstile counts](/public/img/Turnstile_Hist_2.png)
 
 
 
-## Station traffic
+<br>
+
+## Commuter Counts
 
 After the data was cleaned, we calculated the counts for each 4 hour interval by finding the difference in counts between audits.
 
@@ -99,18 +98,20 @@ After the data was cleaned, we calculated the counts for each 4 hour interval by
     df_4hour['Counts_Hour'] = df_4hour['New_Entries_Hour'] + df_4hour['New_Exits_Hour']
 ~~~
 
-We totaled up these counts to find the traffic by day.
+
+We could then see the total traffic for each station by totaling up the counts in the 4 hour intervals.
 
 ~~~py
-    df_turnstile_day = df_4hour.groupby(['STATION-LINE','Turnstile','Day_of_Week'])['Counts_Hour']
-    df_turnstile_day = df_turnstile_day.sum().to_frame().reset_index()
-    df_turnstile_day = df_turnstile_day.rename(columns={'Counts_Hour':'Counts_Day'})
+    df_station_total = df_4hour.groupby(['STATION-LINE'])['Counts_Hour'].sum().to_frame().reset_index()
+    df_station_total = df_station_total.rename(columns={'Counts_Hour':'Counts'})
+    ranked = df_station_total.sort_values('Counts', ascending=False).reset_index()
 ~~~
 
-![Top 10 Stations](/public/img/Station_Rank.png){: .center-image }
+![Top 10 Stations](/public/img/Station_Rank.png)
 
 
 
+<br>
 
 ## Station Locations
 
@@ -134,10 +135,10 @@ The table of coordinates for stations provided by web.mta.info has Station ID nu
 Now that we had the coordinates of each station, we could find the stations within a targeted region.  We found that the tech startups on digital.nyc did trace out the tech hubs in Silicon Alley and Lower Manhattan.  
 
 
-![Startups used to trace tech hubs](/public/img/New_York.png){: .center-image }
+![Startups used to trace tech hubs](/public/img/New_York.png)
 
 
-![Silicon Alley and Lower Manhattan](/public/img/New_York_2.png){: .center-image }
+![Silicon Alley and Lower Manhattan](/public/img/New_York_2.png)
 
 
 To get stations near tech hubs, we used coordinate boxes that encompassed those areas, and did a search of stations within that area.  For example, to search the area of dense tech companies just south of Central Park, we limited the search to staitons with longitudes between -73.994992&deg; and -73.975443&deg;, and latitudes between 40.735691&deg; and 40.759721&deg;.
@@ -162,6 +163,8 @@ The following is the dataframe created showing the top stations in the target ar
 
 
 
+<br>
+
 ## Targeting Demographics
 
 While canvassing at the busiest stations will result in the street teams being able to canvass to the most people, they may not necessarily encounter the most people who would be interested in the WTWY gala.  To target the demographics, we weighted the commuters by the demographics of the surrounding community.  We multiplied the total number of people by the percent who are female, who have a Bachelors degree or higher, and who are in the science and technology profession.
@@ -173,14 +176,36 @@ We compared the top 10 busiest stations with the top 10 suggested stations based
 These demographics are for the residents, and doesn't include the commuters from other communities who would be coming to those stations for their jobs.  Since we have also targeted stations near tech hubs, this would further increase the percentage of people who would likely be interested in the WTWY gala.
 
 
-![10 top stations meeting demographics](/public/img/MTA_Station_Locations.png){: .center-image }
+![10 top stations for target demographics](/public/img/MTA_Station_Locations.png){: .center-image }
 
 
+<br>
 
+## Day and Time
+
+To test which days would be best for the street teams to canvass, we looked at the amount of traffic for the stations by day of week.  We found that consistently the weekdays showed much more traffic than weekends (as expected).
+
+
+IMAGE: histogram of a station showing increased traffic on weekdays.
+
+However, while there is less traffic on the weekend, there are still commuter counts in the 10's and 100's of thousands.  While the teams may not interact with as many people, they may not be in a rush to get to work or back home and perhaps more likely to talk with the street teams, so that would need to be taken into consideration.
+
+In order to look at the best times for street times to canvass during the weekdays, we looked at traffic rates for different times of the day.  We found that not all stations showed the same trends, but rather we saw two major traffic pattern.  The first showed peaks for the morning and afternoon rush hours, with the afternoon rush hour often being higher.
+
+IMAGE: histogram showing double peak traffic
+
+The second type of traffic showed an increase in the day, and then stayed somewhat consistent to the evening.
+
+IMAGE: histogram showing consistent traffic
+
+Going to the stations showing this second traffic pattern may not make a difference as much when to go.  Since the first type showed more commuters in the afternoon, it would make sense to go to those in the afternoon, and then go to the stations with the second pattern in the morning.  For the top ten stations for our target demographics, we found that five fit in the first traffic pattern, and five fit the second, making it easy to divide up which stations to visit in the morning or afternoon.
+
+
+<br>
 
 ## Overview
 
-By using commuter rates, demographic information, and location data for MTA subway stations, we were able to create a priority list of stations that would most likely have commuters who are famales with higher education degrees and careers in tech industries.  We were also able to identify optimal times for WTWY to be convassing for their gala, and showed that priorities would change between morning and afternoon rush hours as some stations would have higher traffic in the afternoon while others showed little difference.
+By using commuter rates, demographic information, and location data for MTA subway stations, we were able to create a priority list of stations that would most likely have commuters who are famales with higher education degrees and careers in tech industries.  We were also able to identify optimal times for WTWY to be convassing for their gala, and showed that station priorities would change between morning and afternoon rush hours as some stations would have higher traffic in the afternoon while others showed little difference.  
 
 With this information, we would be able to create a canvassing schedule based on the availability of WTWY street teams and the number of days they are able to work.  Using the methods shown above, if the workers were available on more days, we could expand their work to new priority stations in parts of tech hubs not yet covered.
 
