@@ -194,15 +194,16 @@ To test which days would be best for the street teams to canvass, we looked at t
 
 However, while there is less traffic on the weekend, there are still commuter counts in the 10's and 100's of thousands.  While the teams may not interact with as many people, they may not be in a rush to get to work or back home and perhaps more likely to talk with the street teams, so that would need to be taken into consideration.
 
-In order to look at the best times for street times to canvass during the weekdays, we looked at traffic rates for different times of the day.  We found that not all stations showed the same trends, but rather we saw two major traffic pattern.  The first showed peaks for the morning and afternoon rush hours, with the afternoon rush hour often being higher.
+In order to look at the best times for street times to canvass during the weekdays, we looked at traffic rates for different times of the day.  We found that not all stations showed the same traffic pattern trends.  All the stations we looked at did peak in the afternoon rush hour, but how it compared to the rest of the day varied.  Some stations showed an increase from morning to afternoon, like that seen at the 96th St. station for lines 1,2,3:
 
-![86th Street 456 Traffic by Time](/public/img/Double_Peak_Hour.png)
+![96th Street 123 Traffic by Time](/public/img/96th_Traffic_Hour.png)
 
-The second type of traffic showed an increase in the day, and then stayed somewhat consistent to the evening.
+Other stations showed a double peak in the morning and afternoon traffic, as seen in the Lexington Ave / 53rd St. station for lines E,M,6:
 
-![86th Street 456 Traffic by Time](/public/img/Lexington_Traffic_Hour.png)
 
-Going to the stations showing this second traffic pattern may not make a difference as much when to go.  Since the first type showed more commuters in the afternoon, it would make sense to go to those in the afternoon, and then go to the stations with the second pattern in the morning.  For the top ten stations for our target demographics, we found that five fit in the first traffic pattern, and five fit the second, making it easy to divide up which stations to visit in the morning or afternoon.
+![Lexington Ave / 53rd Street EM6 Traffic by Time](/public/img/Lexington_Traffic_Hour.png)
+
+Others showed a combination of these two patterns with the morning rush hour traffic ranging from moderate to high traffic.  This affects which stations would be best to go to in the morning and afternoon, as it would be better to go in the afternoon to stations with low morning traffic, and then go in the morning to stations that have double peaked traffic patterns. For the top ten stations for our target demographics, we found that five showed relatively lower morning traffic, and five had relatively higher morning traffic, making it easy to divide up which stations to visit in the morning or afternoon.
 
 
 <br>
