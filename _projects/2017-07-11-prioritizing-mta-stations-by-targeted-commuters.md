@@ -78,11 +78,11 @@ Some counts were unrealistically high.  To fix this, we made an upper limit of c
 
 
 
-![Histogram of all turnstile counts](/public/img/Turnstile_Hist_1.png)
+![Histogram of all turnstile counts](/public/img/Turnstile_Counts_Hist1.png)
 
 
 
-![Histogram of higher turnstile counts](/public/img/Turnstile_Hist_2.png)
+![Histogram of higher turnstile counts](/public/img/Turnstile_Counts_Hist2.png)
 
 
 
