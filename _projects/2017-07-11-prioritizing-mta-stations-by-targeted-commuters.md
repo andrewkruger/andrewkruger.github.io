@@ -189,7 +189,7 @@ Given our target demographics, the stations near NYU, Cornell University, and Ge
 To test which days would be best for the street teams to canvass, we looked at the amount of traffic for the stations by day of week.  We found that consistently the weekdays showed much more traffic than weekends (as expected).  To illustrate this, below is the average daily subway traffic (entries plus exits) for Grand Central Station in April/May 2016.
 
 
-![Silicon Alley and Lower Manhattan](/public/img/Grand_Central_Station_Weekday.png)
+![Silicon Alley and Lower Manhattan](/public/img/Grand_Central_Traffic_Week.png)
 
 However, while there is less traffic on the weekend, there are still commuter counts in the 10's and 100's of thousands.  While the teams may not interact with as many people, they may not be in a rush to get to work or back home and perhaps more likely to talk with the street teams, so that would need to be taken into consideration.
 
