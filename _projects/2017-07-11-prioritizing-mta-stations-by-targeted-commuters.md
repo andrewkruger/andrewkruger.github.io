@@ -180,6 +180,7 @@ These demographics are for the residents, and doesn't include the commuters from
 
 ![10 top stations for target demographics](/public/img/MTA_Station_Locations.png){: .center-image }
 
+
 Given our target demographics, the stations near NYU, Cornell University, and Georgetown University were included.  This means the academic community will also be included with these stations. 
 
 <br>
@@ -195,11 +196,11 @@ However, while there is less traffic on the weekend, there are still commuter co
 
 In order to look at the best times for street times to canvass during the weekdays, we looked at traffic rates for different times of the day.  We found that not all stations showed the same trends, but rather we saw two major traffic pattern.  The first showed peaks for the morning and afternoon rush hours, with the afternoon rush hour often being higher.
 
-IMAGE: histogram showing double peak traffic
+![86th Street 456 Traffic by Time](/public/img/Double_Peak_Hour.png)
 
 The second type of traffic showed an increase in the day, and then stayed somewhat consistent to the evening.
 
-IMAGE: histogram showing consistent traffic
+![86th Street 456 Traffic by Time](/public/img/Lexington_Traffic_Hour.png)
 
 Going to the stations showing this second traffic pattern may not make a difference as much when to go.  Since the first type showed more commuters in the afternoon, it would make sense to go to those in the afternoon, and then go to the stations with the second pattern in the morning.  For the top ten stations for our target demographics, we found that five fit in the first traffic pattern, and five fit the second, making it easy to divide up which stations to visit in the morning or afternoon.
 
