@@ -7,7 +7,7 @@ description: >
 ---
 
 
-# section 1
+## section 1
 
 [Go to section 2](#section-2)
 content
@@ -67,7 +67,7 @@ content
 
 
 
-# section 2
+## section 2
 
 content
 
