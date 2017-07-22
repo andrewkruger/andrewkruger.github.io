@@ -20,7 +20,7 @@ If you click on the link above, you can see that the html for the page now has `
 
 ## Table of contents
 
-You can create a table of contents for your projects if you make a list of sections with anchor links.  For example, the table of contents for my [MTA Project](https://andrewkruger.github.io/projects/2017-07-11-prioritizing-mta-stations-by-targeted-commuters#data-resources) would made by:
+You can create a table of contents for your projects if you make a list of sections with anchor links.  For example, the table of contents for my [MTA Project](https://andrewkruger.github.io/projects/2017-07-11-prioritizing-mta-stations-by-targeted-commuters) would made by:
 
 ```
     1. [MTA Subway Commuter Analysis](#mta-subway-commuter-analysis)
