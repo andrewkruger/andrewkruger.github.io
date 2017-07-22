@@ -7,9 +7,9 @@ description: >
 ---
 
 
-## section 1
+## Heading Anchors
 
-[Go to section 2](#section-2)
+`[Go to section 2](#section-2)`
 content
 
 content

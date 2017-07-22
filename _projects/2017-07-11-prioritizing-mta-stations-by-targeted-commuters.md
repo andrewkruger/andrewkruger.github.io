@@ -7,7 +7,16 @@ img: New_York.png
 description: >
 ---
 
+<br>
 
+1. [MTA Subway Commuter Analysis](#mta-subway-commuter-analysis)
+1. [Data Resources](#data-resources)
+1. [Data Processing](#data-processing)
+1. [Commuter Counts](#commuter-counts)
+1. [Station Locations](#station-locations)
+1. [Targeting Demographics](#targeting-demographics)
+1. [Day and Time](#day-and-time)
+1. [Overview](#overview)
 
 <br>
 
