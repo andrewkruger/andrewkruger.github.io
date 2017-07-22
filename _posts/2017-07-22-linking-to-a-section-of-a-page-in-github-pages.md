@@ -7,7 +7,7 @@ description: >
 ---
 
 
-[Title of the section 1](#section-1)
+[section 1](#section-1)
 
 
 content
@@ -67,7 +67,7 @@ content
 
 
 
-[Title of the section 2](#section-2)
+[section 2](#section-2)
 
 content
 
