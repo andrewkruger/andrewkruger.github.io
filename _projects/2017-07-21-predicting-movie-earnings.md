@@ -8,7 +8,16 @@ description: >
 ---
 
 
-The movie industry spends millions of dollars on cast and crew on most movies in the hopes of making many more millions in gross profit.  The profit comes from ticket sales in the U.S. (domestic) or internatational countries.  The financial information for movies, including budget and gross earnings, is available on the website http://www.the-numbers.com/.  This site also includes the information about cast and crew, showing which movies they acted or worked in and the gross earnings of those movies.  
+
+The movie industry spends millions of dollars on cast and crew on most movies in the hopes of making many more millions in gross profit.  The earnings come from ticket sales in the U.S. (domestic) or internatational countries, video sales, merchandise, etc.  The financial information for many movies, including budget and gross earnings, is available on the website [http://www.the-numbers.com/](http://www.the-numbers.com/).  This site also includes the information about cast and crew, showing which movies they acted or worked in and the gross earnings of those movies.
+
+As part of a Metis Data Science Bootcamp project, I want to use this data create a predictor for the opening weekend gross domestic box office earnings of movies.  Such a predictor would act as an immediate indicator for how well a movie is performing in theaters.
+
+
+
+## Webscraping
+
+I webscraped the data from the-numbers.com 
 
 This project has the aim of creating a predictor for the success (gross earnings) of a movie based on who is in the cast and crew.
 
