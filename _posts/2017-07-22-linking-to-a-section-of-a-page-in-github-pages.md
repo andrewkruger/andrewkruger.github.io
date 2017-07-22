@@ -7,7 +7,7 @@ description: >
 ---
 
 
-<A href="#section-1">Main Header</A>
+[Title of the section 1](#section-1)
 
 
 content
@@ -67,7 +67,7 @@ content
 
 
 
-<A href="#section-2">Title of the section</A>
+[Title of the section 2](#section-2)
 
 content
 
@@ -107,4 +107,3 @@ content
 
 content
 
-[Section 1](#section-1)
