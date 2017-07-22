@@ -9,7 +9,7 @@ description: >
 
 ## Heading Anchors
 
-If you want to link to a specific section of a blog or project, you can use an anchor link.  This way you can send readers directly to a section you're referring to, or create a table of contents at the beginning.  To create an anchor to a section on the same page, use a `#` then the section name in lower case with a `-` instead of spaces.  For example, to link to [the next secttion of this post](#other-pages), you would use `[some words](#other-pages)`.
+If you want to link to a specific section of a blog or project, you can use an anchor link.  This way you can send readers directly to a section you're referring to, or create a table of contents at the beginning.  To create an anchor to a section on the same page, use a `#` then the section name in lower case with a `-` instead of spaces.  For example, to link to [the next section of this post](#other-pages), you would use `[some words](#other-pages)`.
 
 
 
