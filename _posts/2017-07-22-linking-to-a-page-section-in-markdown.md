@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linking to a Page Section in Github Pages"
+title: "Linking to a Page Section in Markdown"
 author: andrew
 tags: [blog]
 description: >
