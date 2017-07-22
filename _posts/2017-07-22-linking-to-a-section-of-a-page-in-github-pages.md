@@ -18,3 +18,19 @@ If you want to link to a specific section of a blog or project, you can use an a
 If you click on the link above, you can see that the html for the page now has `#other-pages` at the end.  This shows that if you want to link to a section of another page, you can just put the anchor link at the end of the html for the page.
 
 
+## Table of contents
+
+You can create a table of contents for your projects if you make a list of sections with anchor links.  For example, the table of contents for my [MTA Project](https://andrewkruger.github.io/projects/2017-07-11-prioritizing-mta-stations-by-targeted-commuters#data-resources) would made by:
+
+```
+    1. [MTA Subway Commuter Analysis](#mta-subway-commuter-analysis)
+    1. [Data Resources](#data-resources)
+    1. [Data Processing](#data-processing)
+        - [Turnstile and Station Identifiers](#turnstile-and-station-identifiers)
+        - [Turnstile Data](#turnstile-data)
+    1. [Commuter Counts](#commuter-counts)
+    1. [Station Locations](#station-locations)
+    1. [Targeting Demographics](#targeting-demographics)
+    1. [Day and Time](#day-and-time)
+    1. [Overview](#overview)
+```
