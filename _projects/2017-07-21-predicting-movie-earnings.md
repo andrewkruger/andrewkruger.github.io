@@ -23,14 +23,21 @@ The financial information for many movies, including budget and gross earnings, 
     <img src="/public/img/Movie_Budget_List.png?raw=true" alt="Movie List"/>
 </p>
 
+<br>
 
 I then used the movie URLs to get a list of cast (up to 10 actors/actresses), a list of crew (including crew credits), the URLs for cast and crew members, and the opening weekend gross domestic earnings and the number of theaters the movie was playing in.  On the webpage for each cast and crew member is a list of movies they've been in and the gross earnings for those movies.  
+
+<br>
 
 <p align="center">
     <img src="/public/img/John_Goodman.png?raw=true" alt="John Goodman"/>
 </p>
 
+<br>
+
 For each of the movies in my list, I found how many movies they had been in previously, and the total gross earnings for those movies.  For the crew, I found the number of movies they had done that credit and the total gross earnings of those movies.  In this way, all data for the cast and crew is their historical data up to that movie.
+
+<br>
 
 <p align="center">
     <img src="/public/img/Nolan_Movie_Table.png?raw=true" alt="Christopher Nolan Movie Table"/>
