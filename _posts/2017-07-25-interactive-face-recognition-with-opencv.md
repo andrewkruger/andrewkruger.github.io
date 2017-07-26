@@ -30,7 +30,7 @@ The landmarks can be used to track specific parts of the face.  Here I'm only sh
 
 This allowed me to track the eyes.  I took the average of the left and right eye landmarks to get the positions of the center of the eyes. 
 
-Next, we can do image manipulation in OpenCV.  We can [rotate, move, and resize images](http://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/), as well as [detect colors and mask them](http://www.pyimagesearch.com/2014/08/04/opencv-python-color-detection/).  With the masking, we can overlay images that we've manipulated.  Starting with an image of ["deal with it" glasses"](https://www.google.com/search?rlz=1C5CHFA_enUS567US569&biw=1215&bih=579&tbm=isch&q=deal+with+it+glasses+gif), we can resize, rotate, and move it relative to where the eyes are.  The image of the glasses can then be overlayed on the face by using masking.  
+Next, we can do image manipulation in OpenCV.  We can [rotate, move, and resize images](http://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/), as well as [detect colors and mask them](http://www.pyimagesearch.com/2014/08/04/opencv-python-color-detection/).  With the masking, we can overlay images that we've manipulated.  Starting with an image of ["deal with it" glasses](https://www.google.com/search?rlz=1C5CHFA_enUS567US569&biw=1215&bih=579&tbm=isch&q=deal+with+it+glasses+gif), we can resize, rotate, and move it relative to where the eyes are.  The image of the glasses can then be overlayed on the face by using masking.  
 
 <p align="center">
 <iframe src='https://gfycat.com/ifr/PowerfulAbandonedLamprey' frameborder='0' scrolling='no' width='600' height='332' allowfullscreen></iframe>
