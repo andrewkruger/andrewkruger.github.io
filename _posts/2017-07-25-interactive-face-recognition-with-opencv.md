@@ -13,4 +13,25 @@ description: >
 
 These landmarks are indicated with red dots:
 
+<p align="center">
 <iframe src='https://gfycat.com/ifr/IlliterateMetallicAmericanindianhorse' frameborder='0' scrolling='no' width='600' height='330' allowfullscreen></iframe>
+</p>
+
+
+The landmarks can be used to track parts of the face.  For example, I can choose only to show the eye landmarks:
+
+
+
+
+<p align="center">
+<iframe src='https://gfycat.com/ifr/CautiousFantasticEel' frameborder='0' scrolling='no' width='600' height='330' allowfullscreen></iframe>
+</p>
+
+
+<p align="center">
+<iframe src='https://gfycat.com/ifr/GregariousFarKid' frameborder='0' scrolling='no' width='600' height='332' allowfullscreen></iframe>
+</p>
+
+<p align="center">
+<iframe src='https://gfycat.com/ifr/PowerfulAbandonedLamprey' frameborder='0' scrolling='no' width='600' height='332' allowfullscreen></iframe>
+</p>
