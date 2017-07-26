@@ -9,6 +9,7 @@ description: >
 
 
 # Opening Weekend Domestic Gross Earnings Predictor for Movies
+#### Warning: In the spirit of living in Chicago, this page is under construction.
 
 The movie industry spends millions of dollars on cast and crew on most movies in the hopes of making many more millions in gross profit.  The earnings come from ticket sales in the U.S. (domestic) or internatational countries, video sales, merchandise, etc.  A common indicator for a movie's performance is the opening weekend gross earnings, which provides immediate feedback on how the movie is doing.  As part of a Metis Data Science Bootcamp project, I will be exploring if budget and earnings data can be used to create a predictor for the opening weekend domestic gross earnings for movies.  In short, this predictor uses the past performance of movies with the cast and crew, along with budget and number of opening theaters, to make the prediction.  Such a predictor would provide immediate feedback for how well a movie is doing, for example to give time to react and increase movie attendance while the movie is still in theaters.
 
