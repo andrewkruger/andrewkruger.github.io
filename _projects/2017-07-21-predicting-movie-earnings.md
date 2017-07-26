@@ -3,7 +3,7 @@ layout: project
 title: "Movies"
 author: andrew
 tags: [projects]
-img: titlesmap.png
+img: Movies.png
 description: >
 ---
 
@@ -53,4 +53,4 @@ For example, refer to the partial data above for [Christopher Nolan](http://www.
 This process is sped up by not checking a person's financial information more than once when they are in multiple movies in multiple roles.  As I go through the actors/actresses, I check if they have had other roles for which I need information in other movies and scrape that information as well.
 
 
-#Number of theaters: The movie Gran Torino tarted in 6 theaters in December 2016, expanded to 84 theaters on Christmas two weeks later, then to 2,808 in the beginning of January.  The movie had a total domestic gross of $148 million, but only made $271,720 its first weekend.
+Number of theaters: The movie Gran Torino tarted in 6 theaters in December 2016, expanded to 84 theaters on Christmas two weeks later, then to 2,808 in the beginning of January.  The movie had a total domestic gross of $148 million, but only made $271,720 its first weekend.
