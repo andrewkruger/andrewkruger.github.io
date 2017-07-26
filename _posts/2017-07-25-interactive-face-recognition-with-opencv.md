@@ -13,4 +13,4 @@ description: >
 
 These landmarks are indicated with red dots:
 
-<div class='gfyitem' data-id=IlliterateMetallicAmericanindianhorse></div>
+<iframe src='https://gfycat.com/ifr/IlliterateMetallicAmericanindianhorse' frameborder='0' scrolling='no' width='600' height='330' allowfullscreen></iframe>
