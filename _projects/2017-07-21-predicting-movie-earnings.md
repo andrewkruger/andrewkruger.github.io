@@ -54,3 +54,52 @@ This process is sped up by not checking a person's financial information more th
 
 
 Number of theaters: The movie Gran Torino tarted in 6 theaters in December 2016, expanded to 84 theaters on Christmas two weeks later, then to 2,808 in the beginning of January.  The movie had a total domestic gross of $148 million, but only made $271,720 its first weekend.
+
+
+
+## Trends in the Data
+
+We can look at individual features to see if there are any obvious relationships with gross earnings.
+
+### Number of Theaters
+
+Without looking at the data, the number of theaters a movie plays in will obviously play a large role in how much the movie will earn.  [Gran Torino](http://www.the-numbers.com/movie/Gran-Torino#tab=box-office) opened in 6 theaters on the weekend of December 12, 2008 and had a total gross of $271,720.  When it opened to 2,808 theaters the following January 9, it grossed $40,524,518.  Clearly this is because having more theaters allows more tickets.  But the gross is not necessarily linear with the number of theaters.
+
+<p align="center">
+<img src="/public/img/Number_of_Theaters.png?raw=true" alt="Gross vs. Number of Theaters"/>
+</p>
+
+
+The non-linear upward curve is quite apparent, and it's not just a second-order relationship.  Here's the same data with the number of theaters raised to the power of six:
+
+<p align="center">
+<img src="/public/img/Number_of_Theaters_6.png?raw=true" alt="Gross vs. Number of Theaters"/>
+</p>
+
+
+This means we should probably fit a sixth order polynomial.
+
+### 
+
+
+
+
+
+AMI
+Launch Instance
+COmmunity AMIS
+Udacity-dl
+All instance types - >GPU instances
+Add storage to Size 100 GB
+Add tags > Metis_gpu
+Select existing -> 
+
+
+Go to bash profile, add lines:
+export metis_gpu_url="..."
+alias ssh_gpu="..."
+
+
+In instance, type:  (in slack)
+
+
