@@ -79,27 +79,25 @@ The non-linear upward curve is quite apparent, and it's not just a second-order 
 
 This means we should probably fit a sixth order polynomial.
 
-### 
+#### Accumulated Gross
+
+There was a surprising trend when looking at the accumulated gross (sum of gross for all previous movies) as a function of number of movies an Executive Producer has done.  The 
+
+
+<p align="center">
+<img src="/public/img/Exec_Producers.png?raw=true" alt="Accumulated Gross vs. Number of Movies"/>
+</p>
 
 
 
 
 
-AMI
-Launch Instance
-COmmunity AMIS
-Udacity-dl
-All instance types - >GPU instances
-Add storage to Size 100 GB
-Add tags > Metis_gpu
-Select existing -> 
+<p align="center">
+<img src="/public/img/Exec_Producers_Rate.png?raw=true" alt="Accumulated Gross vs. Number of Movies"/>
+</p>
 
 
-Go to bash profile, add lines:
-export metis_gpu_url="..."
-alias ssh_gpu="..."
 
 
-In instance, type:  (in slack)
 
 
