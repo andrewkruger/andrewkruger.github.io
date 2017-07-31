@@ -81,19 +81,18 @@ This means we should probably fit a sixth order polynomial.
 
 #### Accumulated Gross
 
-There was a surprising trend when looking at the accumulated gross (sum of gross for all previous movies) as a function of number of movies an Executive Producer has done.  The 
-
+The accumulated gross of prior movies acts as an indicator of how well the movies typically do for cast and crew members.  If we plot the accumulated gross compared to the number of movies, the slope is the average gross per movie.  I expected the slopes for different crew to be somewhat similar, for the slopes to increase with number of movies, and for the trends to be very noisy.  However, I was surprised to see how consistent the trends were for different crew members.  Below is a plot showing the accumulated gross vs. number of movies for Executive Producers.  
 
 <p align="center">
 <img src="/public/img/Exec_Producers.png?raw=true" alt="Accumulated Gross vs. Number of Movies"/>
 </p>
 
+Executive Producers with a higher slope consistently have more successful movies than those with a lower slope.  As Executive Producer of the Marvel movies, Stan Lee has consistently higher grossing movies.  Bruce Berman's movies don't do as well as Stan Lee's, but do better than the Bob and Harvey Weinstein.  For the Weinstein Brothers, there are obvious changes in trend.  In the first half of their movies, they're doing increasingly well, and then something changed at around 100 movies so they haven't done quite as well, but are more consistent.  The change was that they were working for Miramax and in 2005 (at about 100 movies) they left to form [The Weinstein Company](https://en.wikipedia.org/wiki/The_Weinstein_Company).  
 
-
-
+This means the succeess of a crew member's movie doesn't necessarily change with number of movies.  We can thus try to use the average gross of the previous movies as an estimator for how their current movie will do. Below is the average gross of prior movies relative to number of movies.  
 
 <p align="center">
-<img src="/public/img/Exec_Producers_Rate.png?raw=true" alt="Accumulated Gross vs. Number of Movies"/>
+<img src="/public/img/Exec_Producers_Rate.png?raw=true" alt="Accumulated Gross Rate vs. Number of Movies"/>
 </p>
 
 
