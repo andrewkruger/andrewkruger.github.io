@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!--{% include teammenu.html %}-->
+{% include teammenu.html %}
 
 <br><br>
 
@@ -11,64 +11,6 @@ layout: default
 <h1 class="page-title">{{page.year}} Team</h1>
 
 <hr/>
-
-
-<script src="https://d3js.org/d3.v4.min.js"></script>
-
-  <script>
-    var svg = d3.select("body")
-      .append("svg")
-      .attr("width", 600)
-      .attr("height",400);
-
-    svg.append("line")
-      .attr("x1",0)
-      .attr("y1",0)
-      .attr("x2",600)
-      .attr("y2",400)
-      .attr("stroke", "red")
-      .attr("stroke-width",2)
-
-    svg.append("line")
-      .attr("x1",0)
-      .attr("y1",400)
-      .attr("x2",600)
-      .attr("y2",0)
-      .attr("stroke", "orange")
-
-    svg.append("rect")
-      .attr("x",50)
-      .attr("y",100)
-      .attr("width",400)
-      .attr("height",100)
-      .attr("fill","steelblue")
-
-    svg.append("circle")
-      .attr("cx",250)
-      .attr("cy",150)
-      .attr("r",50)
-      .attr("fill","white")
-
-    svg.append("text")
-      .attr("x",0)
-      .attr("y",300)
-      .attr("fill","red")
-      .attr("font-size",36)
-      .attr("font-weight","bold")
-      .text("D3!!!!!!")
-
-
-	var parts = ["This is", "my first", "data join!"]
-
-	  var sentence = d3.select("body").selectAll("p")
-	      .data(parts)
-	    .enter()
-	      .append("p")
-	      .text(function(d) { return d; });
-
-
-    //JS to go here
-  </script>
 
 <!-- Display team bios from relevant year -->
 
