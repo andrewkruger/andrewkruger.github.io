@@ -12,16 +12,6 @@ layout: default
 
 <hr/>
 
-<!-- Display team bios from relevant year -->
-
-{% for author in site.data.authors %}
-  {% for item in author[1].year %}
-    {% if item == page.year %}
-      {% include teammember.html %}
-      <br>
-    {% endif %}
-  {% endfor %}
-{% endfor %}
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
@@ -132,3 +122,14 @@ var circle = svg.selectAll(".anscombe-circle")
 
     //JS to go here
   </script>
+
+<!-- Display team bios from relevant year -->
+
+{% for author in site.data.authors %}
+  {% for item in author[1].year %}
+    {% if item == page.year %}
+      {% include teammember.html %}
+      <br>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
