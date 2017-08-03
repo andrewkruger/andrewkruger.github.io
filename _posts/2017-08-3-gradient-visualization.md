@@ -10,5 +10,5 @@ description: >
 A gradient is used to find the slope of a multi-dimensional field by the relationship
 
 $$
-\del F = 
+\bigtriangledown F = \frac{\nabla F}{\nabla x} \xhat
 $$
