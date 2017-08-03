@@ -45,3 +45,5 @@ The gradient is $$\nabla f(x,y) = 2x \hat{x} - 2y \hat{y}$$.  We can create the 
 <p align="center">
 <img src="/public/img/Vector_Field.png?raw=true" alt="Vector Field"/>
 </p>
+
+You can see the arrows are pointing from lower to higher values (darker to lighter).
