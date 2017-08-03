@@ -5,10 +5,11 @@ author: andrew
 tags: [blog]
 description: >
 ---
+\usepackage{bbm}
 
 
 A gradient is used to find the slope of a multi-dimensional field by the relationship
 
-\begin{equation*}
+$$
 \bigtriangledown F = \frac{\nabla F}{\nabla x} \xhat
-\end{equation*}
+$$
