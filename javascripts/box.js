@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
+
     <title>SVG</title>
     <meta charset="utf-8">
 
@@ -16,7 +14,7 @@
       }
 
     </style>
-  </head>
+
   <body>
     <svg width="600" height="400">
       <line x1="0" y1="0" x2="600" y2="400" stroke="red" stroke-width="2" />
@@ -31,4 +29,3 @@
       //JS to go here
     </script>
   </body>
-</html>
