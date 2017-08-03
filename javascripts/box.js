@@ -15,7 +15,7 @@
     </style>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
-  <script type="text/javascript">
+  <script type="text/html">
     <svg width="600" height="400">
       <line x1="0" y1="0" x2="600" y2="400" stroke="red" stroke-width="2" />
       <line x1="0" y1="400" x2="600" y2="0" stroke="orange" stroke-width="2" />
