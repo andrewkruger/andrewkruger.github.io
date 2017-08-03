@@ -15,5 +15,5 @@ $$
 
 
 $$
-\nabla F = \frac{\partial F}{\partial x} x\hat + \frac{\partial F}{\partial y} y\hat + \frac{\partial F}{\partial z} z\hat
+\nabla F = \frac{\partial F}{\partial x} \hat{x} + \frac{\partial F}{\partial y} \hat{y} + \frac{\partial F}{\partial z} \hat{z}
 $$
