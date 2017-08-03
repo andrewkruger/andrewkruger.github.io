@@ -37,13 +37,14 @@ The gradient is $$\nabla f(x,y) = 2x \hat{x} - 2y \hat{y}$$.  We can create the 
 ~~~py
     U = 2*X
     V = -2*Y
+    plt.imshow(field, extent=(-10.5,9.5,-10.5,9.5))
     Q = plt.quiver(X, Y, U, V, units='width')
     qk = plt.quiverkey(Q, 0.9, 0.9, 2, r'$2 \frac{m}{s}$', labelpos='E',
         coordinates='figure')
 ~~~
 
 <p align="center">
-<img src="/public/img/Vector_Field.png?raw=true" alt="Vector Field"/>
+<img src="/public/img/Vector_Field_Overlay.png?raw=true" alt="Vector Field"/>
 </p>
 
 You can see the arrows are pointing from lower to higher values (darker to lighter).
