@@ -15,5 +15,5 @@ $$
 
 
 $$
-\nabla F = \frac{F}{x}
+\nabla F = \frac{\partial F}{\partial x}
 $$
