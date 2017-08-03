@@ -15,5 +15,5 @@ $$
 
 
 $$
-F = \frac{\nabla F}{\nabla x} \xhat
+F = \frac{F}{x}
 $$
