@@ -1,5 +1,4 @@
 
-    <title>SVG</title>
     <meta charset="utf-8">
 
     <style type="text/css">
