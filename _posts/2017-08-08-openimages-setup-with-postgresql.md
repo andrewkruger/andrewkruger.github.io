@@ -48,7 +48,7 @@ In each of the folders `annotations_human_2017_07`, `annotations_human_bbox_2017
 After starting PostgreSQL from the terminal by the command `psql`, the terminal should show the username and look something like:
 
 ~~~sql
-    andrew=#
+    andrew=`#`
 ~~~
 
 A database can be created to contain the OpenImages database, which we'll call `openimages` by:
@@ -60,7 +60,7 @@ A database can be created to contain the OpenImages database, which we'll call `
 If you enter `\l`, you should see that the database `openimages` now exists.  You can connect to the database by:
 
 ~~~sql
-    andrew=# \c openimages
+    andrew=`#` \c openimages
     openimages=#
 ~~~
 
