@@ -48,7 +48,7 @@ In each of the folders `annotations_human_2017_07`, `annotations_human_bbox_2017
 After starting PostgreSQL from the terminal by the command `psql`, the terminal should show the username and look something like:
 
 ~~~sql
-    andrew=`#`
+    andrew=#
 ~~~
 
 A database can be created to contain the OpenImages database, which we'll call `openimages` by:
@@ -60,7 +60,7 @@ A database can be created to contain the OpenImages database, which we'll call `
 If you enter `\l`, you should see that the database `openimages` now exists.  You can connect to the database by:
 
 ~~~sql
-    andrew=`#` \c openimages
+    andrew=# \c openimages
     openimages=#
 ~~~
 
@@ -69,7 +69,7 @@ The terminal prompt should change to `openimages=#`, which shows you are now in 
 
 Next, create the tables.  First, a table for the image metadata:
 
-~~~sh
+~~~sql
     CREATE TABLE Images (
         ImageID CHAR(16),
         Subset VARCHAR,
@@ -88,7 +88,7 @@ Next, create the tables.  First, a table for the image metadata:
 
 A table for labels:
 
-~~~sh
+~~~sql
     CREATE TABLE Labels (
         ImageID CHAR(16) REFERENCES Images(ImageID),
         Source VARCHAR,
@@ -100,7 +100,7 @@ A table for labels:
 
 Finally, a table to map the `LabelName` to a display name that is a description of the label:
 
-~~~sh
+~~~sql
     CREATE TABLE Dict (
         LabelName VARCHAR,
         DisplayLabelName VARCHAR,
@@ -112,14 +112,14 @@ Finally, a table to map the `LabelName` to a display name that is a description 
 
 Upload the image metadata into the `Images` table:
 
-~~~sh
+~~~sql
     \COPY Images FROM 'images_2017_07/train/images.csv' DELIMITER ',' CSV HEADER;
     \COPY Images FROM 'images_2017_07/validation/images.csv' DELIMITER ',' CSV HEADER;
 ~~~
 
 Upload the image metadata into the `Labels` table:
 
-~~~sh
+~~~sql
     \COPY Labels FROM 'annotations_human_2017_07/train/annotations-human.csv' DELIMITER ',' CSV HEADER;
     \COPY Labels FROM 'annotations_human_2017_07/test/annotations-human.csv' DELIMITER ',' CSV HEADER;
     \COPY Labels FROM 'annotations_human_2017_07/validation/annotations-human.csv' DELIMITER ',' CSV HEADER;
@@ -130,7 +130,7 @@ Upload the image metadata into the `Labels` table:
 
 Upload the label name descriptions:
 
-~~~sh
+~~~sql
     \COPY Dict FROM 'classes_2017_07/class-descriptions.csv' DELIMITER ',' CSV HEADER;
 ~~~
 
@@ -139,7 +139,7 @@ Upload the label name descriptions:
 
 Let's look at example data for each of the tables.  First, let's look at labels.
 
-~~~sh
+~~~sql
     openimages=# SELECT * FROM Images LIMIT 5;
 
     imageid          | source | labelname  | confidence 
@@ -154,7 +154,7 @@ Let's look at example data for each of the tables.  First, let's look at labels.
 
 However, let's limit to positively identified objects by limiting to rows where the confidence is 1.
 
-~~~sh
+~~~sql
     openimages=# SELECT * FROM Images WHERE Labels.Confidence = 1 LIMIT 5;
 
     imageid          | source | labelname | confidence 
@@ -169,12 +169,12 @@ However, let's limit to positively identified objects by limiting to rows where 
 
 Same for the label descriptions:
 
-~~~sh
+~~~sql
     openimages=# SELECT * FROM Dict LIMIT 5;
 
     labelname   |  displaylabelname   
     ------------+---------------------
-    /m/0100nhbf | Sprenger\'s tulip
+    /m/0100nhbf | Sprenger's tulip
     /m/0104x9kv | Vinegret
     /m/0105jzwx | Dabu-dabu
     /m/0105ld7g | Pistachio ice cream
@@ -185,7 +185,7 @@ Same for the label descriptions:
 
 For the images, the rows are wide with many columns, so turn on the extended display to make it readable.
 
-~~~sh
+~~~sql
     openimages=# \x on
     openimages=# SELECT * FROM Images LIMIT 1;
 
@@ -207,7 +207,7 @@ For the images, the rows are wide with many columns, so turn on the extended dis
 
 If we want to find a specific type of object, we can look for the label names that match the object.  For example, if you want pictures of hands:
 
-~~~sh
+~~~sql
     openimages=# SELECT * FROM dict WHERE DisplayLabelName LIKE 'Hand';
 
     labelname | displaylabelname 
@@ -219,7 +219,7 @@ If we want to find a specific type of object, we can look for the label names th
 If we want things that include the word "hand", we can use the `%` operator:
 
 
-~~~sh
+~~~sql
     openimages=# SELECT * FROM dict WHERE DisplayLabelName LIKE '%hand%' LIMIT 5;
 
     labelname  | displaylabelname  
@@ -250,7 +250,7 @@ If we want it to start with "Hand", don't use `%` at the beginning.
 
 Let's say you want pictures that have hands, we can search for images with the `LabelName` for "Hand" shown above (/m/0k65p).
 
-~~~sh
+~~~sql
     openimages=# SELECT * FROM Labels WHERE LabelName='/m/0k65p' LIMIT 5;
 
     imageid          | source | labelname | confidence 
@@ -266,7 +266,7 @@ Let's say you want pictures that have hands, we can search for images with the `
 It would be better to get the actual URLS for the images (`OriginalLandingURL`).  To do this, we need to join the `Images` with `Labels`
 
 
-~~~sh
+~~~sql
     openimages=# SELECT originalurl FROM Labels
             INNER JOIN Images ON Labels.ImageID = Images.ImageID
             WHERE LabelName='/m/0k65p' LIMIT 5;
