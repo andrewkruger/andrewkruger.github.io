@@ -174,7 +174,7 @@ Same for the label descriptions:
 
     labelname   |  displaylabelname   
     ------------+---------------------
-    /m/0100nhbf | Sprenger's tulip
+    /m/0100nhbf | Sprenger``'``s tulip
     /m/0104x9kv | Vinegret
     /m/0105jzwx | Dabu-dabu
     /m/0105ld7g | Pistachio ice cream
