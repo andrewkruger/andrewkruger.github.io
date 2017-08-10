@@ -209,3 +209,16 @@ As expected, the model was able to classify objects correctly even when their fe
 </section>
 
 
+It is also able to distinguish between things that have similar features, for example the difference between my younger daughter when she a "baby" and my older daughter as a "girl".
+
+<section>
+<img align="left" src="/public/img/cifar100/baby.jpg?raw=true" alt="Baby" style="width:250px"/><img align="left" src="/public/img/cifar100/baby.png?raw=true" alt="Baby Prediction" style="width:250px"/>
+</section>
+
+<section>
+<img align="left" src="/public/img/cifar100/girl.jpg?raw=true" alt="Girl" style="height:250px"/><img align="left" src="/public/img/cifar100/girl.png?raw=true" alt="Girl Prediction" style="width:250px"/>
+</section>
+
+
+
+
