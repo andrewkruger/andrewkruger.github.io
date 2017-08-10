@@ -216,7 +216,7 @@ It is also able to distinguish between things that have similar features, for ex
 <img src="/public/img/cifar100/girl.png?raw=true" alt="Girl Prediction" style="width:300px"/>
 </p>
 
-As shown above in the video, it can identify multiple objects in the image.
+As shown above in the video, it can identify multiple objects in the image.  Another example is this house in the mountains:
 
 
 <p align="center">
