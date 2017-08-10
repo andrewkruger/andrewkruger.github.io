@@ -51,3 +51,5 @@ Different objects have similar structure elements (i.e. vertical/horizontal/slan
 <p align="center">
 <img src="/public/img/cifar100/kangaroo_kangaroo.png?raw=true" alt="Kangaroo Prediction"/>
 </p>
+
+Now the highest prediction is a kangaroo.  This shows that the while a deeper network enables it to recognize more complicated structures, it is absolutely necessary not to limit the number of structures that can be detected in the first place.
