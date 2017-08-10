@@ -10,12 +10,12 @@ description: >
 ---
 
 
-## CIFAR-10 and -100
+## MNIST, CIFAR-10 and -100
+
+There are standard datasets used to test new machine learning programs and compare their performance to previous models.  [MNIST](http://yann.lecun.com/exdb/mnist/) is a set 28x28 pixel images of handwritten numbers, with 60,000 training and 10,000 test images.  The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The [github repo for Keras](https://github.com/fchollet/keras) has example Convolutional Neural Networks (CNN) for [MNIST](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [CIFAR-10](https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py).  
 
 
-The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The [github repo for Keras](https://github.com/fchollet/keras) has an [example Convolutional Neural Network (CNN) for CIFAR-10](https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py) that has ____________.  
-
-
+My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Amazon Web Services (AWS) g2.2xlarge EC2 instance.  The main limitation is memory, which means the neural network can't be as deep as other CNNs that would perform better.  But creating a CNN that fits on smaller GPUs is beneficial for people who would want to use CIFAR-100 to learn how to create better neural networks, as is commonly done with MNIST and CIFAR-10.
 
 
 <br>
