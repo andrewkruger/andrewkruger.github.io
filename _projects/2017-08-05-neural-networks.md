@@ -197,7 +197,7 @@ The final model had a validation accuracy of 0.64, which depends on the probabil
 As expected, the model was able to classify objects correctly even when their features were displayed differently.  For example, the following are three kangaroos in completely different positions it correctly classified:
 
 <p>
-<img align="left" src="/public/img/cifar100/kangaroo1.jpg?raw=true" alt="Jumping Kangaroo" style="width:250px"/><img align="left" src="/public/img/cifar100/kangaroo1_pred.png?raw=true" alt="Jumping Kangaroo Prediction" style="width:250px"/>
+<img align="left" src="/public/img/cifar100/kangaroo1.jpg?raw=true" alt="Jumping Kangaroo" style="width:300px"/><img align="left" src="/public/img/cifar100/kangaroo1_pred.png?raw=true" alt="Jumping Kangaroo Prediction" style="width:300px"/>
 </p>
 <p>
 <img align="left" src="/public/img/cifar100/kangaroo2.jpg?raw=true" alt="Laying Kangaroo" style="width:250px"/><img align="left" src="/public/img/cifar100/kangaroo2_pred.png?raw=true" alt="Laying Kangaroo Prediction" style="width:250px"/>
