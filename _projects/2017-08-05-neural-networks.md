@@ -16,6 +16,7 @@ The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.htm
 
 
 
+<br>
 
 ## Convolutional Neural Networks
 
@@ -35,7 +36,7 @@ An Exponential Linear Unit (ELUs) is an activation function that has been shown 
 ## Flask and D3 App
 
 
-I created an app that would take in an online image and use the CNN model to predict what the image was.  It used [Flask](http://flask.pocoo.org/), which is used to make python-based webpages, and [D3](https://d3js.org/), a JavaScript library used to create visuals.  After inputting the URL of the image, it returns a graph showing the probabilities of the top five predictions.  ([Higher-resolution on YouTube](https://www.youtube.com/watch?v=oLxNxCC-G6Q&feature=youtu.be)).
+I made a basic app that takes in an online image and use the CNN model to predict what the image was.  It used [Flask](http://flask.pocoo.org/), which is used to make python-based webpages, and [D3](https://d3js.org/), a JavaScript library used to create visuals.  After inputting the URL of the image, it returns a graph showing the probabilities of the top five predictions.  ([Higher-resolution on YouTube](https://www.youtube.com/watch?v=oLxNxCC-G6Q&feature=youtu.be)).
 
 <p align="center">
 <iframe src='https://gfycat.com/ifr/LikelyAdorableKronosaurus' frameborder='0' scrolling='no' width='600' height='375' allowfullscreen></iframe>
@@ -53,6 +54,7 @@ The prediction:
 <img src="/public/img/cifar100/bridge_castle_prediction.png?raw=true" alt="Bridge Castle Prediction" style="width:500px"/>
 </p>
 
+Although the model was trained to recognize images of single objects, it was able to recognize both the bridge and the castle.
 
 <br>
 
