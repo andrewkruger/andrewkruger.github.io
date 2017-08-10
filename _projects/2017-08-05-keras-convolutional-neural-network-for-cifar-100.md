@@ -8,7 +8,7 @@ description: >
 ---
 
 
-## MNIST, CIFAR-10 and -100
+## Objective
 
 There are standard datasets used to test new machine learning programs and compare their performance to previous models.  [MNIST](http://yann.lecun.com/exdb/mnist/) is a set 28x28 pixel images of handwritten numbers, with 60,000 training and 10,000 test images.  The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The [github repo for Keras](https://github.com/fchollet/keras) has example Convolutional Neural Networks (CNN) for [MNIST](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [CIFAR-10](https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py).  
 
@@ -20,13 +20,31 @@ My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Ama
 
 ## Convolutional Neural Networks
 
-However, there is a major downside to training on images that have been pre-cropped and have the objects in a consistent position: the NN expects that the number should always be that size and in that position.  It's fast and easy to get a NN to correctly classify a number in an image using the MNIST dataset, but that model won't necessarily translate to detect numbers well in an arbitrary image.  A (poor) fix to this problem would be to scan images, cropping the image into boxes and seeing if a number is inside that box, but that's inefficient.
+
+<p align="center">
+<img src="/public/img/cifar100/regression.png?raw=true" alt="Sigmoid Activation Function"/>
+</p>
+
+A neural network (NN) is a series of layered neurons that have weights and biases that can "learn".  When an input is entered into the NN, it applies filters and weights to the input, with the outputs being fed to further layers of weights, and so on until a final output is made.  The goal is the make the output correctly predict the classification of an object, which it won't at first.  But after it has made a an incorrect prediction, a backpropagation through the network updates the weights to increase the probability of returning the correct output.  This process of predicting and updating the weights is repeated for new inputs, and the network learns the optimal weights that produces the most accurate model.
+
+
+
+
+
+Object recognition is a common goal when learning machine learning and neural networks.  The MNIST dataset has all of the numbers centered and cropped the same, making consistent images that can be predicted by basic models.  However, object recognition becomes more difficult for images of objects that are inconsistent with each other, including shade, angle, crop size, position of object, etc.  
+
+
+Increasing the number of layers allows for more complex models (analogous to polynomial fits compared to linear fits).
+
+<br>
+
+## Data Augmentation
+
+There is a major downside to training on images that have been pre-cropped and have the objects in a consistent position: the NN expects that the number should always be that size and in that position.  It's fast and easy to get a NN to correctly classify a number in an image using the MNIST dataset, but that model won't necessarily translate to detect numbers well in an arbitrary image.  A (poor) fix to this problem would be to scan images, cropping the image into boxes and seeing if a number is inside that box, but that's inefficient.
 
 Instead, we can change the MNIST data so the numbers are no longered all centered, or the same size, or even tilted the same way.  This teaches the NN that the numbers don't have to be that size or specific position in the image, and makes it more robust in detecting numbers in non-conforming images.  (It will also expand the size of our training dataset, which is why this is called [*data augmentation*.](http://machinelearningmastery.com/image-augmentation-deep-learning-keras/))  While this will make the NN take longer to train, it will make it faster and better at detecting numbers in other images.
 
 
-
-Increasing the number of layers allows for more complex models (analogous to polynomial fits compared to linear fits).
 
 <br>
 
@@ -121,12 +139,6 @@ The neural network ultimately needs to output the probability of the different c
     model.add(Dense(100))
     model.add(Activation('softmax'))
 ~~~
-
-
-
-
-
-
 
 
 
