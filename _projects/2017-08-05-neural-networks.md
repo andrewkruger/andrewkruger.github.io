@@ -37,15 +37,21 @@ A neuron's "activation" is determined by an *activation function*.  An example *
 <img src="/public/img/cifar100/sigmoid.png?raw=true" alt="Sigmoid Activation Function"/>
 </p>
 
-where $$x$$ is the dot product of the input and the weights.  When $$x$$ is small, $$\sigma$$ will be closer to zero (neuron is not activated), but a large $$x$$ will make $$\sigma$$ closer to one (neuron gets activated).  So a single neuron acts similar to a linear classifier.
+where $$x$$ is the dot product of the input and the weights.  When $$x$$ is small, $$\sigma$$ will be closer to zero (neuron is not activated), but a large $$x$$ will make $$\sigma$$ closer to one (neuron gets activated).  So a single neuron acts similar to a linear classifier.  However, if $$x$$ is very large or small, the gradient is small, so even large changes in $$x$$ in the earlier layers may show essentially no change in the neural network's output.  This could make an important parameter or filter useless (unlearnable) if the initial weights make $$x$$ too large or small.
 
-Another common activation function is the Rectified Linear Unit (ReLU) which follows
+To fix this *vanishing gradient problem*, another common activation function is the Rectified Linear Unit (ReLU) which follows
 
 <p align="center">
 <img src="/public/img/cifar100/relu.png?raw=true" alt="ReLU Activation Function"/>
 </p>
 
 In this case, if $$x$$ is less than 0, then the *activation function* is just zero.  Otherwise, it increases linearly with $$x$$ and doesn't have a maximum of one.  These characteristics help the model weights converge faster, although there's an added risk that if the learning rate is too high, a weight change could make $$x$$ less than zero.  When this happens, there is a loss of information (can't do gradient descent if $$x$$ is always zero!) that can keep $$x$$ permanently zero, and neurons in the network may be "dead".
+
+Another activiation function that has been shown to speed up the learning process and create a neural network with high accuracy, specifically on the CIFAR 100 dataset, is the Exponential Linear Unit (ELU) ([Clevert et al. 2015](https://arxiv.org/pdf/1511.07289.pdf)).  The ELU follows the relationship
+
+<p align="center">
+<img src="/public/img/cifar100/elu.png?raw=true" alt="ELU Activation Function"/>
+</p>
 
 The images are on an 8-bit grayscale with 256 intensities (in the range 0-255).  However, using numbers this large can result in *activation saturation*.  Since $$x$$ is the dot product of the input and the weights, if the inputs are larger, the weights should be smaller.  In the case of the sigmoid activation function, starting out weights that aren't small results in the sigmoid will be forced to be one for all inputs.  Thus some weights may not be corrected with those neurons always being activated.  Likewise with ReLU, the $$x$$ can be a high value regardless of the weight.  When this model was fit to un-normalized data, For this reason, the images are normalized so they are in the range 0-1 instead of 0-255 by dividing by 255.  
 
@@ -64,9 +70,7 @@ print(x_test.shape[0], 'test samples')
 An Exponential Linear Unit (ELUs) is an activation function that has been shown to help speed up the learning and return high accuracy of a NN, specifically on the CIFAR 100 dataset ([Clevert et al. 2015](https://arxiv.org/pdf/1511.07289.pdf)).  The CNNs used in the paper are deep, with up to 18 convolutional layers.
 
 
-<p align="center">
-<img src="/public/img/cifar100/elu.png?raw=true" alt="ELU Activation Function"/>
-</p>
+
 
 
 For updating the weights in backpropagation, the derivative is
