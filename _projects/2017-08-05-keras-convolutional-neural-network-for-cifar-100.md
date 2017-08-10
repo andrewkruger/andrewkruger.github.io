@@ -21,7 +21,13 @@ My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Ama
 ## Convolutional Neural Networks
 
 
-A regular regression model take in inputs (x1, x2, etc.) and finds the optimal weights (beta values) that result in the least amount of loss from the expected value.
+A regular regression model take in inputs ($$x_1$$, $$x_2$$, etc.) and finds the optimal weights (beta values) that result in the least amount of loss from the expected value, $$y$$.  A linear regression model would follow the relationship
+
+<p align="center">
+<img src="/public/img/cifar100/linear.png?raw=true" alt="Linear Regression"/>
+</p>
+
+This relationship between the input and output can be visualized by a diagram:
 
 <p align="center">
 <img src="/public/img/cifar100/regression.png?raw=true" alt="Sigmoid Activation Function" style="width:300px"/>
