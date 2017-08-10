@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Convolutional Neural Network and CIFAR 100"
+title: "Keras Convolutional Neural Network and CIFAR 100"
 author: andrew
 tags: [projects]
 img: Movies.png
@@ -11,7 +11,9 @@ description: >
 ## CIFAR-10 and -100
 
 
-The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The 
+The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The [github repo for Keras](https://github.com/fchollet/keras) has an [example Convolutional Neural Network (CNN) for CIFAR-10](https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py) that has ____________.  
+
+
 
 
 
@@ -21,8 +23,15 @@ However, there is a major downside to training on images that have been pre-crop
 
 Instead, we can change the MNIST data so the numbers are no longered all centered, or the same size, or even tilted the same way.  This teaches the NN that the numbers don't have to be that size or specific position in the image, and makes it more robust in detecting numbers in non-conforming images.  (It will also expand the size of our training dataset, which is why this is called [*data augmentation*.](http://machinelearningmastery.com/image-augmentation-deep-learning-keras/))  While this will make the NN take longer to train, it will make it faster and better at detecting numbers in other images.
 
-But then how is the NN detecting the numbers in larger images if it's not scanning them?  I'm glad you asked.  In simple terms, it's looking at the image in chunks, and only keeping the most interesting parts.  For exmaple
 
+<br>
+
+## The Model
+
+An Exponential Linear Unit (ELUs) is an activation function that has been shown to help speed up the learning and return high accuracy of a NN, specifically on the CIFAR 100 dataset ([Clevert et al. 2015](https://arxiv.org/pdf/1511.07289.pdf)).  The CNNs used in the paper are deep, with up to 18 convolutional layers.
+
+
+[![Object Recognition Demo](https://img.youtube.com/vi/oLxNxCC-G6Q/0.jpg)](https://www.youtube.com/watch?v=oLxNxCC-G6Q)
 
 <br>
 
@@ -57,4 +66,6 @@ Different objects have similar structure elements (i.e. vertical/horizontal/slan
 </p>
 
 Now the highest prediction is a kangaroo.  This shows that the while a deeper network enables it to recognize more complicated structures, it is absolutely necessary not to limit the number of structures that can be used.
+
+
 
