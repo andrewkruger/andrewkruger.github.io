@@ -4,6 +4,8 @@ title: "Keras Convolutional Neural Network and CIFAR 100"
 author: andrew
 tags: [projects]
 img: cifar100/Kangaroo_gray.jpg
+header-includes:
+- \usepackage{amsmath}
 description: >
 ---
 
