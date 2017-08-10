@@ -32,7 +32,7 @@ Increasing the number of layers allows for more complex models (analogous to pol
 
 <br>
 
-### Activation Functions
+## Activation Functions
 
 A neuron's "activation" is determined by an *activation function*.  An example activation function is a sigmoid function which follows the relationship 
 
@@ -113,6 +113,7 @@ Continuing to two following stacks with 2x2 pooling and dropouts after each:
     model.add(Dropout(0.5))
 ~~~
 
+The neural network ultimately needs to output the probability of the different classes in an array.  After the convolution stacks, the probabilities need to be *flattened* to a 1D feature vector.  The *dense* layers are fully-connected layers that apply transformations and change the dimensions.  The final dense layer needs to be the same length as the number of classes, and gives the probability of each class.
 
 ~~~py
     model.add(Flatten())
@@ -123,7 +124,6 @@ Continuing to two following stacks with 2x2 pooling and dropouts after each:
     model.add(Activation('softmax'))
 ~~~
 
-The last layer, the output layer, doesn't use an activation function because it is returning the probabilities for each class.
 
 
 
