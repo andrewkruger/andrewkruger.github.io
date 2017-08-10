@@ -199,5 +199,5 @@ As expected, the model was able to classify objects correctly even when their fe
 
 <p align="center">
 <img src="/public/img/cifar100/kangaroo1.jpg?raw=true" alt="Jumping Kangaroo" style="width:250px"/>
-<img src="/public/img/cifar100/kangaroo1_pred.png?raw=true" alt="Jumping Kangaroo Prediction" style="width:300"/>
+<img src="/public/img/cifar100/kangaroo1_pred.png?raw=true" alt="Jumping Kangaroo Prediction" style="width:200"/>
 </p>
