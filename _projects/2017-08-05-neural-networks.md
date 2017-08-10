@@ -34,12 +34,16 @@ Instead, we can change the MNIST data so the numbers are no longered all centere
 An Exponential Linear Unit (ELUs) is an activation function that has been shown to help speed up the learning and return high accuracy of a NN, specifically on the CIFAR 100 dataset ([Clevert et al. 2015](https://arxiv.org/pdf/1511.07289.pdf)).  The CNNs used in the paper are deep, with up to 18 convolutional layers.
 
 
-$$
-f(x)=\begin{cases}
-1, & \text{if $x<0$}.\\
-0, & \text{otherwise}.
-\end{cases}
-$$
+<p align="center">
+<img src="/public/img/cifar100/elu.png?raw=true" alt="ELU Activation Function"/>
+</p>
+
+
+For updating the weights in backpropagation, the derivative is
+
+<p align="center">
+<img src="/public/img/cifar100/elu_diff.png?raw=true" alt="ELU Derivative"/>
+</p>
 
 
 
