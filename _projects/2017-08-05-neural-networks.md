@@ -37,8 +37,8 @@ An Exponential Linear Unit (ELUs) is an activation function that has been shown 
 
 I created an app that would take in an online image and use the CNN model to predict what the image was.  It used [Flask](http://flask.pocoo.org/), which is used to make python-based webpages, and [D3](https://d3js.org/), a JavaScript library used to create visuals.  After inputting the URL of the image, it returns a graph showing the probabilities of the top five predictions.  It can be seen in action on YouTube:
 
-<p align="center">
-[![Object Recognition Demo](https://img.youtube.com/vi/oLxNxCC-G6Q/0.jpg)](https://www.youtube.com/watch?v=oLxNxCC-G6Q)
+<p align="center">"
+<iframe src='https://gfycat.com/ifr/LikelyAdorableKronosaurus' frameborder='0' scrolling='no' width='1152' height='720' allowfullscreen></iframe>
 </p>
 
 The image used:
