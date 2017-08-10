@@ -21,8 +21,10 @@ My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Ama
 ## Convolutional Neural Networks
 
 
+A regular regression model take in inputs (x1, x2, etc.) and finds the optimal weights (beta values) that result in the least amount of loss from the expected value.
+
 <p align="center">
-<img src="/public/img/cifar100/regression.png?raw=true" alt="Sigmoid Activation Function"/>
+<img src="/public/img/cifar100/regression.png?raw=true" alt="Sigmoid Activation Function" style="width:300px"/>
 </p>
 
 A neural network (NN) is a series of layered neurons that have weights and biases that can "learn".  When an input is entered into the NN, it applies filters and weights to the input, with the outputs being fed to further layers of weights, and so on until a final output is made.  The goal is the make the output correctly predict the classification of an object, which it won't at first.  But after it has made a an incorrect prediction, a backpropagation through the network updates the weights to increase the probability of returning the correct output.  This process of predicting and updating the weights is repeated for new inputs, and the network learns the optimal weights that produces the most accurate model.
