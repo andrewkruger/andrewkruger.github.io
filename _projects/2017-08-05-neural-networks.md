@@ -3,7 +3,7 @@ layout: project
 title: "Keras Convolutional Neural Network and CIFAR 100"
 author: andrew
 tags: [projects]
-img: cifar100/Kangaroo_gray.png
+img: cifar100/Kangaroo_gray.jpg
 description: >
 ---
 
