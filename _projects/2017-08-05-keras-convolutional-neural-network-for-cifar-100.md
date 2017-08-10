@@ -21,17 +21,20 @@ My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Ama
 ## Convolutional Neural Networks
 
 
-A regular regression model take in inputs ($$x_1$$, $$x_2$$, etc.) and finds the optimal weights (beta values) that result in the least amount of loss from the expected value, $$y$$.  A linear regression model would follow the relationship
+A regular classifier model take in inputs ($$x_1$$, $$x_2$$, etc.) and finds weights that result in the least amount of loss when comparing the predicted classes to the real class, $$y$$.  These weights are used in the [*activation function*, discussed below,](#activation_function) that return a probability of the input's classification.
 
-<p align="center">
-<img src="/public/img/cifar100/linear.png?raw=true" alt="Linear Regression"/>
-</p>
-
-This relationship between the input and output can be visualized by a diagram:
+This relationship between the inputs and output classification can be visualized by a diagram:
 
 <p align="center">
 <img src="/public/img/cifar100/regression.png?raw=true" alt="Sigmoid Activation Function" style="width:400px"/>
 </p>
+
+A neural network has layers between the inputs and outputs.  Looking at this in a step-by-step approach, weights are still being applied to each of the inputs, and this creates new "responses" that aren't trying to immediately predict the class.  These "responses" are in a hidden layer. 
+
+<p align="center">
+<img src="/public/img/cifar100/neural_network.png?raw=true" alt="Neural Network"/>
+</p>
+
 
 A neural network (NN) is a series of layered neurons that have weights and biases that can "learn".  When an input is entered into the NN, it applies filters and weights to the input, with the outputs being fed to further layers of weights, and so on until a final output is made.  The goal is the make the output correctly predict the classification of an object, which it won't at first.  But after it has made a an incorrect prediction, a backpropagation through the network updates the weights to increase the probability of returning the correct output.  This process of predicting and updating the weights is repeated for new inputs, and the network learns the optimal weights that produces the most accurate model.
 
