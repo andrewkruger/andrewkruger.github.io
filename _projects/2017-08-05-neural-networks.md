@@ -34,7 +34,7 @@ Instead, we can change the MNIST data so the numbers are no longered all centere
 A neuron's "activation" is determined by an *activation function*.  An example *activation function* is a sigmoid function which follows the relationship 
 
 <p align="center">
-<img src="/public/img/cifar100/relu.png?raw=true" alt="Sigmoid Activation Function"/>
+<img src="/public/img/cifar100/sigmoid.png?raw=true" alt="Sigmoid Activation Function"/>
 </p>
 
 where $$x$$ is the dot product of the input and the weights.  When $$x$$ is small, $$\sigma$$ will be closer to zero (neuron is not activated), but a large $$x$$ will make $$\sigma$$ closer to one (neuron gets activated).  So a single neuron acts similar to a linear classifier.
