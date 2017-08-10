@@ -199,10 +199,10 @@ As expected, the model was able to classify objects correctly even when their fe
 <p align="center">
 <img src="/public/img/cifar100/kangaroo1.jpg?raw=true" alt="Jumping Kangaroo" style="width:300px"/>
 <img src="/public/img/cifar100/kangaroo1_pred.png?raw=true" alt="Jumping Kangaroo Prediction" style="width:300px"/>
-<img src="/public/img/cifar100/kangaroo2.jpg?raw=true" alt="Laying Kangaroo" style="width:310px"/>
-<img src="/public/img/cifar100/kangaroo2_pred.png?raw=true" alt="Laying Kangaroo Prediction" style="width:310px"/>
-<img src="/public/img/cifar100/kangaroo3.jpg?raw=true" alt="Kangaroo Face" style="width:200px"/>
-<img src="/public/img/cifar100/kangaroo3_pred.png?raw=true" alt="Kangaroo Face Prediction" style="width:250px"/>
+<img src="/public/img/cifar100/kangaroo2.jpg?raw=true" alt="Laying Kangaroo" style="width:300px"/>
+<img src="/public/img/cifar100/kangaroo2_pred.png?raw=true" alt="Laying Kangaroo Prediction" style="width:300px"/>
+<img src="/public/img/cifar100/kangaroo3.jpg?raw=true" alt="Kangaroo Face" style="width:250px"/>
+<img src="/public/img/cifar100/kangaroo3_pred.png?raw=true" alt="Kangaroo Face Prediction" style="width:300px"/>
 </p>
 
 
@@ -210,13 +210,19 @@ As expected, the model was able to classify objects correctly even when their fe
 It is also able to distinguish between things that have similar features, for example the difference between my younger daughter when she a "baby" and my older daughter as a "girl".
 
 <p align="center">
-<img src="/public/img/cifar100/baby.jpg?raw=true" alt="Baby" style="width:250px"/>
-<img src="/public/img/cifar100/baby.png?raw=true" alt="Baby Prediction" style="width:250px"/>
+<img src="/public/img/cifar100/baby.jpg?raw=true" alt="Baby" style="width:300px"/>
+<img src="/public/img/cifar100/baby.png?raw=true" alt="Baby Prediction" style="width:300px"/>
 <img src="/public/img/cifar100/girl.jpg?raw=true" alt="Girl" style="height:250px"/>
-<img src="/public/img/cifar100/girl.png?raw=true" alt="Girl Prediction" style="width:250px"/>
+<img src="/public/img/cifar100/girl.png?raw=true" alt="Girl Prediction" style="width:300px"/>
 </p>
 
+As shown above in the video, it can identify multiple objects in the image.
 
+
+<p align="center">
+<img src="/public/img/cifar100/mountain_house.jpg?raw=true" alt="Baby" style="width:300px"/>
+<img src="/public/img/cifar100/mountain_house.png?raw=true" alt="Baby Prediction" style="width:300px"/>
+</p>
 
 
 
