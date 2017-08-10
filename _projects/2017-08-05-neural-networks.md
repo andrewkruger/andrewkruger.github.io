@@ -205,7 +205,7 @@ As expected, the model was able to classify objects correctly even when their fe
 </section>
 
 <section>
-<img align="left" src="/public/img/cifar100/kangaroo3.jpg?raw=true" alt="Kangaroo Face" style="width:250px"/><img align="left" src="/public/img/cifar100/kangaroo3_pred.png?raw=true" alt="Kangaroo Face Prediction" style="width:250px"/>
+<img align="left" src="/public/img/cifar100/kangaroo3.jpg?raw=true" alt="Kangaroo Face" style="width:200px"/><img align="left" src="/public/img/cifar100/kangaroo3_pred.png?raw=true" alt="Kangaroo Face Prediction" style="width:250px"/>
 </section>
 
 
