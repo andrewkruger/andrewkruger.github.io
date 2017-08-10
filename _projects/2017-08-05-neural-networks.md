@@ -220,10 +220,17 @@ As shown above in the video, it can identify multiple objects in the image.
 
 
 <p align="center">
-<img src="/public/img/cifar100/mountain_house.jpg?raw=true" alt="Baby" style="width:300px"/>
-<img src="/public/img/cifar100/mountain_house.png?raw=true" alt="Baby Prediction" style="width:300px"/>
+<img src="/public/img/cifar100/mountain_house.jpg?raw=true" alt="Mountain House" style="width:300px"/>
+<img src="/public/img/cifar100/mountain_house.png?raw=true" alt="Mountain House Prediction" style="width:300px"/>
 </p>
 
+
+Naturally, it also gets some things completely wrong.  For example, in this image it wasn't able to identify the forest or the chimpanzee, both objects it should recognize.
+
+<p align="center">
+<img src="/public/img/cifar100/mountain_house.jpg?raw=true" alt="Chimp" style="width:300px"/>
+<img src="/public/img/cifar100/mountain_house.png?raw=true" alt="Chimp Prediction" style="width:300px"/>
+</p>
 
 
 
