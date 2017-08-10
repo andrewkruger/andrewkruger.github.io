@@ -190,4 +190,14 @@ Different objects have similar structure elements (i.e. vertical/horizontal/slan
 Now the highest prediction is a kangaroo.  This shows that the while a deeper network enables it to recognize more complicated structures, it's necessary not to limit the number of structures that can be used.
 
 
+## Model performance
 
+The final model had a validation accuracy of 0.64, which depends on the probability of the predictions, when predicting on the test images.  When considering simply how many "guesses" it would take for the model to get the object correct, it got 65% of objects correct in one guess, 77% in two guesses, and 83% in three guesses.
+
+As expected, the model was able to classify objects correctly even when their features were displayed differently.  For example, the following are three kangaroos in completely different positions:
+
+
+<p align="center">
+<img src="/public/img/cifar100/kangaroo1.jpg?raw=true" alt="Jumping Kangaroo" style="width:250px"/>
+<img src="/public/img/cifar100/kangaroo1_pred.png?raw=true" alt="Jumping Kangaroo Prediction" style="width:300"/>
+</p>
