@@ -31,7 +31,29 @@ Instead, we can change the MNIST data so the numbers are no longered all centere
 An Exponential Linear Unit (ELUs) is an activation function that has been shown to help speed up the learning and return high accuracy of a NN, specifically on the CIFAR 100 dataset ([Clevert et al. 2015](https://arxiv.org/pdf/1511.07289.pdf)).  The CNNs used in the paper are deep, with up to 18 convolutional layers.
 
 
+
+## Flask and D3 App
+
+
+I created an app that would take in an online image and use the CNN model to predict what the image was.  It used [Flask](http://flask.pocoo.org/), which is used to make python-based webpages, and [D3](https://d3js.org/), a JavaScript library used to create visuals.  After inputting the URL of the image, it returns a graph showing the probabilities of the top five predictions.  It can be seen in action on YouTube:
+
+<p align="center">
 [![Object Recognition Demo](https://img.youtube.com/vi/oLxNxCC-G6Q/0.jpg)](https://www.youtube.com/watch?v=oLxNxCC-G6Q)
+</p>
+
+The image used:
+
+
+<p align="center">
+<img src="https://s3-eu-west-1.amazonaws.com/mordhau-media/spirit/images/895/23b4c00e4779c04235bd338bb997b4a9.jpeg" alt="Castle and Bridge"/>
+</p>
+
+The prediction:
+
+<p align="center">
+<img src="/public/img/cifar100/bridge_castle_prediction.png?raw=true" alt="Bridge Castle Prediction" style="width:400px"/>
+</p>
+
 
 <br>
 
