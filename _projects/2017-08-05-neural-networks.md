@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Neural Networks"
+title: "Convolutional Neural Network and CIFAR 100"
 author: andrew
 tags: [projects]
 img: Movies.png
@@ -8,7 +8,10 @@ description: >
 ---
 
 
-## Object Detection
+## CIFAR-10 and -100
+
+
+The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The 
 
 
 
