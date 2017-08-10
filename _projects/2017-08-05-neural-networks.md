@@ -21,8 +21,9 @@ Instead, we can change the MNIST data so the numbers are no longered all centere
 But then how is the NN detecting the numbers in larger images if it's not scanning them?  I'm glad you asked.  In simple terms, it's looking at the image in chunks, and only keeping the most interesting parts.  For exmaple
 
 
+<br>
 
-## Wide Networks?
+## Wide Neural Networks?
 
 The Keras example CNN for CIFAR 10 has four convolutional layers.  The first two have 32 filters, second two have 64 filters.  In creating a CNN for CIFAR 100, I initially attempted to increase accuracy by making it deeper with more hidden layers.  However, after grid searching different parameters such as learning rates adn decays, batch sizes, activation functions, etc., I was only able to get a maximum accuracy of 0.55 when adding two more layers.  
 
@@ -46,10 +47,11 @@ This image had the following predictions:
 
 This kangaroo was predicted to be an elephant.  It is similar in shape to other kangaroos that the model had recognized accurately, but only grayer in color.  This indicated a potential issue that the model was putting emphasis on color rather than shape, possibly due to the number of filters being used in the first layers.  
 
-Different objects have similar structure elements (i.e. vertical/horizontal/slanted edges, colors, etc.), but 32 filters is not sufficient for the 100 different classes of objects.  I increased the first two layers from 32 to 128 filters, and the next two layers to 256, and the prediction for the image above changed to:
+Different objects have similar structure elements (i.e. vertical/horizontal/slanted edges, colors, etc.), but 32 filters is not sufficient for the 100 different classes of objects.  I increased the first two layers from 32 to 128 filters, and the next two layers from 64 to 256, and the prediction for the image above changed to:
 
 <p align="center">
 <img src="/public/img/cifar100/kangaroo_kangaroo.png?raw=true" alt="Kangaroo Prediction"/>
 </p>
 
-Now the highest prediction is a kangaroo.  This shows that the while a deeper network enables it to recognize more complicated structures, it is absolutely necessary not to limit the number of structures that can be detected in the first place.
+Now the highest prediction is a kangaroo.  This shows that the while a deeper network enables it to recognize more complicated structures, it is absolutely necessary not to limit the number of structures that can be used.
+
