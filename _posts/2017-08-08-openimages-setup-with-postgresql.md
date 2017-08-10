@@ -3,7 +3,7 @@ layout: post
 title: "OpenImages Setup with PostgreSQL"
 author: andrew
 tags: [blog]
-description: >
+description: "Uploading OpenImages into a PostgreSQL database, and querying for image URLs."
 ---
 
 
