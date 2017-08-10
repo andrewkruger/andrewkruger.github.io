@@ -29,7 +29,37 @@ Instead, we can change the MNIST data so the numbers are no longered all centere
 
 <br>
 
-## The Model
+### Activation Functions
+
+A neuron's "activation" is determined by an *activation function*.  An example *activation function* is a sigmoid function which follows the relationship 
+
+<p align="center">
+<img src="/public/img/cifar100/relu.png?raw=true" alt="Sigmoid Activation Function"/>
+</p>
+
+where $$x$$ is the dot product of the input and the weights.  When $$x$$ is small, $$\sigma$$ will be closer to zero (neuron is not activated), but a large $$x$$ will make $$\sigma$$ closer to one (neuron gets activated).  So a single neuron acts similar to a linear classifier.
+
+Another common activation function is the Rectified Linear Unit (ReLU) which follows
+
+<p align="center">
+<img src="/public/img/cifar100/relu.png?raw=true" alt="ReLU Activation Function"/>
+</p>
+
+In this case, if $$x$$ is less than 0, then the *activation function* is just zero.  Otherwise, it increases linearly with $$x$$ and doesn't have a maximum of one.  These characteristics help the model weights converge faster, although there's an added risk that if the learning rate is too high, a weight change could make $$x$$ less than zero.  When this happens, there is a loss of information (can't do gradient descent if $$x$$ is always zero!) that can keep $$x$$ permanently zero, and neurons in the network may be "dead".
+
+The images are on an 8-bit grayscale with 256 intensities (in the range 0-255).  However, using numbers this large can result in *activation saturation*.  Since $$x$$ is the dot product of the input and the weights, if the inputs are larger, the weights should be smaller.  In the case of the sigmoid activation function, starting out weights that aren't small results in the sigmoid will be forced to be one for all inputs.  Thus some weights may not be corrected with those neurons always being activated.  Likewise with ReLU, the $$x$$ can be a high value regardless of the weight.  When this model was fit to un-normalized data, For this reason, the images are normalized so they are in the range 0-1 instead of 0-255 by dividing by 255.  
+
+
+~~~py
+x_train = x_train.astype('float32')
+x_test = x_test.astype('float32')
+x_train /= 255
+x_test /= 255
+print('x_train shape:', x_train.shape)
+print(x_train.shape[0], 'train samples')
+print(x_test.shape[0], 'test samples')
+~~~
+
 
 An Exponential Linear Unit (ELUs) is an activation function that has been shown to help speed up the learning and return high accuracy of a NN, specifically on the CIFAR 100 dataset ([Clevert et al. 2015](https://arxiv.org/pdf/1511.07289.pdf)).  The CNNs used in the paper are deep, with up to 18 convolutional layers.
 
