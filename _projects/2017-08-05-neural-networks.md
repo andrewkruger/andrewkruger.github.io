@@ -51,7 +51,7 @@ The image used:
 The prediction:
 
 <p align="center">
-<img src="/public/img/cifar100/bridge_castle_prediction.png?raw=true" alt="Bridge Castle Prediction" style="width:400px"/>
+<img src="/public/img/cifar100/bridge_castle_prediction.png?raw=true" alt="Bridge Castle Prediction" style="width:500px"/>
 </p>
 
 
