@@ -20,7 +20,7 @@ My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Ama
 
 ## Convolutional Neural Networks
 
-To understand neural networks, it's easier if you think about how we recognize things.  For example, if you see a duck, you recognize it because it has a bill, feathers, wings, and webbed feet.  So when you're deciding if something is a duck, you have a mental checkbox that you check off if what you're seeing has those characteristics.  Sometimes a duck may be in water, and you can't see the webbed feet, but you'll still classify it as a duck because you see the bill, feathers, and wings.  This is just like a regular classifier which takes in inputs ($$x_1$$, $$x_2$$, etc. would be the bill, feathers, etc.) and finds weights that predicts the classification of something most accurately ($$y$$ would be whether the object is a duck or not).  These weights are used in the [*activation function*, discussed below,](#activation_function) that return a probability of the input's classification.
+To understand neural networks, it's easier if you think about how we recognize things.  As an analogy, if you see a duck, you recognize it because it has a bill, feathers, wings, and webbed feet.  So when you're deciding if something is a duck, you have a mental checkbox that you check off.  Sometimes a duck may be in water, and you can't see the webbed feet, but you'll still classify it as a duck because you see the bill, feathers, and wings.  This is just like a regular classifier which takes in inputs ($$x_1$$, $$x_2$$, etc. would be the bill, feathers, etc.) and finds weights that predicts the classification of something most accurately ($$y$$ would be whether the object is a duck or not).  These weights are used in the [*activation function*, discussed below,](#activation_function) that return a probability of the input's classification (duck or not duck).
 
 This relationship between the inputs and output classification can be visualized by a diagram:
 
@@ -28,11 +28,25 @@ This relationship between the inputs and output classification can be visualized
 <img src="/public/img/cifar100/regression.png?raw=true" alt="Sigmoid Activation Function" style="width:400px"/>
 </p>
 
-A neural network has layers between the inputs and outputs.  Looking at this in a step-by-step approach, weights are still being applied to each of the inputs, and this creates new "responses" that aren't trying to immediately predict the class.  These "responses" are in a *hidden layer*. 
+But that's not really the whole story, we need to know what a bill, feathers, wings, and webbed feet look like in the first place to know if they are there.  So really, we look for edges, lines, colors, textures, and shapes that are similar to bills, feathers, wings, and webbed feet that we've seen before.  So there's an intermediate step between sight and classification:
 
 <p align="center">
 <img src="/public/img/cifar100/neural_network.png?raw=true" style="width:400px" alt="Neural Network"/>
 </p>
+
+This is a basic neural network.  Weights are still being applied to each of the inputs (lines, edges, etc.), and this creates new "responses" that aren't trying to immediately predict the final class (similar to recognizing bill, feathers, etc.).  These intermediate "responses" are in a *hidden layer*.  
+
+But that's still not the whole story of how we recognize things.  A single line or color doesn't identify a feather, but rather a combination.  So there need to be multiple hidden layers where we first identify lines, edges, etc., then a combination of those to recognize a bill, feather, etc., then a combination of those to know if we see a duck or not.
+
+
+<p align="center">
+<img src="/public/img/cifar100/deep_neural_network.png?raw=true" style="width:400px" alt="Deep Neural Network"/>
+</p>
+
+
+Even further, we need to recognize where the parts of the duck are relative to each other, relative sizes, etc., otherwise the duck doesn't look like what we're used to.  More hidden layers are needed to find these relationships, and as those layers are added, the neural network is getting *deeper*.
+
+Now, if we create a classifier to recognize a duck, it's not necessarily going to look for feathers (the image may be too low resolution).  The features and combintations of features it looks for are whatever results in the lowest loss. 
 
 A new set of activation functions are then used on the hidden layer to predict the classification of the input.
 
