@@ -19,7 +19,7 @@ description: >
 
 <br><br>
 
-## Objective
+# Objective
 
 There are standard datasets used to test new machine learning programs and compare their performance to previous models.  [MNIST](http://yann.lecun.com/exdb/mnist/) is a set 28x28 pixel images of handwritten numbers, with 60,000 training and 10,000 test images.  The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The [github repo for Keras](https://github.com/fchollet/keras) has example Convolutional Neural Networks (CNN) for [MNIST](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [CIFAR-10](https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py).  
 
@@ -29,7 +29,7 @@ My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Ama
 
 <br>
 
-## Neural Networks
+# Neural Networks
 
 To understand neural networks, it's easier if you think about how we recognize things.  As an analogy, if you see a duck, you recognize it because it has a bill, feathers, wings, and webbed feet.  So when you're deciding if something is a duck, you have a mental checkbox that you check off.  Sometimes a duck may be in water, and you can't see the webbed feet, but you'll still classify it as a duck because you see the bill, feathers, and wings.  This is just like a regular classifier which takes in inputs ($$x_1$$, $$x_2$$, etc. would be the bill, feathers, etc.) and finds weights that predicts the classification of something most accurately ($$y$$ would be whether the object is a duck or not).  These weights are used in the [*activation function*, discussed below,](#activation_function) that return a probability of the input's classification (duck or not duck).
 
