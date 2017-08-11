@@ -261,7 +261,7 @@ What the CNN is able to predict does depend on what images were input.  For exam
 <img src="/public/img/cifar100/chimpanzee_alone.jpeg?raw=true" alt="Chimpanzee" style="width:300px"/>
 <img src="/public/img/cifar100/chimpanzee_alone_pred.png?raw=true" alt="Chimpanzee Prediction" style="width:300px"/>
 <img src="/public/img/cifar100/forest.jpg?raw=true" alt="Forest" style="width:300px"/>
-<img src="/public/img/cifar100/forest_pred.png?raw=true" alt="Forest Prediction" style="width:300px"/>
+<img src="/public/img/cifar100/forest.png?raw=true" alt="Forest Prediction" style="width:300px"/>
 </p>
 
 
