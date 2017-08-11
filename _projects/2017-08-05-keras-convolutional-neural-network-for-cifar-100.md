@@ -17,6 +17,8 @@ description: >
 1. [Wide Neural Network?](#wide_neural_network)
 1. [Model Performance](#model_performance)
 
+<br><br>
+
 ## Objective
 
 There are standard datasets used to test new machine learning programs and compare their performance to previous models.  [MNIST](http://yann.lecun.com/exdb/mnist/) is a set 28x28 pixel images of handwritten numbers, with 60,000 training and 10,000 test images.  The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The [github repo for Keras](https://github.com/fchollet/keras) has example Convolutional Neural Networks (CNN) for [MNIST](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [CIFAR-10](https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py).  
