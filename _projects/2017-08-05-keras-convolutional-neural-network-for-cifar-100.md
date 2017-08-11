@@ -48,17 +48,17 @@ Even further, we need to recognize where the parts of the duck are relative to e
 
 Now, if we create a classifier to recognize a duck, it's not necessarily going to look for the same things we do, such as feathers and an orange bill (the image may be too low resolution, or black-and-white).  The features and combintations of features it looks for are whatever results in the lowest loss for the inputs its given.  Also, as it searches for combinations of lines, edges, etc., what it's looking for becomes unintelligible to us, which is why they're called "hidden" layers.
 
-That first layer applies filters directly to the image to search for edges, lines, colors, etc.  Example illustration by [Rob Fergus at NYU](http://cs.nyu.edu/~fergus/tutorials/deep_learning_cvpr12/):
+That first layer applies filters directly to the image to search for edges, lines, colors, etc.  Here's an example illustration by [Rob Fergus at NYU](http://cs.nyu.edu/~fergus/tutorials/deep_learning_cvpr12/):
 
 <p align="center">
-<img src="/public/img/cifar100/filtering.gif?raw=true" alt="Filtering" style="width:400px"/>
+<img src="/public/img/cifar100/filtering.gif?raw=true" alt="Filtering" style="width:500px"/>
 </p>
 
 The output from this first layer is then sent to the next hidden layer, which applies new weights and filters.  Here's an illustration of how to think of a neural network recognizing a car (from [Lee et al. 2011](http://dl.acm.org/citation.cfm?doid=2001269.2001295)):
 
 
 <p align="center">
-<img src="/public/img/cifar100/nn_vision.jpg?raw=true" style="width:500px" alt="Neural Network Vision"/>
+<img src="/public/img/cifar100/nn_vision.jpg?raw=true" style="width:600px" alt="Neural Network Vision"/>
 </p>
 
 
