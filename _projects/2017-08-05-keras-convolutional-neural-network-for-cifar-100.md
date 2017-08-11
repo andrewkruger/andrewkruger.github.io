@@ -31,7 +31,7 @@ This relationship between the inputs and output classification can be visualized
 A neural network has layers between the inputs and outputs.  Looking at this in a step-by-step approach, weights are still being applied to each of the inputs, and this creates new "responses" that aren't trying to immediately predict the class.  These "responses" are in a *hidden layer*. 
 
 <p align="center">
-<img src="/public/img/cifar100/neural_network.png?raw=true" alt="Neural Network"/>
+<img src="/public/img/cifar100/neural_network.png?raw=true" style="width:400px" alt="Neural Network"/>
 </p>
 
 A new set of activation functions are then used on the hidden layer to predict the classification of the input.
