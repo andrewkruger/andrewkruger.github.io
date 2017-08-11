@@ -46,7 +46,20 @@ But that's still not the whole story of how we recognize things.  A single line 
 
 Even further, we need to recognize where the parts of the duck are relative to each other, relative sizes, etc., otherwise the duck doesn't look like what we're used to.  More hidden layers are needed to find these relationships, and as those layers are added, the neural network is getting *deeper*.
 
-Now, if we create a classifier to recognize a duck, it's not necessarily going to look for feathers (the image may be too low resolution).  The features and combintations of features it looks for are whatever results in the lowest loss. 
+Now, if we create a classifier to recognize a duck, it's not necessarily going to look for the same things we do, such as feathers and an orange bill (the image may be too low resolution, or black-and-white).  The features and combintations of features it looks for are whatever results in the lowest loss for the inputs its given.  Also, as it searches for combinations of lines, edges, etc., what it's looking for becomes unintelligible to us, which is why they're called "hidden" layers.
+
+Here's an illustration of how to think of a neural network recognizing a car (from [Lee et al. 2011](http://dl.acm.org/citation.cfm?doid=2001269.2001295)):
+
+
+<p align="center">
+<img src="/public/img/cifar100/nn_vision.png?raw=true" style="width:400px" alt="Neural Network Vision"/>
+</p>
+
+
+
+But how does a computer first recognize edges, lines, and colors?  Filters.  Here's a great illustration:
+
+
 
 A new set of activation functions are then used on the hidden layer to predict the classification of the input.
 
