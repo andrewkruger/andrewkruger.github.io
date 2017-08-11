@@ -57,8 +57,11 @@ Here's an illustration of how to think of a neural network recognizing a car (fr
 
 
 
-But how does a computer first recognize edges, lines, and colors?  Filters.  Here's a great illustration:
+That first layer is applying filters to the image to search for edges, lines, colors, etc.  From [Rob Fergus' at NYU](http://cs.nyu.edu/~fergus/tutorials/deep_learning_cvpr12/):
 
+<p align="center">
+<img src="/public/img/cifar100/filtering.gif?raw=true" alt="Sigmoid Activation Function" style="width:400px"/>
+</p>
 
 
 A new set of activation functions are then used on the hidden layer to predict the classification of the input.
