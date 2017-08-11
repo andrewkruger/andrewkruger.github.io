@@ -52,7 +52,7 @@ Here's an illustration of how to think of a neural network recognizing a car (fr
 
 
 <p align="center">
-<img src="/public/img/cifar100/nn_vision.png?raw=true" style="width:400px" alt="Neural Network Vision"/>
+<img src="/public/img/cifar100/nn_vision.jpg?raw=true" style="width:400px" alt="Neural Network Vision"/>
 </p>
 
 
