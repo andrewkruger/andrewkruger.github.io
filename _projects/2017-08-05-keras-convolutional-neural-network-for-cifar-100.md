@@ -74,7 +74,7 @@ Instead, we can change the MNIST data so the numbers are no longered all centere
 
 <br>
 
-## Activation Functions
+## Activation Function
 
 A neuron's "activation" is determined by an *activation function*.  An example activation function is a sigmoid function which follows the relationship 
 
