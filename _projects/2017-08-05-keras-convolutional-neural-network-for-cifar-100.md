@@ -8,6 +8,16 @@ description: >
 ---
 
 
+1. [Objective](#objective)
+1. [Neural Networks](#neural_networks)
+1. [Data Augmentation](#data_augmentation)
+1. [Activation Function](#activation_function)
+1. [The Model](#the_model)
+1. [Flask and D3 App](#flask_and_d3_app)
+1. [Wide Neural Network?](#wide_neural_network)
+1. [Model Performance](#model_performance)
+
+
 ## Objective
 
 There are standard datasets used to test new machine learning programs and compare their performance to previous models.  [MNIST](http://yann.lecun.com/exdb/mnist/) is a set 28x28 pixel images of handwritten numbers, with 60,000 training and 10,000 test images.  The [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html) consist of 32x32 pixel images in 10 and 100 classes, respectively.  Both datasets have 50,000 training images and 10,000 testing images.  The [github repo for Keras](https://github.com/fchollet/keras) has example Convolutional Neural Networks (CNN) for [MNIST](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [CIFAR-10](https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py).  
@@ -243,7 +253,7 @@ Now the highest prediction is a kangaroo.  This shows that the while a deeper ne
 
 <br>
 
-## Model performance
+## Model Performance
 
 The final model had a validation accuracy of 0.64, which depends on the probability of the predictions, when predicting on the test images.  When considering simply how many "guesses" it would take for the model to get the object correct, it got 65% of objects correct in one guess, 77% in two guesses, and 83% in three guesses.
 
