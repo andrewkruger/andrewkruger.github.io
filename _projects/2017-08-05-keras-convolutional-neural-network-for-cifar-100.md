@@ -18,7 +18,7 @@ My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Ama
 
 <br>
 
-## Convolutional Neural Networks
+## Neural Networks
 
 To understand neural networks, it's easier if you think about how we recognize things.  As an analogy, if you see a duck, you recognize it because it has a bill, feathers, wings, and webbed feet.  So when you're deciding if something is a duck, you have a mental checkbox that you check off.  Sometimes a duck may be in water, and you can't see the webbed feet, but you'll still classify it as a duck because you see the bill, feathers, and wings.  This is just like a regular classifier which takes in inputs ($$x_1$$, $$x_2$$, etc. would be the bill, feathers, etc.) and finds weights that predicts the classification of something most accurately ($$y$$ would be whether the object is a duck or not).  These weights are used in the [*activation function*, discussed below,](#activation_function) that return a probability of the input's classification (duck or not duck).
 
@@ -44,7 +44,7 @@ But that's still not the whole story of how we recognize things.  A single line 
 </p>
 
 
-Even further, we need to recognize where the parts of the duck are relative to each other, relative sizes, etc., otherwise the duck doesn't look like what we're used to.  More hidden layers are needed to find these relationships, and as those layers are added, the neural network is getting *deeper*.
+Even further, we need to recognize where the parts of the duck are relative to each other, relative sizes, etc., otherwise the duck doesn't look like what we're used to.  More hidden layers are needed to find these relationships, and as those layers are added, the neural network is getting *deeper*.  Deeper neural networks are able to make more complex structures in the input data. 
 
 Now, if we create a classifier to recognize a duck, it's not necessarily going to look for the same things we do, such as feathers and an orange bill (the image may be too low resolution, or black-and-white).  The features and combintations of features it looks for are whatever results in the lowest loss for the inputs its given.  Also, as it searches for combinations of lines, edges, etc., what it's looking for becomes unintelligible to us, which is why they're called "hidden" layers.
 
@@ -61,22 +61,23 @@ The output from this first layer is then sent to the next hidden layer, which ap
 <img src="/public/img/cifar100/nn_vision.jpg?raw=true" style="width:600px" alt="Neural Network Vision"/>
 </p>
 
-
-
-A neural network (NN) is a series of layered neurons that have weights and biases that can "learn".  When an input is entered into the NN, it applies filters and weights to the input, with the outputs being fed to further layers of weights, and so on until a final output is made.  The goal is the make the output correctly predict the classification of an object, which it won't at first.  But after it has made a an incorrect prediction, a backpropagation through the network updates the weights to increase the probability of returning the correct output.  This process of predicting and updating the weights is repeated for new inputs, and the network learns the optimal weights that produces the most accurate model.
-
+After the input has gone through the layers, it returns an output classification which could be incorrect.  But the goal is the make the output correctly predict the classification of an object, which it won't at first.  After it has made an incorrect prediction, a backpropagation through the network updates the weights to increase the probability of returning the correct output.  This process of predicting and updating the weights is repeated for new inputs, and the network learns the optimal weights that produces the most accurate model.
 
 
 
 
-Object recognition is a common goal when learning machine learning and neural networks.  The MNIST dataset has all of the numbers centered and cropped the same, making consistent images that can be predicted by basic models.  However, object recognition becomes more difficult for images of objects that are inconsistent with each other, including shade, angle, crop size, position of object, etc.  
 
 
-Increasing the number of layers allows for more complex models (analogous to polynomial fits compared to linear fits).
+
+
 
 <br>
 
 ## Data Augmentation
+
+
+Object recognition is a common goal when learning machine learning and neural networks.  The MNIST dataset has all of the numbers centered and cropped the same, making consistent images that can be predicted by basic models.  However, object recognition becomes more difficult for images of objects that are inconsistent with each other, including shade, angle, crop size, position of object, etc.  
+
 
 There is a major downside to training on images that have been pre-cropped and have the objects in a consistent position: the NN expects that the number should always be that size and in that position.  It's fast and easy to get a NN to correctly classify a number in an image using the MNIST dataset, but that model won't necessarily translate to detect numbers well in an arbitrary image.  A (poor) fix to this problem would be to scan images, cropping the image into boxes and seeing if a number is inside that box, but that's inefficient.
 
