@@ -26,6 +26,8 @@ There are standard datasets used to test new machine learning programs and compa
 
 My goal is to create a CNN using Keras for CIFAR-100 that is suitable for an Amazon Web Services (AWS) g2.2xlarge EC2 instance.  The main limitation is memory, which means the neural network can't be as deep as other CNNs that would perform better.  But creating a CNN that fits on smaller GPUs is beneficial for people who would want to use CIFAR-100 to learn how to create better neural networks, as is commonly done with MNIST and CIFAR-10.
 
+The model and app described below are available on a [GitHub repository](https://github.com/andrewkruger/cifar100_CNN).
+
 
 <br>
 
