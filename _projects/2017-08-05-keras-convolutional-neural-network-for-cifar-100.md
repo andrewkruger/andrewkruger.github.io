@@ -48,23 +48,19 @@ Even further, we need to recognize where the parts of the duck are relative to e
 
 Now, if we create a classifier to recognize a duck, it's not necessarily going to look for the same things we do, such as feathers and an orange bill (the image may be too low resolution, or black-and-white).  The features and combintations of features it looks for are whatever results in the lowest loss for the inputs its given.  Also, as it searches for combinations of lines, edges, etc., what it's looking for becomes unintelligible to us, which is why they're called "hidden" layers.
 
-Here's an illustration of how to think of a neural network recognizing a car (from [Lee et al. 2011](http://dl.acm.org/citation.cfm?doid=2001269.2001295)):
+That first layer applies filters directly to the image to search for edges, lines, colors, etc.  Example illustration by [Rob Fergus at NYU](http://cs.nyu.edu/~fergus/tutorials/deep_learning_cvpr12/):
+
+<p align="center">
+<img src="/public/img/cifar100/filtering.gif?raw=true" alt="Filtering" style="width:400px"/>
+</p>
+
+The output from this first layer is then sent to the next hidden layer, which applies new weights and filters.  Here's an illustration of how to think of a neural network recognizing a car (from [Lee et al. 2011](http://dl.acm.org/citation.cfm?doid=2001269.2001295)):
 
 
 <p align="center">
 <img src="/public/img/cifar100/nn_vision.jpg?raw=true" style="width:500px" alt="Neural Network Vision"/>
 </p>
 
-
-
-That first layer is applying filters to the image to search for edges, lines, colors, etc.  From [Rob Fergus' at NYU](http://cs.nyu.edu/~fergus/tutorials/deep_learning_cvpr12/):
-
-<p align="center">
-<img src="/public/img/cifar100/filtering.gif?raw=true" alt="Sigmoid Activation Function" style="width:400px"/>
-</p>
-
-
-A new set of activation functions are then used on the hidden layer to predict the classification of the input.
 
 
 A neural network (NN) is a series of layered neurons that have weights and biases that can "learn".  When an input is entered into the NN, it applies filters and weights to the input, with the outputs being fed to further layers of weights, and so on until a final output is made.  The goal is the make the output correctly predict the classification of an object, which it won't at first.  But after it has made a an incorrect prediction, a backpropagation through the network updates the weights to increase the probability of returning the correct output.  This process of predicting and updating the weights is repeated for new inputs, and the network learns the optimal weights that produces the most accurate model.
