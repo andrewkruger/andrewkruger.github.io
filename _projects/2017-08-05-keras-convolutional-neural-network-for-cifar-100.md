@@ -9,13 +9,13 @@ description: >
 
 
 1. [Objective](#objective)
-1. [Neural Networks](#neural_networks)
-1. [Data Augmentation](#data_augmentation)
-1. [Activation Function](#activation_function)
-1. [The Model](#the_model)
-1. [Flask and D3 App](#flask_and_d3_app)
-1. [Wide Neural Network?](#wide_neural_network)
-1. [Model Performance](#model_performance)
+1. [Neural Networks](#neural-networks)
+1. [Data Augmentation](#data-augmentation)
+1. [Activation Function](#activation-function)
+1. [The Model](#the-model)
+1. [Flask and D3 App](#flask-and-d3-app)
+1. [Wide Neural Network?](#wide-neural-network)
+1. [Model Performance](#model-performance)
 
 <br><br>
 
