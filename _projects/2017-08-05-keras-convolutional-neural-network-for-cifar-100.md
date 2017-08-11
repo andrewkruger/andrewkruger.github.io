@@ -14,7 +14,7 @@ description: >
 1. [Activation Function](#activation-function)
 1. [The Model](#the-model)
 1. [Flask and D3 App](#flask-and-d3-app)
-1. [Wide Neural Network?](#wide-neural-network)
+1. [Wide Neural Network](#wide-neural-network)
 1. [Model Performance](#model-performance)
 
 <br><br>
@@ -219,7 +219,7 @@ Although the model was trained to recognize images of single objects, it was abl
 
 <br>
 
-## Wide Neural Networks?
+## Wide Neural Networks
 
 The Keras example CNN for CIFAR 10 has four convolutional layers.  The first two have 32 filters, second two have 64 filters.  In creating a CNN for CIFAR 100, I initially attempted to increase accuracy by making it deeper with more hidden layers.  However, after grid searching different parameters such as learning rates adn decays, batch sizes, activation functions, etc., I was only able to get a maximum accuracy of 0.55 when adding two more layers.  
 
