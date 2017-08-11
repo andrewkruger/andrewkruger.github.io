@@ -247,7 +247,26 @@ Now the highest prediction is a kangaroo.  This shows that the while a deeper ne
 
 The final model had a validation accuracy of 0.64, which depends on the probability of the predictions, when predicting on the test images.  When considering simply how many "guesses" it would take for the model to get the object correct, it got 65% of objects correct in one guess, 77% in two guesses, and 83% in three guesses.
 
-As expected, the model was able to classify objects correctly even when their features were displayed differently.  For example, the following are three kangaroos in completely different positions it correctly classified:
+
+Naturally, it gets some things completely wrong.  For example, in this image it wasn't able to identify the forest or the chimpanzee, both objects it should recognize.
+
+<p align="center">
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
+<img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" alt="Chimp Prediction" style="width:300px"/>
+</p>
+
+What the CNN is able to predict does depend on what images were input.  For example, if "forest" images showed the base of trees (unlike above), then it wouldn't be able to recognize this as a forest.  If it's only been trained on chimpanzees where they are the main focus of the image, it will have a harder time detecting the chimpanzee when it's a smaller part of the image.  As can be seen here, the predictor easily identified a close-up of a chimpanzee and a forest with tree bases:
+
+<p align="center">
+<img src="/public/img/cifar100/chimpanzee_alone.jpg?raw=true" alt="Chimpanzee" style="width:300px"/>
+<img src="/public/img/cifar100/chimpanzee_alone_pred.png?raw=true" alt="Chimpanzee Prediction" style="width:300px"/>
+<img src="/public/img/cifar100/kangaroo3.jpg?raw=true" alt="Forest" style="width:300px"/>
+<img src="/public/img/cifar100/kangaroo3_pred.png?raw=true" alt="Forest Prediction" style="width:300px"/>
+</p>
+
+
+
+As expected, the model is able to classify objects correctly even when their features were displayed differently.  For example, the following are three kangaroos in completely different positions it correctly classified:
 
 <p align="center">
 <img src="/public/img/cifar100/kangaroo1.jpg?raw=true" alt="Jumping Kangaroo" style="width:300px"/>
@@ -278,12 +297,6 @@ As shown above in the video, it can identify multiple objects in the image.  Ano
 </p>
 
 
-Naturally, it also gets some things completely wrong.  For example, in this image it wasn't able to identify the forest or the chimpanzee, both objects it should recognize.
-
-<p align="center">
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
-<img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" alt="Chimp Prediction" style="width:300px"/>
-</p>
 
 
 
