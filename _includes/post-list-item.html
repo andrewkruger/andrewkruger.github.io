@@ -2,9 +2,10 @@
 {% assign author = site.data.authors[post.author] %}
 
 <li>
+  {{post.date | date: include.format}}: 
   <a href="{{ post.url | prepend:site.baseurl }}">
     <!--<span>{{ post.title }}</span>-->
-    <span>{{post.date | date: include.format}}: {{ post.title }}</span>
+    <span>{{ post.title }}</span>
   </a>
   <br>
   <!--<small>
