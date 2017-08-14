@@ -271,7 +271,7 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 <tr><td>
 <img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px"/>
 </td><td>
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px"/>
+<img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" style="width:300px"/>
 </td>
 </tr>
 
@@ -280,7 +280,7 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 <img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
 </div>
 <div class="theme-table-image col-sm-6">
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
+<img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" style="width:300px">
 </div>
 </div>
 
