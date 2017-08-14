@@ -293,14 +293,28 @@ What the CNN is able to predict does depend on what images were input.  For exam
 
 As expected, the model is able to classify objects correctly even when their features were displayed differently.  For example, the following are three kangaroos in completely different positions it correctly classified:
 
-<p align="center">
-<img src="/public/img/cifar100/kangaroo1.jpg?raw=true" alt="Jumping Kangaroo" style="width:300px"/>
-<img src="/public/img/cifar100/kangaroo1_pred.png?raw=true" alt="Jumping Kangaroo Prediction" style="width:300px"/>
-<img src="/public/img/cifar100/kangaroo2.jpg?raw=true" alt="Laying Kangaroo" style="width:300px"/>
-<img src="/public/img/cifar100/kangaroo2_pred.png?raw=true" alt="Laying Kangaroo Prediction" style="width:300px"/>
-<img src="/public/img/cifar100/kangaroo3.jpg?raw=true" alt="Kangaroo Face" style="width:250px"/>
-<img src="/public/img/cifar100/kangaroo3_pred.png?raw=true" alt="Kangaroo Face Prediction" style="width:300px"/>
-</p>
+
+
+<div id="image-table"><table><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/kangaroo1.jpg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/kangaroo1_pred.png?raw=true" style="width:300px">
+</td></tr><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/kangaroo2.jpg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/kangaroo2_pred.png?raw=true" style="width:300px">
+</td></tr><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/kangaroo3.jpg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/kangaroo3_pred.png?raw=true" style="width:300px">
+</td></tr>
+</table></div>
 
 
 
