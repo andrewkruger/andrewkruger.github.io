@@ -276,12 +276,8 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 </tr>
 
 <div class="container" style="width: 100%;">
-<div class="theme-table-image col-sm-6">
 <img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
-</div>
-<div class="theme-table-image col-sm-6">
 <img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" style="width:300px">
-</div>
 </div>
 
 
