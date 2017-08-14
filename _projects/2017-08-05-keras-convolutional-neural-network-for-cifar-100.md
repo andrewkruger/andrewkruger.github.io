@@ -269,9 +269,9 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 </p>
 
 <tr><td>
-<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px;"/>
+<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
 </td><td>
-<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px;"/>
+<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
 </td>
 </tr>
 
