@@ -269,11 +269,11 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 </p>
 
 <table>
-<tr><th>
+<tr><td>
 <img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
-</th><th>
+</td><td>
 <img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
-</th>
+</td>
 </tr>
 </table>
 
