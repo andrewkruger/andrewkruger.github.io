@@ -269,22 +269,21 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 </p>
 
 <tr><td>
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px"/>
 </td><td>
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px"/>
 </td>
 </tr>
 
 <div class="container" style="width: 100%;">
 <div class="theme-table-image col-sm-6">
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true">
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
 </div>
 <div class="theme-table-image col-sm-6">
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true">
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
 </div>
 </div>
 
-![alt-text-1](/public/img/cifar100/chimpanzee.jpg?raw=true "title-1") ![alt-text-2](/public/img/cifar100/chimpanzee.jpg?raw=true "title-2")
 
 What the CNN is able to predict does depend on what images were input.  For example, if "forest" images showed the base of trees (unlike above), then it wouldn't be able to recognize this as a forest.  If it's only been trained on chimpanzees where they are the main focus of the image, it will have a harder time detecting the chimpanzee when it's a smaller part of the image.  As can be seen here, the predictor easily identified a close-up of a chimpanzee and a forest with tree bases:
 
