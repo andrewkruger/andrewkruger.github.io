@@ -270,9 +270,9 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 
 <table>
 <tr><th>
-<img style="align:center" "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
+<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
 </th><th>
-<img style="align:center" "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
+<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" alt="Chimp" style="width:300px"/>
 </th>
 </tr>
 </table>
