@@ -263,28 +263,31 @@ The final model had a validation accuracy of 0.64, which depends on the probabil
 
 Naturally, it gets some things completely wrong.  For example, in this image it wasn't able to identify the forest or the chimpanzee, both objects it should recognize.
 
-<div id="image-table">
-<table>
-<tr>
+<div id="image-table"><table><tr>
 <td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
 <img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
 </td>
 <td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
 <img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" style="width:300px">
-</td>
-</tr>
-</table>
-</div>
+</td></tr></table></div>
 
 
 What the CNN is able to predict does depend on what images were input.  For example, if "forest" images showed the base of trees (unlike above), then it wouldn't be able to recognize this as a forest.  If it's only been trained on chimpanzees where they are the main focus of the image, it will have a harder time detecting the chimpanzee when it's a smaller part of the image.  As can be seen here, the predictor easily identified a close-up of a chimpanzee and a forest with tree bases:
 
-<p align="center">
-<img src="/public/img/cifar100/chimpanzee_alone.jpeg?raw=true" alt="Chimpanzee" style="width:300px"/>
-<img src="/public/img/cifar100/chimpanzee_alone_pred.png?raw=true" alt="Chimpanzee Prediction" style="width:300px"/>
-<img src="/public/img/cifar100/forest.jpg?raw=true" alt="Forest" style="width:300px"/>
-<img src="/public/img/cifar100/forest.png?raw=true" alt="Forest Prediction" style="width:300px"/>
-</p>
+<div id="image-table"><table><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/chimpanzee_alone.jpeg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/chimpanzee_alone_pred.png?raw=true" style="width:300px">
+</td></tr><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/forest.jpg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/forest.png?raw=true" style="width:300px">
+</td></tr>
+</table></div>
 
 
 
