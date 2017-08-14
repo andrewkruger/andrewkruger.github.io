@@ -320,22 +320,33 @@ As expected, the model is able to classify objects correctly even when their fea
 
 It is also able to distinguish between things that have similar features, for example the difference between my younger daughter when she a "baby" and my older daughter as a "girl".
 
-<p align="center">
-<img src="/public/img/cifar100/baby.jpg?raw=true" alt="Baby" style="width:300px"/>
-<img src="/public/img/cifar100/baby.png?raw=true" alt="Baby Prediction" style="width:300px"/>
-<img src="/public/img/cifar100/girl.jpg?raw=true" alt="Girl" style="height:250px"/>
-<img src="/public/img/cifar100/girl.png?raw=true" alt="Girl Prediction" style="width:300px"/>
-</p>
+
+<div id="image-table"><table><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/baby.jpg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/baby.png?raw=true" style="width:300px">
+</td></tr><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/girl.jpg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/girl.png?raw=true" style="width:300px">
+</td></tr>
+</table></div>
 
 As shown above in the video, it can identify multiple objects in the image.  Another example is this house in the mountains:
 
 
-<p align="center">
-<img src="/public/img/cifar100/mountain_house.jpg?raw=true" alt="Mountain House" style="width:300px"/>
-<img src="/public/img/cifar100/mountain_house.png?raw=true" alt="Mountain House Prediction" style="width:300px"/>
-</p>
 
-
+<div id="image-table"><table><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/mountain_house.jpg?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/mountain_house.png?raw=true" style="width:300px">
+</td></tr></table></div>
 
 
 
