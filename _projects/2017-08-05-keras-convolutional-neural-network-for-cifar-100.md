@@ -284,10 +284,10 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 <table>
 <tr>
 <td style="padding:5px">
-<img src="/public/img/cifar100/chimpanzee.jpg?raw=true">
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
 </td>
 <td style="padding:5px">
-<img src="/public/img/cifar100/chimpanzee_pred.png?raw=true">
+<img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" style="width:300px">
 </td>
 </tr>
 </table>
