@@ -263,10 +263,10 @@ The final model had a validation accuracy of 0.64, which depends on the probabil
 
 Naturally, it gets some things completely wrong.  For example, in this image it wasn't able to identify the forest or the chimpanzee, both objects it should recognize.
 
-<div id="image-table" style="border:1px solid #ffffff; background-color:#fff;">
+<div id="image-table">
 <table>
 <tr>
-<td style="padding:5px">
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
 <img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
 </td>
 <td style="padding:5px">
