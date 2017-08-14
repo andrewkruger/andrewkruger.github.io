@@ -50,7 +50,10 @@ The demographic information included sex, highest degree attained, and area of p
 
 For reference, here is a sample of the data taken from web.mta.info:
 
-![MTA dataframe](/public/img/MTA_df.png)
+<p align="center">
+<img src="/public/img/MTA_df.png?raw=true" alt="Movie List"/>
+</p>
+
 
 The turnstile data was created by audits of the turnstiles every 4 hours.  The turnstile data includes
 
@@ -69,7 +72,9 @@ The turnstile data was created by audits of the turnstiles every 4 hours.  The t
 Below is a sample of the data for stations with the name 135th St (135 ST).
 
 
-![Station and Turnstile identifiers](/public/img/Station_Info.png)
+<p align="center">
+<img src="/public/img/Station_Info.png?raw=true" alt="Movie List"/>
+</p>
 
 
 Because stations are identified by the stop, there were multiple stations with the same name (there is a 135th St. stop for lines 2/3, and lines B/C).  Thus, we needed to identify stations by both the "Station" value and the "Linename".  (A station could also be identified by its Unit number, although we found that was not descriptive enough for our needs below.)  
@@ -89,11 +94,15 @@ Some counts were unrealistically high.  To fix this, we made an upper limit of c
 
 
 
-![Histogram of all turnstile counts](/public/img/Turnstile_Counts_Hist1.png)
+<p align="center">
+<img src="/public/img/Turnstile_Counts_Hist1.png?raw=true" alt="Movie List"/>
+</p>
 
 
 
-![Histogram of higher turnstile counts](/public/img/Turnstile_Counts_Hist2.png)
+<p align="center">
+<img src="/public/img/Turnstile_Counts_Hist2.png?raw=true" alt="Movie List"/>
+</p>
 
 
 
@@ -121,7 +130,9 @@ We could then see the total traffic for each station by totaling up the counts i
     ranked = df_station_total.sort_values('Counts', ascending=False).reset_index()
 ~~~
 
-![Top 10 Stations](/public/img/Station_Rank.png)
+<p align="center">
+<img src="/public/img/Station_Rank.png?raw=true" alt="Movie List"/>
+</p>
 
 
 
@@ -148,11 +159,13 @@ The table of coordinates for stations provided by web.mta.info has Station ID nu
 
 Now that we had the coordinates of each station, we could find the stations within a targeted region.  We found that the tech startups on digital.nyc did trace out the tech hubs in Silicon Alley and Lower Manhattan.  
 
+<p align="center">
+<img src="/public/img/New_York.png?raw=true" alt="Movie List"/>
+</p>
 
-![Startups used to trace tech hubs](/public/img/New_York.png)
-
-
-![Silicon Alley and Lower Manhattan](/public/img/New_York_2.png)
+<p align="center">
+<img src="/public/img/New_York_2.png?raw=true" alt="Movie List"/>
+</p>
 
 
 To get stations near tech hubs, we used coordinate boxes that encompassed those areas, and did a search of stations within that area.  For example, to search the area of dense tech companies just south of Central Park, we limited the search to staitons with longitudes between -73.994992&deg; and -73.975443&deg;, and latitudes between 40.735691&deg; and 40.759721&deg;.
@@ -189,7 +202,9 @@ We compared the top 10 busiest stations with the top 10 suggested stations based
 These demographics are for the residents, and doesn't include the commuters from other communities who would be coming to those stations for their jobs.  Since we have also targeted stations near tech hubs, this would further increase the percentage of people who would likely be interested in the WTWY gala.
 
 
-![10 top stations for target demographics](/public/img/MTA_Station_Locations.png){: .center-image }
+<p align="center">
+<img src="/public/img/MTA_Station_Locations.png?raw=true" alt="Movie List"/>
+</p>
 
 
 Given our target demographics, the stations near NYU, Cornell University, and Georgetown University were included.  This means the academic community will also be included with these stations. 
@@ -201,18 +216,27 @@ Given our target demographics, the stations near NYU, Cornell University, and Ge
 To test which days would be best for the street teams to canvass, we looked at the amount of traffic for the stations by day of week.  We found that consistently the weekdays showed much more traffic than weekends (as expected).  To illustrate this, below is the average daily subway traffic (entries plus exits) for Grand Central Station in April/May 2016.
 
 
-![Grand Central Station traffic](/public/img/Grand_Central_Traffic_Week.png)
+<p align="center">
+<img src="/public/img/Grand_Central_Traffic_Week.png?raw=true" alt="Movie List"/>
+</p>
 
 However, while there is less traffic on the weekend, there are still commuter counts in the 10's and 100's of thousands.  While the teams may not interact with as many people, they may not be in a rush to get to work or back home and perhaps more likely to talk with the street teams, so that would need to be taken into consideration.
 
 In order to look at the best times for street times to canvass during the weekdays, we looked at traffic rates for different times of the day.  We found that not all stations showed the same traffic pattern trends.  All the stations we looked at did peak in the afternoon rush hour, but how it compared to the rest of the day varied.  Some stations showed an increase from morning to afternoon, like that seen at the 96th St. station for lines 1,2,3:
 
-![96th Street 123 Traffic by Time](/public/img/96th_Traffic_Hour.png)
+<p align="center">
+<img src="/public/img/96th_Traffic_Hour.png?raw=true" alt="Movie List"/>
+</p>
+
 
 Other stations showed a double peak in the morning and afternoon traffic, as seen in the Lexington Ave / 53rd St. station for lines E,M,6:
 
 
-![Lexington Ave / 53rd Street EM6 Traffic by Time](/public/img/Lexington_Traffic_Hour.png)
+
+<p align="center">
+<img src="/public/img/Lexington_Traffic_Hour.png?raw=true" alt="Movie List"/>
+</p>
+
 
 Others showed a combination of these two patterns with the morning rush hour traffic ranging from moderate to high traffic.  This affects which stations would be best to go to in the morning and afternoon, as it would be better to go in the afternoon to stations with low morning traffic, and then go in the morning to stations that have double peaked traffic patterns. For the top ten stations for our target demographics, we found that five showed relatively lower morning traffic, and five had relatively higher morning traffic, making it easy to divide up which stations to visit in the morning or afternoon.
 
