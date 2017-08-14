@@ -269,11 +269,20 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 </p>
 
 <tr><td>
-<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
 </td><td>
-<img "src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true" />
 </td>
 </tr>
+
+<div class="container" style="width: 100%;">
+<div class="theme-table-image col-sm-6">
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true">
+</div>
+<div class="theme-table-image col-sm-6">
+<img src="/public/img/cifar100/chimpanzee.jpg?raw=true">
+</div>
+</div>
 
 ![alt-text-1](/public/img/cifar100/chimpanzee.jpg?raw=true "title-1") ![alt-text-2](/public/img/cifar100/chimpanzee.jpg?raw=true "title-2")
 
