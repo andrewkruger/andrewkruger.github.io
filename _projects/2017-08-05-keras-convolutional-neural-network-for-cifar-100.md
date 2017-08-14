@@ -59,7 +59,7 @@ But that's still not the whole story of how we recognize things.  A single line 
 
 Even further, we need to recognize where the parts of the duck are relative to each other, relative sizes, etc., otherwise the duck doesn't look like what we're used to.  More hidden layers are needed to find these relationships, and as those layers are added, the neural network is getting *deeper*.  Deeper neural networks are able to make more complex structures in the input data. 
 
-Now, if we create a classifier to recognize a duck, it's not necessarily going to look for the same things we do, such as feathers and an orange bill (the image may be too low resolution, or black-and-white).  The features and combintations of features it looks for are whatever results in the lowest loss for the inputs its given.  Also, as it searches for combinations of lines, edges, etc., what it's looking for becomes unintelligible to us, which is why they're called "hidden" layers.
+Now, if we create a classifier to recognize a duck, it's not necessarily going to look for the same things we do, such as feathers and an orange bill (the image may be too low resolution, or black-and-white).  The features and combinations of features it looks for are whatever results in the lowest loss for the inputs its given.  Also, as it searches for combinations of lines, edges, etc., what it's looking for becomes unintelligible to us, which is why they're called "hidden" layers.
 
 That first layer applies filters directly to the image to search for edges, lines, colors, etc.  Here's an example illustration by [Rob Fergus at NYU](http://cs.nyu.edu/~fergus/tutorials/deep_learning_cvpr12/):
 
