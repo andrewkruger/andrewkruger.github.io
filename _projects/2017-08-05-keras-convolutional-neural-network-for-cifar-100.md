@@ -269,7 +269,7 @@ Naturally, it gets some things completely wrong.  For example, in this image it 
 <td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
 <img src="/public/img/cifar100/chimpanzee.jpg?raw=true" style="width:300px">
 </td>
-<td style="padding:5px">
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
 <img src="/public/img/cifar100/chimpanzee_pred.png?raw=true" style="width:300px">
 </td>
 </tr>
