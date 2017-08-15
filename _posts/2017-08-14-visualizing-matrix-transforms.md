@@ -50,7 +50,7 @@ A rotation matrix will rotate the data around the origin by an angle $$\theta$$,
 <img src="/public/img/visualizing_matrix_transforms/rotation_matrix.png?raw=true" alt="Field"/>
 </p>
 
-Here I rotate the image by a positive $$20^{\circ}$$.
+Here I rotate the image by a positive $$20^{\circ}$$.  Notice that it rotates counter-clockwise.
 
 <p align="center">
 <img src="/public/img/visualizing_matrix_transforms/rotation_ex.png?raw=true" alt="Field"/>
