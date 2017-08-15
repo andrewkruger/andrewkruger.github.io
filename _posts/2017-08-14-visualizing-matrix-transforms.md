@@ -23,6 +23,7 @@ In other words, $$A$$ is transforming $$x$$ to become $$T$$.  I'll apply matrix 
 
 For each of the following, the blue will be the transformed image, green is the original.
 
+<br>
 ## Scaling Matrix
 
 A scaling matrix is a diagonal matrix where the diagonal elements (here $$v_x$$ and $$v_y$$) don't need to be one:
@@ -38,10 +39,10 @@ For example, if we use $$v_x=1.2$$, it will make the image larger in the x-direc
 <img src="/public/img/visualizing_matrix_transforms/scale.png?raw=true" />
 </p>
 
-
+<br>
 ## Rotation Matrix
 
-A rotation matrix will rotate the data around the origin by an angle $$\theta$$, and follows:
+A rotation matrix will rotate the data *around the origin* by an angle $$\theta$$, and follows:
 
 <p align="center">
 <img src="/public/img/visualizing_matrix_transforms/rotation_matrix.png?raw=true"/>
@@ -54,7 +55,7 @@ Here I rotate the image by a positive $$20^{\circ}$$.  Notice that it rotates co
 <img src="/public/img/visualizing_matrix_transforms/rotate.png?raw=true"/>
 </p>
 
-
+<br>
 ## Shear Matrix
 
 A shear matrix will basically tilt an axis by having a non-zero, off-axis element.
@@ -76,7 +77,7 @@ The larger the $$\lambda$$, the greater the shear.
 <img src="/public/img/visualizing_matrix_transforms/shear2.png?raw=true"/>
 </p>
 
-
+<br>
 ## Skew-symmetric Matrix
 
 The skew matrix will shear the axes the same amount but in opposite directions.  A skew matrix will not rotate the data, but will shear the axis the same angle in opposite directions.  This does the same as the scaling matrix, but instead of scaling along the axes, it scales at a $$45^{\circ}$$ angle.
@@ -97,7 +98,7 @@ The angle $$\theta$$ does not determine the angle of the skew, but the amount of
 <img src="/public/img/visualizing_matrix_transforms/skew20.png?raw=true"/>
 </p>
 
-
+<br>
 ## Transform Combinations
 
 A transformation can be the combination of transformations.  For example, a skew-symmetric matrix can be replaced by a combination of a rotation-scale-derotation:
@@ -112,7 +113,14 @@ This can be understood visually by the image being rotated, scaled along the x- 
 <img src="/public/img/visualizing_matrix_transforms/symmetric_matrix.png?raw=true"/>
 </p>
 
-where $$Q$$ is an orthogonal matrix ($$Q=-Q^T$$) and $$D$$ is a diagonal matrix.  Notice that the rotation matrix is orthogonal (and $$R(-\theta) = R(\theta)^T$$) and the scaling matrix is diagonal.
+where $$Q$$ is an orthogonal matrix ($$Q=-Q^T$$) and $$D$$ is a diagonal matrix.  Notice that the rotation matrix is orthogonal (and $$R(-\theta) = R(\theta)^T$$) and the scaling matrix is diagonal.  
+
+Another way to think of it is the matrix $$D$$ is the diagonalization of $$A$$.  The magnitude that $$D$$ scales the image is the same as $$A$$, but the axes of $$D$$ are just aligned with the direction $$A$$ scales it.  Those directions that $$A$$ scale, and that the elements $$D$$ are aligned in, are the *principal axes*.
+
+<br>
+## Covariance Matrix
+
+A covariance matrix shows the covariance of two vector elements in a dataset.  The covariance of the $$i$$ and $$j$$ elements is the same as the covariance of the $$j$$ and $$i$$ elements (order doesn't matter).  This means the i,j component of the covariance matrix are the same as the j,i component, so the covariance matrix is symmetric.  This then means it can be 
 
 
 
