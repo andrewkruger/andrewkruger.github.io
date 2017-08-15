@@ -9,7 +9,7 @@ description: >
 
 ## Matrix Transforms
 
-The following is to demonstrate different types of matrix transformations that can be done to a data set or image.  For each of the following, if $$x\arrow$$ is the dataset (as a vector), and $$A$$ is the transformation matrix of $$T$$, then
+The following is to demonstrate different types of matrix transformations that can be done to a data set or image.  For each of the following, if $$x$$ is the dataset (as a vector), and $$A$$ is the transformation matrix of $$T$$, then
 
 $$
 T = Ax
