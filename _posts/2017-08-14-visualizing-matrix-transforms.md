@@ -77,13 +77,24 @@ The larger the $$\lambda$$, the greater the shear.
 </p>
 
 
-## Skew Matrix
+## Skew-symmetric Matrix
 
-A skew matrix will not rotate the data, but will shear the axis the same angle in opposite directions.  
+The skew matrix will shear the axes the same amount but in opposite directions.  A skew matrix will not rotate the data, but will shear the axis the same angle in opposite directions.  This does the same as the scaling matrix, but instead of scaling along the axes, it scales at a $$45^{\circ}$ angle.
 
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/skew_matrix.png?raw=true"/>
+</p>
 
+The angle $$\theta$$ does not determine the angle of the skew, but the amount of skew.
 
-It is the same as a scaling matrix where the scaling 
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/skew10_ex.png?raw=true"/>
+<img src="/public/img/visualizing_matrix_transforms/skew10.png?raw=true"/>
+</p>
 
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/skew20_ex.png?raw=true"/>
+<img src="/public/img/visualizing_matrix_transforms/skew20.png?raw=true"/>
+</p>
 
 
