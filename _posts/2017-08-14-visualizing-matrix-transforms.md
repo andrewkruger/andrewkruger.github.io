@@ -234,6 +234,7 @@ This means 94.6% of the total variance is along the first component.  However, t
 ~~~
 
 
+<br>
 ## Singular Value Decomposition
 
 Singular Value Decomposition (SVD) is similar to principal component analysis, but has a different matrix transformation decomposition:
@@ -252,6 +253,56 @@ In this case, the $$V^*$$ is the *complex conjugate* of $$V$$, and it still cont
                [ 0.5084, -0.8611]])
 ~~~
 
-However, $$U$$ and $$\Sigma$$ are less intuitive.  $$\Sigma$$ still contains the eigenvectors, but it has more 
+$$\Sigma$$ contains the *singular values*, which are proportional to the standard deviations of the data in the different axes.
+
+~~~py
+    print(s)
+
+        array([ 90.2286,  21.6220])
+~~~
+
+To get the variance, you need to square the standard deviations and divide by the number of points (I used 100 points):
+
+~~~py
+    np.power(s,2)/100
+
+        array([ 81.4119,   4.6751])
+~~~
+
+The matrix $$U$$ is the adjusted dataset, with the directions of greatest variance aligned with the axes, but is scaled such that the variance times the number of datapoints is unitary for all coordinates:
+
+~~~py
+    print(np.var(U[:,0])*100)
+    print(np.var(U[:,1])*100)
+
+        1.0
+        1.0
+~~~
+
+Or, another way to think of it is the standard deviation times the square root of the number of points is also one:
+
+~~~py
+    print(np.std(U[:,0])*np.sqrt(100))
+    print(np.std(U[:,1])*np.sqrt(100))
+
+        1.0
+        1.0
+~~~
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/u_data.png?raw=true"/>
+</p>
+
+
+If we multiply $$U$$ and $$\Sigma$$, we should end up with the dataset after it has been rotated to remove the slope.  Here I plot both the $$U \Sigma$$ (the negatives are just because of the rotation made by the SVD fit being 210$$^{\circ}$$ instead of 30$$^{\circ}$$) along with the rotated data shown above, and it can be seen they are overlapping to where they're basically indistinguishable.
+
+~~~py
+    plt.scatter(-U[:,0]*s[0],-U[:,1]*s[1],color='blue')
+    plt.scatter(x_rot[:,0],x_rot[:,1],color='green',alpha=0.4)
+~~~
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/u_sigma.png?raw=true"/>
+</p>
 
 
