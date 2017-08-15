@@ -307,6 +307,15 @@ If we multiply $$U$$ and $$\Sigma$$, we should end up with the dataset after it 
 <img src="/public/img/visualizing_matrix_transforms/u_sigma.png?raw=true"/>
 </p>
 
-This is the adjusted dataset where it is aligned with the principle axes.
+This is the adjusted dataset where it is aligned with the principle axes.  Like before, if we set the second component of $$\Sigma$$ to be zero, we will get the first principal component.
+
+~~~py
+    plt.scatter(-u[:,0]*s[0],-u[:,1]*0,color='blue')
+    plt.scatter(x_rot[:,0],x_rot[:,1],color='green',alpha=0.4)
+~~~
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/u_data_1component.png?raw=true"/>
+</p>
 
 
