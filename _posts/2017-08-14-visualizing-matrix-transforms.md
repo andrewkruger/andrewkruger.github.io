@@ -122,6 +122,72 @@ Another way to think of it is the matrix $$D$$ is the diagonalization of $$A$$. 
 <br>
 ## Principal Components
 
-A covariance matrix shows the covariance of two vector elements in a dataset.  The covariance of the $$i$$ and $$j$$ elements is the same as the covariance of the $$j$$ and $$i$$ elements (order doesn't matter).  This means the i,j component of the covariance matrix are the same as the j,i component, so the covariance matrix is symmetric.  
+A covariance matrix shows the covariance of two vector elements in a dataset.  The covariance of the $$i$$ and $$j$$ elements is the same as the covariance of the $$j$$ and $$i$$ elements (order doesn't matter).  This means the i,j component of the covariance matrix are the same as the j,i component, so the covariance matrix is symmetric.  The covariance matrix $$C$$ can thus be decomposed:
 
-The covariance matrix is 
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/cov_matrix.png?raw=true"/>
+</p>
+
+where $$V$$ is a matrix of *eigenvectors* and $$L$$ is a diagonal matrix of *eigenvalues*.  We can think of this as $$V^T$$ rotates the data, $$L$$ is the scale of the data in the different directions, and $$V$$ de-rotates the data back to the angle it started.
+
+To illustrate this, I'll make data that's centered at the origin (or, de-meaned, which is necessary for the matrix transformations to be correct).  It has a slope that is at $$30^{\circ}$$ from the x-axis.
+
+
+~~~py
+    angle = 30.*np.pi/180. #in radians
+    x1 = np.random.normal(loc=0, scale=8, size=100)
+    x2 = x1*angle + np.random.normal(scale=3, size=100)
+    x1 = x1-np.mean(x1)
+    x2 = x2-np.mean(x2)
+    x = np.column_stack((x1,x2))
+~~~
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/data.png?raw=true"/>
+</p>
+
+First, let's rotate the data so it's not sloped (or, the greatest variance is in the x-direction):
+
+
+~~~py
+    rot = np.array([[np.cos(angle), -np.sin(angle)],
+                    [np.sin(angle), np.cos(angle)]])
+
+    x_rot = np.matmul(x,rot)
+~~~
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/data_rotate_matrix.png?raw=true"/>
+<img src="/public/img/visualizing_matrix_transforms/data_rotate.png?raw=true"/>
+</p>
+
+
+Let's find the variance in the x- and y-directions (we'll use this later):
+
+~~~py
+    print("Variance in X:",np.var(x_rot[:,0]))
+    print("Variance in Y:",np.var(x_rot[:,1]))
+
+        Variance in X: 81.4045
+        Variance in Y: 4.68242
+~~~
+
+Let's get rid of the variance in a direction that has the least amounnt of variance, the y-direction.  We can do this with a matrix transformation by having 1 in the x-x position, and zero everywhere else:
+
+~~~py
+    flat = np.array([[1,0],
+                     [0,0]])
+    x_flat = np.matmul(x_rot,flat)
+~~~
+
+
+
+Now let's rotate it back to a slope of $$30^{\circ}$$ and compare to the original.
+
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/data_1component.png?raw=true"/>
+</p>
+
+
