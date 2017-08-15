@@ -289,7 +289,7 @@ Or, another way to think of it is the standard deviation times the square root o
         1.0
 ~~~
 
-Here I plot the first column vs. the second column of $$U$$ to show that the noise is symmetric.
+Here I plot the first column vs. the second column of $$U$$ to show the noise.
 
 <p align="center">
 <img src="/public/img/visualizing_matrix_transforms/u_data.png?raw=true"/>
