@@ -27,19 +27,15 @@ For each of the following, the blue will be the transformed image, green is the 
 
 A scaling matrix is a diagonal matrix where the diagonal elements (here $$v_x$$ and $$v_y$$) don't need to be one:
 
-$$
-S_v = \left( \begin{array}{cc}
-v_x & 0 \\
-0 & v_y \end{array} \right)\\
-$$
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/scale_matrix.png?raw=true" alt="Field"/>
+</p>
 
 For example, if we use $$v_x=1.2$$, it will make the image larger in the x-direction (because $$v_x>1$$), while $$v_y=0.6$$ will make it smaller in the y-direction (because $$v_y<1$$).
 
-$$
-S_v = \left( \begin{array}{cc}
-1.2 & 0 \\
-0 & 0.6 \end{array} \right)\\
-$$
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/scale_ex.png?raw=true" alt="Field"/>
+</p>
 
 <p align="center">
 <img src="/public/img/visualizing_matrix_transforms/scale.png?raw=true" alt="Field"/>
@@ -50,29 +46,29 @@ $$
 
 A rotation matrix will rotate the data around the origin by an angle $$\theta$$, and follows:
 
-$$
-R(\theta) = \left( \begin{array}{cc}
-\cos\theta & -\sin\theta \\
-\sin\theta & \cos\theta \end{array} \right)\\
-$$
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/rotation_matrix.png?raw=true" alt="Field"/>
+</p>
 
 Here I rotate the image by a positive $$20^{\circ}$$.
 
-$$
-R(20^{\circ}) = \left( \begin{array}{cc}
-\cos 20^{\circ} & -\sin 20^{\circ} \\
-\sin 20^{\circ} & \cos 20^{\circ} \end{array} \right)\\
-$$
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/rotation_ex.png?raw=true" alt="Field"/>
+</p>
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/rotate.png?raw=true" alt="Field"/>
+</p>
+
+
+## Shear Matrix
+
+A shear matrix will basically tilt an axis.
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/shear_matrix.png?raw=true" alt="Field"/>
+</p>
 
 
 
 
-
-
-
-
-$$
-R(\theta) = \left( \begin{array}{cc}
-\cos\theta & -\sin\theta \\
-\sin\theta & \cos\theta \end{array} \right)\\
-$$
