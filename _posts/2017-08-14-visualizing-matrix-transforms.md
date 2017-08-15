@@ -102,4 +102,18 @@ The angle $$\theta$$ does not determine the angle of the skew, but the amount of
 
 A transformation can be the combination of transformations.  For example, a skew-symmetric matrix can be replaced by a combination of a rotation-scale-derotation:
 
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/skew_combo.png?raw=true"/>
+</p>
+
+This can be understood visually by the image being rotated, scaled along the x- and y-axes, then rotated back so the scaling appears as a skew.  (Or, tilt your head when looking at the skew images, it's just like a scaled image but at an angle.)  But mathetmatically, [since the skew-symmetric matrix is symmetric, it means it can be described by the relationship](http://mathworld.wolfram.com/SymmetricMatrix.html):
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/symmetric_matrix.png?raw=true"/>
+</p>
+
+where $$Q$$ is an orthogonal matrix ($$Q=-Q^T$$) and $$D$$ is a diagonal matrix.  Notice that the rotation matrix is orthogonal (and $$R(-\theta) = R(\theta)^T$$) and the scaling matrix is diagonal.
+
+
+
 
