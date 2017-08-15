@@ -63,12 +63,30 @@ Here I rotate the image by a positive $$20^{\circ}$$.
 
 ## Shear Matrix
 
-A shear matrix will basically tilt an axis.
+A shear matrix will basically tilt an axis by having a non-zero, off-axis element.
 
 <p align="center">
 <img src="/public/img/visualizing_matrix_transforms/shear_matrix.png?raw=true" alt="Field"/>
 </p>
 
+The larger the $$\lambda$$, the greater the shear.
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/shear1_ex.png?raw=true" alt="Field"/>
+</p>
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/shear1.png?raw=true" alt="Field"/>
+</p>
+
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/shear2_ex.png?raw=true" alt="Field"/>
+</p>
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/shear2.png?raw=true" alt="Field"/>
+</p>
 
 
 
