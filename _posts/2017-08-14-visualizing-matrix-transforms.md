@@ -269,7 +269,7 @@ To get the variance, you need to square the standard deviations and divide by th
         array([ 81.4119,   4.6751])
 ~~~
 
-The matrix $$U$$ is the adjusted dataset, with the directions of greatest variance aligned with the axes, but is scaled such that the variance times the number of datapoints is unitary for all coordinates:
+The columns of $$U$$ all have the same noise such that the variance times the number of datapoints is unitary for all coordinates:
 
 ~~~py
     print(np.var(U[:,0])*100)
@@ -288,6 +288,8 @@ Or, another way to think of it is the standard deviation times the square root o
         1.0
         1.0
 ~~~
+
+Here I plot the first column vs. the second column of $$U$$ to show that the noise is symmetric.
 
 <p align="center">
 <img src="/public/img/visualizing_matrix_transforms/u_data.png?raw=true"/>
