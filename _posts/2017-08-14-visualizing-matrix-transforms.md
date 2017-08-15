@@ -18,7 +18,7 @@ $$
 In other words, $$A$$ is transforming $$x$$ to become $$T$$.  I'll apply matrix transformations to this circle and grid:
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/original.png?raw=true" alt="Field" style="width:200px"/>
+<img src="/public/img/visualizing_matrix_transforms/original.png?raw=true" alt="Field" style="width:300px"/>
 </p>
 
 For each of the following, the blue will be the transformed image, green is the original.
