@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Visualizing Matrix Transforms"
+title: "Visualizing Matrix Transforms and Principal Component Analysis"
 author: andrew
 tags: [blog]
 description: >
@@ -120,7 +120,7 @@ Another way to think of it is the matrix $$D$$ is the diagonalization of $$A$$. 
 
 
 <br>
-## Principal Components
+## Principal Component Analysis
 
 A covariance matrix shows the covariance of two vector elements in a dataset.  The covariance of the $$i$$ and $$j$$ elements is the same as the covariance of the $$j$$ and $$i$$ elements (order doesn't matter).  This means the i,j component of the covariance matrix are the same as the j,i component, so the covariance matrix is symmetric.  The covariance matrix $$C$$ can thus be decomposed:
 
@@ -181,14 +181,17 @@ Let's get rid of the variance in a direction that has the least amounnt of varia
     x_flat = np.matmul(x_rot,flat)
 ~~~
 
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/data_1component.png?raw=true"/>
+</p>
 
 
 Now let's rotate it back to a slope of $$30^{\circ}$$ and compare to the original.
 
-
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/data_1component.png?raw=true"/>
+<img src="/public/img/visualizing_matrix_transforms/data_1compoverlay.png?raw=true"/>
 </p>
+
 
 
 Now the data lies along an axis along which most of the variance in the data lies.  This is the *principal axis*.  By projecting the data onto that axis, we are looking at a *principal component*.  Let's use scikit-learn's PCA package and compare its results to what we did.  First, let's print out the principal components:
@@ -214,5 +217,41 @@ Next, let's print out the explained variance:
         array([ 81.4119,   4.6751])
 ~~~
 
-Notice this is almost exactly the same as the variance we calculated.  These are the eigenvalues.
+Notice this is almost exactly the same as the variance we calculated.  These are the eigenvalues that show the relative importance of the different components based on their variance.  If you want to see how much of the total variance is explained by the different components, you can divide each eigenvalue by the sum of the eigenvalues.
+
+~~~py
+    pca.explained_variance_/(np.sum(pca.explained_variance_))
+
+        array([ 0.9457,  0.0543])
+~~~
+
+This means 94.6% of the total variance is along the first component.  However, there's a faster way to get the ratio of explained variance:
+
+~~~py
+    pca.explained_variance_ratio_
+
+        array([ 0.9457,  0.0543])
+~~~
+
+
+## Singular Value Decomposition
+
+Singular Value Decomposition (SVD) is similar to principal component analysis, but has a different matrix transformation decomposition:
+
+<p align="center">
+<img src="/public/img/visualizing_matrix_transforms/svd_equation.png?raw=true"/>
+</p>
+
+In this case, the $$V^*$$ is the *complex conjugate* of $$V$$, and it still contains the eigenvectors of $$M$$ (it is still rotating the data):
+
+~~~py
+    U,s,V = np.linalg.svd(x)
+    print(V)
+
+        array([[-0.8611, -0.5084],
+               [ 0.5084, -0.8611]])
+~~~
+
+However, $$U$$ and $$\Sigma$$ are less intuitive.  $$\Sigma$$ still contains the eigenvectors, but it has more 
+
 
