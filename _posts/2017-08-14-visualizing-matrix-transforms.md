@@ -191,3 +191,28 @@ Now let's rotate it back to a slope of $$30^{\circ}$$ and compare to the origina
 </p>
 
 
+Now the data lies along an axis along which most of the variance in the data lies.  This is the *principal axis*.  By projecting the data onto that axis, we are looking at a *principal component*.  Let's use scikit-learn's PCA package and compare its results to what we did.  First, let's print out the principal components:
+
+~~~py
+    from sklearn.decomposition import PCA
+    pca = PCA()
+    p = pca.fit(x)
+    print(pca.components_)
+
+        array([[-0.8611, -0.5084],
+                [ 0.5084, -0.8611]])
+~~~
+
+The magnitudes of the principal components are the same as the rotation matrix we used.  (Negative values just mean it rotates by more than $$90^{\circ}$$, so it's projection on the x-axis would just be a mirror image of the image above, but gives same results.)  The rows in this matrix are the eigenvectors, showing the direction of most variance, second most variance, etc.
+
+
+Next, let's print out the explained variance:
+
+~~~py
+    pca.explained_variance_
+
+        array([ 81.4119,   4.6751])
+~~~
+
+Notice this is almost exactly the same as the variance we calculated.  These are the eigenvalues.
+
