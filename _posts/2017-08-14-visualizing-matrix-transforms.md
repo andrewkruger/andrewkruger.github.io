@@ -28,17 +28,14 @@ For each of the following, the blue will be the transformed image, green is the 
 A scaling matrix is a diagonal matrix where the diagonal elements (here $$v_x$$ and $$v_y$$) don't need to be one:
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/scale_matrix.png?raw=true" alt="Field"/>
+<img src="/public/img/visualizing_matrix_transforms/scale_matrix.png?raw=true" />
 </p>
 
 For example, if we use $$v_x=1.2$$, it will make the image larger in the x-direction (because $$v_x>1$$), while $$v_y=0.6$$ will make it smaller in the y-direction (because $$v_y<1$$).
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/scale_ex.png?raw=true" alt="Field"/>
-</p>
-
-<p align="center">
-<img src="/public/img/visualizing_matrix_transforms/scale.png?raw=true" alt="Field"/>
+<img src="/public/img/visualizing_matrix_transforms/scale_ex.png?raw=true"/>
+<img src="/public/img/visualizing_matrix_transforms/scale.png?raw=true" />
 </p>
 
 
@@ -47,17 +44,14 @@ For example, if we use $$v_x=1.2$$, it will make the image larger in the x-direc
 A rotation matrix will rotate the data around the origin by an angle $$\theta$$, and follows:
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/rotation_matrix.png?raw=true" alt="Field"/>
+<img src="/public/img/visualizing_matrix_transforms/rotation_matrix.png?raw=true"/>
 </p>
 
 Here I rotate the image by a positive $$20^{\circ}$$.  Notice that it rotates counter-clockwise.
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/rotation_ex.png?raw=true" alt="Field"/>
-</p>
-
-<p align="center">
-<img src="/public/img/visualizing_matrix_transforms/rotate.png?raw=true" alt="Field"/>
+<img src="/public/img/visualizing_matrix_transforms/rotation_ex.png?raw=true"/>
+<img src="/public/img/visualizing_matrix_transforms/rotate.png?raw=true"/>
 </p>
 
 
@@ -66,26 +60,20 @@ Here I rotate the image by a positive $$20^{\circ}$$.  Notice that it rotates co
 A shear matrix will basically tilt an axis by having a non-zero, off-axis element.
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/shear_matrix.png?raw=true" alt="Field"/>
+<img src="/public/img/visualizing_matrix_transforms/shear_matrix.png?raw=true"/>
 </p>
 
 The larger the $$\lambda$$, the greater the shear.
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/shear1_ex.png?raw=true" alt="Field"/>
-</p>
-
-<p align="center">
-<img src="/public/img/visualizing_matrix_transforms/shear1.png?raw=true" alt="Field"/>
+<img src="/public/img/visualizing_matrix_transforms/shear1_ex.png?raw=true" />
+<img src="/public/img/visualizing_matrix_transforms/shear1.png?raw=true" />
 </p>
 
 
 <p align="center">
-<img src="/public/img/visualizing_matrix_transforms/shear2_ex.png?raw=true" alt="Field"/>
-</p>
-
-<p align="center">
-<img src="/public/img/visualizing_matrix_transforms/shear2.png?raw=true" alt="Field"/>
+<img src="/public/img/visualizing_matrix_transforms/shear2_ex.png?raw=true"/>
+<img src="/public/img/visualizing_matrix_transforms/shear2.png?raw=true"/>
 </p>
 
 
