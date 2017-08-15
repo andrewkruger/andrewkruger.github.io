@@ -296,7 +296,7 @@ Here I plot the first column vs. the second column of $$U$$ to show that the noi
 </p>
 
 
-If we multiply $$U$$ and $$\Sigma$$, we should end up with the dataset after it has been rotated to remove the slope.  Here I plot both the $$U \Sigma$$ (the negatives are just because of the rotation made by the SVD fit being 210$$^{\circ}$$ instead of 30$$^{\circ}$$) along with the rotated data shown above, and it can be seen they are overlapping to where they're basically indistinguishable.
+$$\Sigma$$ can then be used to scale $$U$$ to it's original magnitudes, so $$U \Sigma$$ should be the dataset that was rotated to remove the slope.  Here I plot both the $$U \Sigma$$ (the negatives are just because of the rotation made by the SVD fit being 210$$^{\circ}$$ instead of 30$$^{\circ}$$) along with the rotated data shown above, and it can be seen they are overlapping to where they're basically indistinguishable.
 
 ~~~py
     plt.scatter(-U[:,0]*s[0],-U[:,1]*s[1],color='blue')
