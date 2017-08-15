@@ -307,4 +307,6 @@ If we multiply $$U$$ and $$\Sigma$$, we should end up with the dataset after it 
 <img src="/public/img/visualizing_matrix_transforms/u_sigma.png?raw=true"/>
 </p>
 
+This is the adjusted dataset where it is aligned with the principle axes.
+
 
