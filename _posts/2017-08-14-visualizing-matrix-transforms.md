@@ -98,3 +98,8 @@ The angle $$\theta$$ does not determine the angle of the skew, but the amount of
 </p>
 
 
+## Transform Combinations
+
+A transformation can be the combination of transformations.  For example, a skew-symmetric matrix can be replaced by a combination of a rotation-scale-derotation:
+
+
