@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Visualizing Matrix Transforms and Principal Component Analysis"
+title: "Visualizing Matrix Transforms, PCA, and SVD"
 author: andrew
 tags: [blog]
 description: >
