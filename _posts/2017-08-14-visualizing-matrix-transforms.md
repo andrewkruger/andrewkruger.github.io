@@ -86,7 +86,7 @@ The skew matrix will shear the axes the same amount but in opposite directions. 
 <img src="/public/img/visualizing_matrix_transforms/skew_matrix.png?raw=true"/>
 </p>
 
-The angle $$\theta$$ does not determine the angle of the skew, but the amount of skew.
+The angle $$\theta$$ does not determine the angle of the skew, rather $$sin \theta$$ gives the slope of the axes relative to the unskewed axes.
 
 <p align="center">
 <img src="/public/img/visualizing_matrix_transforms/skew10_ex.png?raw=true"/>
