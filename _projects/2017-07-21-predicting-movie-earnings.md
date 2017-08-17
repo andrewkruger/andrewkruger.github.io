@@ -96,6 +96,14 @@ This means the succeess of a crew member's movie doesn't necessarily change with
 </p>
 
 
+## Regularization
+
+Regularization does a fit to the data while minimizing the complexity of the model needed to get a best fit.  It does this by finding the minimum loss through gradient descent, but with an added penalty to the weights used on the different features used.  In this way, if a feature does not have a large effect, its weighting will decrease to make the model less complicated to prevent overfitting.  Lasso is a form of regularization where the cost function is found by
+
+
+<p align="center">
+<img src="/public/img/lasso.png?raw=true" />
+</p>
 
 
 
