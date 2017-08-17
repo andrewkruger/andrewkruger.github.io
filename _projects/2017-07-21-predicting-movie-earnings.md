@@ -86,12 +86,19 @@ This means we should fit up to a sixth order polynomial.
 
 The total gross that a movie makes depends on the cost of a ticket.  A movie that opened in 1950 naturally won't make nearly as much as a movie that opened in 2010, even if they opened in the same number of theaters, simply because the cost of a ticket is much higher in 2010.  
 
-Here you can see the total gross of all movies for the years available on https://the-numbers.com, as well as total ticket sales.
+Here you can see the total gross of all movies for the years available on the-numbers.com, as well as total ticket sales, from 1995 to 2016.
 
 <p align="center">
 <img src="/public/img/Ticket_Sales.png?raw=true"/>
 </p>
 
+While the total number of tickets sold has stayed relatively constant, the total gross for all movies has over doubled.  This indicates that the year the movie was made will strongly affect its domestic gross.  However, rather than trying to use the year for our model fit, we can use the average cost per ticket as a feature.  
+
+Since I only have this information from 1995 on, I will limit the movies used to only those released in 1995 and onward.  Fortunately, this is a majority of the movies in the dataset.  This graph shows the number of movies that have budgets per year, and the red indicates the years used in the model.
+
+<p align="center">
+<img src="/public/img/Movies_Per_Year_Annot.png?raw=true"/>
+</p>
 
 
 
