@@ -160,7 +160,8 @@ The residuals have a standard deviation of $9 million.  It also has a moderate a
 <img src="/public/img/Ordered_Residuals.png?raw=true" />
 </p>
 
-It can be seen the earlier models are clearly better predicted as expected, and the movies with higher gross had more error and tended to be higher than expected.  The residuals had a standard deviation of $6 million for movies that grossed $20 million or less (the first ~1000 movies).
+It can be seen the earlier models are clearly better predicted as expected, and the movies with higher gross had more error and tended to be higher than expected.  The residuals had a standard deviation of $6 million for movies that grossed $20 million or less (the first ~1000 movies, which is 64% of the movies).
 
-
+<br>
+This model could be used to make a predition for the opening weekend domestic gross of movies given the who is in the cast, crew, and the number of theaters it is opening in.  This would act as an early indicator if a movie's gross is lower than expected, providing time to increase advertisement or make intervention decisions immediately after release.
 
