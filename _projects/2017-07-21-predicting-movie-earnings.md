@@ -139,7 +139,7 @@ When doing regularization, standardization of the data makes it so the tuning pa
 
 <br>
 
-## The model
+## The Model Results
 
 I used a second-order polynomial fit that was made to the data using a scikit-learn pipeline, and the model had an $$R^2$$ value of 0.87.  Here you can see the comparison of the predicted values vs. the actual opening weekend gross:
 
