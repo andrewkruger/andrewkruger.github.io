@@ -7,8 +7,6 @@ img: Movies.png
 description: >
 ---
 
-### Warning: In the spirit of living in Chicago, this page is under construction.
-
 
 ## Predicting Opening Weekend Domestic Gross Earnings for the Movies
 
