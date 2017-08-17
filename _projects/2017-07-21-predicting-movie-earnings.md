@@ -62,7 +62,7 @@ Number of theaters: The movie Gran Torino tarted in 6 theaters in December 2016,
 
 We can look at individual features to see if there are any obvious relationships with gross earnings.
 
-<br>
+
 ### Number of Theaters
 
 Without looking at the data, the number of theaters a movie plays in will obviously play a large role in how much the movie will earn.  [Gran Torino](http://www.the-numbers.com/movie/Gran-Torino#tab=box-office) opened in 6 theaters on the weekend of December 12, 2008 and had a total gross of $271,720.  When it opened to 2,808 theaters the following January 9, it grossed $40,524,518.  Clearly this is because having more theaters allows more tickets.  But the gross is not necessarily linear with the number of theaters.
@@ -81,8 +81,8 @@ The non-linear upward curve is quite apparent, and it's not just a second-order 
 
 This means we should probably fit a sixth order polynomial.
 
-<br>
-#### Accumulated Gross
+
+### Accumulated Gross
 
 The accumulated gross of prior movies acts as an indicator of how well the movies typically do for cast and crew members.  If we plot the accumulated gross compared to the number of movies, the slope is the average gross per movie.  I expected the slopes for different crew to be somewhat similar, for the slopes to increase with number of movies, and for the trends to be very noisy.  However, I was surprised to see how consistent the trends were for different crew members.  Below is a plot showing the accumulated gross vs. number of movies for Executive Producers.  
 
