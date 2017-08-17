@@ -79,7 +79,7 @@ The non-linear upward curve is quite apparent, and it's not just a second-order 
 </p>
 
 
-This means we should probably fit a sixth order polynomial.
+This means we should fit up to a sixth order polynomial.
 
 
 ### Accumulated Gross
