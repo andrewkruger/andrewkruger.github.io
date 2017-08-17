@@ -152,7 +152,7 @@ The solid line shows where the model and actual values would be the same.  If a 
 <img src="/public/img/Residuals.png?raw=true" />
 </p>
 
-The residuals have a standard deviation of $9 million.  It also has a moderate amount of positive skew (0.84), which is not surprising as the greatest outliers tended to be higher (box office hits showed greater difference from prediction than flops).  The kurtosis is also moderately high (3.5), although this could be because this model is being fit to values that have a large range and a lower-bound of zero, resulting in a heteroskedacity in the prediction error (higher values have greater error).  To check for this, I plotted the residuals for each movie in order of the movie's gross (plotting the residuals vs. gross or log(gross) was not as clear):
+The residuals have a standard deviation of $9 million.  It also has a moderate amount of positive skew (0.84), which is not surprising as the greatest outliers tended to be higher (box office hits showed greater difference from prediction than flops).  The kurtosis is also moderately high (3.5), although this could be because this model is being fit to values that have a large range and a lower-bound of zero, resulting in a heteroskedacity in the prediction error (higher values have greater error).  To check for this, I plotted the residuals for each movie in order of the movie's gross (plotting the residuals vs. gross or log(gross) was not as clear given the scale of the data):
 
 <p align="center">
 <img src="/public/img/Ordered_Residuals.png?raw=true" />
