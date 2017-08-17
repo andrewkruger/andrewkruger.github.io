@@ -82,6 +82,16 @@ The non-linear upward curve is quite apparent, and it's not just a second-order 
 This means we should fit up to a sixth order polynomial.
 
 
+### Ticket sales
+
+The total gross that a movie makes depends on the cost of a ticket.  A movie that opened in 1950 naturally won't make nearly as much as a movie that opened in 2010, even if they opened in the same number of theaters, simply because the cost of a ticket is much higher in 2010.  
+
+Here you can see the 
+
+<p align="center">
+<img src="/public/img/Ticket_Sales.png?raw=true" alt="Gross vs. Number of Theaters"/>
+</p>
+
 ### Accumulated Gross
 
 The accumulated gross of prior movies acts as an indicator of how well the movies typically do for cast and crew members.  If we plot the accumulated gross compared to the number of movies, the slope is the average gross per movie.  I expected the slopes for different crew to be somewhat similar, for the slopes to increase with number of movies, and for the trends to be very noisy.  However, I was surprised to see how consistent the trends were for different crew members.  Below is a plot showing the accumulated gross vs. number of movies for Executive Producers.  
@@ -98,6 +108,9 @@ This means the succeess of a crew member's movie doesn't necessarily change with
 <img src="/public/img/Exec_Producers_Rate.png?raw=true" alt="Accumulated Gross Rate vs. Number of Movies"/>
 </p>
 
+
+
+
 <br>
 
 ## Regularization
@@ -111,16 +124,19 @@ Regularization does a fit to the data while minimizing the complexity of the mod
 
 The *tuning parameter* $$\lambda$$ is chosen based on how much penalty should be given for the weights.  If lambda is small, the model won't be penalized as much for having larger weights.  As lambda gets larger, more penalty will be given for having more features, so the weights will be decreased as long as it doesn't greatly affect the model fit.  This will leave behind only the most important features.  Ridge and ElasticNet are other regularizations that can be used, but I found that Lasso worked better for this data set.
 
-When doing regularization, standardization of the data makes it so the tuning parameter equally affects the different weights.  If the data isn't standardized, some feature weights will be very large while others are small, so the larger weights would be penalized more simply because they are larger instead of because of their importance.
+When doing regularization, standardization of the data makes it so the tuning parameter equally affects the different weights.  If the data isn't standardized, some feature weights will be very large while others are small, so the larger weights would be penalized more simply because they are larger rather than based on their importance.
 
 
 <br>
 
 ## The model
 
+I used a second-order polynomial fit that was made to the data using a scikit-learn pipeline, and the $$R^2$$ value of the model fit was 0.87.  Here you can see the comparison of the predicted values vs. the actual opening weekend gross:
 
 
-
+<p align="center">
+<img src="/public/img/Movie_Gross_Prediction.png?raw=true" />
+</p>
 
 
 
