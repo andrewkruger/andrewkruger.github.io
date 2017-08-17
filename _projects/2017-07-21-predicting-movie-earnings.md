@@ -86,11 +86,14 @@ This means we should fit up to a sixth order polynomial.
 
 The total gross that a movie makes depends on the cost of a ticket.  A movie that opened in 1950 naturally won't make nearly as much as a movie that opened in 2010, even if they opened in the same number of theaters, simply because the cost of a ticket is much higher in 2010.  
 
-Here you can see the 
+Here you can see the total gross of all movies for the years available on https://the-numbers.com, as well as total ticket sales.
 
 <p align="center">
-<img src="/public/img/Ticket_Sales.png?raw=true" alt="Gross vs. Number of Theaters"/>
+<img src="/public/img/Ticket_Sales.png?raw=true"/>
 </p>
+
+
+
 
 ### Accumulated Gross
 
