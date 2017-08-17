@@ -141,13 +141,26 @@ When doing regularization, standardization of the data makes it so the tuning pa
 
 ## The model
 
-I used a second-order polynomial fit that was made to the data using a scikit-learn pipeline, and the $$R^2$$ value of the model fit was 0.87.  Here you can see the comparison of the predicted values vs. the actual opening weekend gross:
+I used a second-order polynomial fit that was made to the data using a scikit-learn pipeline, and the model had an $$R^2$$ value of 0.87.  Here you can see the comparison of the predicted values vs. the actual opening weekend gross:
 
 
 <p align="center">
 <img src="/public/img/Movie_Gross_Prediction.png?raw=true" />
 </p>
 
+The solid line shows where the model and actual values would be the same.  If a point is above the line, the movie did better than predicted.  Here is a histogram of the residuals:
+
+<p align="center">
+<img src="/public/img/Residuals.png?raw=true" />
+</p>
+
+The residuals have a standard deviation of $9 million.  It also has a moderate amount of positive skew (0.84), which is not surprising as the greatest outliers tended to be higher (box office hits showed greater difference from prediction than flops).  The kurtosis is also moderately high (3.5), although this could be because this model is being fit to values that have a large range and a lower-bound of zero, resulting in a heteroskedacity in the prediction error (higher values have greater error).  To check for this, I plotted the residuals for each movie in order of the movie's gross (plotting the residuals vs. gross or log(gross) was not as clear):
+
+<p align="center">
+<img src="/public/img/Ordered_Residuals.png?raw=true" />
+</p>
+
+It can be seen the earlier models are clearly better predicted as expected, and the movies with higher gross had more error and tended to be higher than expected.  The residuals had a standard deviation of $6 million for movies that grossed $20 million or less (the first ~1000 movies).
 
 
 
