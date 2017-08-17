@@ -7,9 +7,10 @@ img: Movies.png
 description: >
 ---
 
+### Warning: In the spirit of living in Chicago, this page is under construction.
+
 
 ## Predicting Opening Weekend Domestic Gross Earnings for the Movies
-#### Warning: In the spirit of living in Chicago, this page is under construction.
 
 The movie industry spends millions of dollars on cast and crew on most movies in the hopes of making many more millions in gross profit.  The earnings come from ticket sales in the U.S. (domestic) or internatational countries, video sales, merchandise, etc.  A common indicator for a movie's performance is the opening weekend gross earnings, which provides immediate feedback on how the movie is doing.  As part of a Metis Data Science Bootcamp project, I will be exploring if budget and earnings data can be used to create a predictor for the opening weekend domestic gross earnings for movies.  In short, this predictor uses the past performance of movies with the cast and crew, along with budget and number of opening theaters, to make the prediction.  Such a predictor would provide immediate feedback for how well a movie is doing, for example to give time to react and increase movie attendance while the movie is still in theaters.
 
@@ -56,11 +57,12 @@ This process is sped up by not checking a person's financial information more th
 Number of theaters: The movie Gran Torino tarted in 6 theaters in December 2016, expanded to 84 theaters on Christmas two weeks later, then to 2,808 in the beginning of January.  The movie had a total domestic gross of $148 million, but only made $271,720 its first weekend.
 
 
-
+<br>
 ## Trends in the Data
 
 We can look at individual features to see if there are any obvious relationships with gross earnings.
 
+<br>
 ### Number of Theaters
 
 Without looking at the data, the number of theaters a movie plays in will obviously play a large role in how much the movie will earn.  [Gran Torino](http://www.the-numbers.com/movie/Gran-Torino#tab=box-office) opened in 6 theaters on the weekend of December 12, 2008 and had a total gross of $271,720.  When it opened to 2,808 theaters the following January 9, it grossed $40,524,518.  Clearly this is because having more theaters allows more tickets.  But the gross is not necessarily linear with the number of theaters.
@@ -79,6 +81,7 @@ The non-linear upward curve is quite apparent, and it's not just a second-order 
 
 This means we should probably fit a sixth order polynomial.
 
+<br>
 #### Accumulated Gross
 
 The accumulated gross of prior movies acts as an indicator of how well the movies typically do for cast and crew members.  If we plot the accumulated gross compared to the number of movies, the slope is the average gross per movie.  I expected the slopes for different crew to be somewhat similar, for the slopes to increase with number of movies, and for the trends to be very noisy.  However, I was surprised to see how consistent the trends were for different crew members.  Below is a plot showing the accumulated gross vs. number of movies for Executive Producers.  
@@ -95,6 +98,7 @@ This means the succeess of a crew member's movie doesn't necessarily change with
 <img src="/public/img/Exec_Producers_Rate.png?raw=true" alt="Accumulated Gross Rate vs. Number of Movies"/>
 </p>
 
+<br>
 
 ## Regularization
 
@@ -104,6 +108,19 @@ Regularization does a fit to the data while minimizing the complexity of the mod
 <p align="center">
 <img src="/public/img/lasso.png?raw=true" />
 </p>
+
+The *tuning parameter* $$\lambda$$ is chosen based on how much penalty should be given for the weights.  If lambda is small, the model won't be penalized as much for having larger weights.  As lambda gets larger, more penalty will be given for having more features, so the weights will be decreased as long as it doesn't greatly affect the model fit.  This will leave behind only the most important features.  Ridge and ElasticNet are other regularizations that can be used, but I found that Lasso worked better for this data set.
+
+When doing regularization, standardization of the data makes it so the tuning parameter equally affects the different weights.  If the data isn't standardized, some feature weights will be very large while others are small, so the larger weights would be penalized more simply because they are larger instead of because of their importance.
+
+
+<br>
+
+## The model
+
+
+
+
 
 
 
