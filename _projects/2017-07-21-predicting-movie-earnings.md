@@ -92,7 +92,7 @@ Here you can see the total gross of all movies for the years available on the-nu
 
 While the total number of tickets sold has stayed relatively constant, the total gross for all movies has over doubled.  This indicates that the year the movie was made will strongly affect its domestic gross.  However, rather than trying to use the year for our model fit, we can use the average cost per ticket as a feature.  
 
-Since I only have this information from 1995 on, I will limit the movies used to only those released in 1995 and onward.  Fortunately, this is a majority of the movies in the dataset.  This graph shows the number of movies that have budgets per year, and the red indicates the years used in the model.
+Since I only have this information from 1995 on, I will limit the movies used to only those released in 1995 and onward.  Fortunately, this is a majority of the movies in the dataset.  This graph shows the number of movies that have budgets per year, and the green indicates the years used in the model.
 
 <p align="center">
 <img src="/public/img/Movies_Per_Year_Annot.png?raw=true"/>
