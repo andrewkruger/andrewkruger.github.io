@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Movies Gross Earnings Predictor"
+title: "Predicting Opening Weekend Gross Earnings for the Movies"
 author: andrew
 tags: [projects]
 img: Movies.png
