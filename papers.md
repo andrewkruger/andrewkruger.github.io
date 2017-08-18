@@ -7,7 +7,7 @@ title: Papers
 ## First Author
 
 <a href='http://www.physi.cz/uploads/2/0/5/6/20564332/chad.pdf'>Active Heading Control Platform for Instruments
-Flown on High Altitude Balloons</a>, <a href='http://via.library.depaul.edu/ahac/2016/oral/23/'>Academic High-Altitude Conference (2016)</a>
+Flown on High Altitude Balloons</a>, Proceedings for <a href='http://via.library.depaul.edu/ahac/2016/oral/23/'>Academic High-Altitude Conference</a> (2016)
 
 <a href='http://iopscience.iop.org/article/10.1088/0004-637X/764/2/127/pdf'>The Curious Case of Glass I: High Ionization and Variability of Different Types</a>, The Astrophysical Journal, 764, 127 (2013)
 
