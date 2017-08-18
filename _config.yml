@@ -28,7 +28,7 @@ description:         >
 sidebar_tags:        [blog]
 
 # Fallback image and color if not overwritten for tag or post
-image:               /public/img/New_York_2.jpg
+image:               /public/img/background.jpg
 color:               '#A85641'
 
 # Fonts
