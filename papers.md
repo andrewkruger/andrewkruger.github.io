@@ -17,6 +17,7 @@ Flown on High Altitude Balloons</a>, Proceedings for <a href='http://via.library
 
 <a href='https://www.spiedigitallibrary.org/conference-proceedings-of-spie/7014/1/Bias-selecting-in-TEXES-electronics/10.1117/12.789242.short?SSO=1'>Bias Selecting in TEXES Electronics</a>, Society of Photo-Optical Instrumentation Engineers, 70146Q, (2008)
 
+<br>
 ## Co-Author
 
 <a href='http://iopscience.iop.org/article/10.1088/0004-637X/755/1/59/pdf'>[S IV] in the NGC 5253 Supernebula: Ionized Gas Kinematics at High Resolution</a>, The Astrophysical Journal, 755, 59 (2012)
