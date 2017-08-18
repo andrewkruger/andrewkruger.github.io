@@ -1,4 +1,4 @@
 ---
 layout: author-page
-title: Projects
+title: About Me
 ---
