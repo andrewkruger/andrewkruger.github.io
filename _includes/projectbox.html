@@ -43,13 +43,22 @@ a:hover {
   overflow: hidden;
 }
 
-/*.no-touch .project-box:hover > .title-box {
-  opacity: 0;
+.no-touch .project-box:hover > .title-box {
+  /*opacity: 0;*/
+  -webkit-transform:scale(1.0); /*Webkit: Scale up image to 1.2x original size*/
+  -indexmoz-transform:scale(1.0); /*Mozilla scale version*/
+  -o-transform:scale(1.0); /*Opera scale version*/
+  box-shadow:0px 0px 30px gray; /*CSS3 shadow: 30px blurred shadow all around image*/
+  -webkit-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 .no-touch .project-box:hover > .title-text {
-  opacity: 0;
-}*/
+  /*opacity: 0;*/
+}
 
 
 
