@@ -307,7 +307,7 @@ $$\Sigma$$ can then be used to scale $$U$$ to it's original magnitudes, so $$U \
 <img src="/public/img/visualizing_matrix_transforms/u_sigma.png?raw=true"/>
 </p>
 
-This is the adjusted dataset where it is aligned with the principle axes.  Like before, if we set the second component of $$\Sigma$$ to be zero, we will get the first principal component.
+This is the adjusted dataset where it is aligned with the principle axes.  Like before, if we set the second component of $$\Sigma$$ to be zero, we will get the first principal axis.
 
 ~~~py
     plt.scatter(-u[:,0]*s[0],-u[:,1]*0,color='blue')
