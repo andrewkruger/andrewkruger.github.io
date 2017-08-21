@@ -11,7 +11,7 @@ Flown on High Altitude Balloons</a>, Proceedings for <a href='http://via.library
 
 <a href='http://iopscience.iop.org/article/10.1088/0004-637X/764/2/127/pdf'>The Curious Case of Glass I: High Ionization and Variability of Different Types</a>, The Astrophysical Journal, 764, 127 (2013)
 
-<a href='http://iopscience.iop.org/article/10.1088/0004-637X/760/1/88/pdf'>Gas adn Dust Absorption in the DoAr 24E System</a>, The Astrophysical Journal, 760, 88 (2012)
+<a href='http://iopscience.iop.org/article/10.1088/0004-637X/760/1/88/pdf'>Gas and Dust Absorption in the DoAr 24E System</a>, The Astrophysical Journal, 760, 88 (2012)
 
 <a href='http://iopscience.iop.org/article/10.1088/0004-637X/729/2/145/pdf'>Gas and Dust Toward DG Tau B And VV CrA</a>, The Astrophysical Journal, 729, 145 (2011)
 
