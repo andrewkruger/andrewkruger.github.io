@@ -61,21 +61,30 @@ There are tens of thousands of words used in the reviews, so it is inefficient t
 
 Next, I used K-Means clustering to find clusters of review components.  A cluster would be a grouping of reviews in the word vector-space, where reviews on similar topics will be near each other.  This means a single cluster should represent a single topic.  The topic can be figured out by looking at the words that are most heavily used.  For example, clusters with the following words were found, leading to the suggested topics:
 
-*speaker, bass, sound, volume, portable, audio, high, quality, music..*. = Speakers
+*speaker, bass, sound, volume, portable, audio, high, quality, music..*. = **Speakers**
 
-*scroll, wheel, logitech, mouse, accessory, thumb...* = Computer Mouse
+*scroll, wheel, logitech, mouse, accessory, thumb...* = **Computer Mouse**
 
-*usb, port, power, plugged, device, cable, adapter, switch...* = Cables
+*usb, port, power, plugged, device, cable, adapter, switch...* = **Cables**
 
-*hard, drive, data, speed, external, usb, files, fast, portable...* = Hard Drives
+*hard, drive, data, speed, external, usb, files, fast, portable...* = **Hard Drives**
 
-*camera, lens, light, image, manual, canon, hand, taking, point...* = Cameras
+*camera, lens, light, image, manual, canon, hand, taking, point...* = **Cameras**
 
-The topic cluster had the three most important factors being high stars, high polarity, high subjectivity, and words such as *perfect, great, love, excellent, product*.  
+Other topics were more ambiguous.  For example, one cluster had words such as:
+
+*something, more, than, what, say, expected...*
+
+Reading the examples showed phrases commonly used in reviews such as "This is something I...", "It worked as expected", and "What more can I say?".  So these types of clusters included less descript reviews that had common phrases.
+
+When modeling the data, I separated the reviews into 200 smaller groups (just over 8,000 reviews in each) and fit the model to each of those subsets.  These types of *common phrase* groups were not very predictable in what words were emphasized.  But one cluster for generic reviews remained consistent between review groups that had the three most important factors being a high star rating, high polarity, high subjectivity, and words such as *perfect, great, love, excellent, product*.  The reviews from this topic, which I'll call the **low-quality** topic cluster, had exactly the qualities listed above that were expected for fake reviews.  I used this as the target topic that would be used to find potential fake reviewers and the products that used fake reviews.
 
 
+## Potential Fake Reviews
 
-Rather than modeling on the entire dataset (which would be very data-heavy), I broke down into 200 groups.  
+I modeled each review in the dataset, and for each product and reviewer, I found what percentage of their reviews were in the low-quality topic with the expectation that those that had higher percentages are more likely to be faked.  Plotting the 
+
+
 
 
 
