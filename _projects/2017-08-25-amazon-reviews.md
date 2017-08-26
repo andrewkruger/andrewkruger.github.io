@@ -53,7 +53,7 @@ For the number of reviews per reviewer, 50% have at most 6 reviews, and the pers
 
 ## The Model
 
-For each review, I used [TextBlob](http://textblob.readthedocs.io/en/dev/index.html) to do sentimental analysis of the review text.  The polarity is a measure of how positive or negative the words in the text are, with -1 being the most negative, +1 being most positive, and 0 being neutral.  This package also rates the subjectivity of the text, ranging from 0 being objective to +1 being the most subjective.
+For each review, I used [TextBlob](http://textblob.readthedocs.io/en/dev/index.html) to do sentiment analysis of the review text.  The polarity is a measure of how positive or negative the words in the text are, with -1 being the most negative, +1 being most positive, and 0 being neutral.  This package also rates the subjectivity of the text, ranging from 0 being objective to +1 being the most subjective.
 
 I then used a [count vectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) count the number of times words are used in the texts, and removed words from the text that are either too rare (used in less than 2% of the reviews) or too common (used in over 80% of the reviews).  I then transformed the count vectors into a [term-frequency times inverse document-frequency (tf-idf) vector](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html), where the counts are given weights.  The tf-idf adds weight to words that are rare in a text but also rare when compared to all the texts, and reduces weight to common words in a text when they are also common in all the other texts.  This essentially adds importance to more unique words.
 
