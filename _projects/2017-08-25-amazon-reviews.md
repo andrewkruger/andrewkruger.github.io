@@ -10,7 +10,7 @@ description: >
 
 ### Welcome! This project write-up is currently in progress.
 
-
+<br>
 ## Amazon Reviews
 
 Amazon.com sells over 372 million products online (as of June 2017) and its online sales are so vast they affect store sales of other companies.  But they don't just affect the amount that is sold by stores, but also what people buy in stores.  It's a common habit of people to check Amazon reviews to see if they want to buy something in another store (or if Amazon is cheaper).  For this reason, it's important to companies that they maintain a postive rating on Amazon, leading to some companies to pay non-consumers to write positive "fake" reviews.
@@ -18,7 +18,7 @@ Amazon.com sells over 372 million products online (as of June 2017) and its onli
 
 As a consumer, I have grown accustomed to reading reviews before making a final purchase decision, but have found it difficult to know when the reviews are possibly fake or not.  In the following, I use natural language processing to red flag reviewers who are potentially writing fake reviews, and products who may be paying for fake reviews.  (Please note, it's impossible to say with 100% certainty whether any of the following are actually fake reviews, so it should not be taken that I'm claiming as such.)
 
-
+<br>
 ## Low-Quality Reviews
 
 Looking at online resources that discuss what a typical fake review might look like ([howtogeek.com](https://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/),_____________), they are frequently:
@@ -30,7 +30,7 @@ Looking at online resources that discuss what a typical fake review might look l
 
 This can also be descriptive of a review written by a top reviewer, but people who consistently write these low-quality reviews are more likely to be fake.  Further, products that have a higher rate of such reviews are more likely to be paying for reviews.  So detecting low-quality reviews would act as a first step in identifying fake reviews.
 
-
+<br>
 ## Dataset
 
 To create a model that can detect low-quality reviews, I obtained an Amazon review dataset on electronic products from [UC San Diego](http://jmcauley.ucsd.edu/data/amazon/).  The dataset contains 1,689,188 reviews from 192,403 reviewers across 63,001 products.  Most of the reviews are positive, with 60% of the ratings being 5-stars.
@@ -51,6 +51,7 @@ For the number of reviews per reviewer, 50% have at most 6 reviews, and the pers
 <img src="/public/img/amazon/Reviews_per_reviewer.png?raw=true"/>
 </p>
 
+<br>
 ## The Model
 
 For each review, I used [TextBlob](http://textblob.readthedocs.io/en/dev/index.html) to do sentiment analysis of the review text.  The polarity is a measure of how positive or negative the words in the text are, with -1 being the most negative, +1 being most positive, and 0 being neutral.  This package also rates the subjectivity of the text, ranging from 0 being objective to +1 being the most subjective.
