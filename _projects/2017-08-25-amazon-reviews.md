@@ -25,7 +25,7 @@ Looking at online resources that discuss what a typical fake review might look l
 
 1. brief
 1. positive
-1. uniformative
+1. uninformative
 1. use generic words
 
 This can also be descriptive of a review written by a top reviewer, but people who consistently write these low-quality reviews are more likely to be fake.  Further, products that have a higher rate of such reviews are more likely to be paying for reviews.  So detecting low-quality reviews would act as a first step in identifying fake reviews.
