@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Identifying Fake and Low-Quality Amazon Reviews"
+title: "Identifying Low-Quality and Potentially Fake Amazon Reviews"
 author: andrew
 tags: [projects]
 img: amazon/project.png
@@ -13,22 +13,14 @@ description: >
 <br>
 ## Amazon Reviews
 
-Amazon.com sells over 372 million products online (as of June 2017) and its online sales are so vast they affect store sales of other companies.  But they don't just affect the amount that is sold by stores, but also what people buy in stores.  It's a common habit of people to check Amazon reviews to see if they want to buy something in another store (or if Amazon is cheaper).  For this reason, it's important to companies that they maintain a postive rating on Amazon, leading to some companies to pay non-consumers to write positive "fake" reviews.
+Amazon.com sells over 372 million products online (as of June 2017) and its online sales are so vast they affect store sales of other companies.  But they don't just affect the amount that is sold by stores, but also what people buy in stores.  It's a common habit of people to check Amazon reviews to see if they want to buy something in another store (or if Amazon is cheaper).  For this reason, it's important to companies that they maintain a postive rating on Amazon, leading to some companies to pay non-consumers to write positive "fake" reviews.  As a consumer, I have grown accustomed to reading reviews before making a final purchase decision, so my decisions are possibly being influenced by non-consumers.  
 
+Another barrier to making an informed decision is the quality of the reviews.  While more popular products will have many reviews that are several paragraphs of thorough discussion, most people are not willing to spend the time to write such lengthy reviews.  This often means less popular products could have reviews with less information.  While they still have a star rating, it's hard to know how accurate that rating is without more informative reviews. 
 
-As a consumer, I have grown accustomed to reading reviews before making a final purchase decision, but have found it difficult to know when the reviews are possibly fake or not.  In the following, I use natural language processing to red flag reviewers who are potentially writing fake reviews, and products who may be paying for fake reviews.  (Please note, it's impossible to say with 100% certainty whether any of the following are actually fake reviews, so it should not be taken that I'm claiming as such.)
+In reading about what clues can be used to identify fake reviews, I found may online resources say they are more likely to be generic and uninformative.  This brings to mind several questions.  Can low-quality reviews be used to potentially find fake reviews?  Are products with mostly low-quality reviews more likely to be purchasing fake reviews?  Can we identify people who are writing the fake reviews based on their quality?
 
-<br>
-## Low-Quality Reviews
+Here I will be using natural language processing to categorize and analyze Amazon reviews to see if and how low-quality reviews could potentially act as a tracer for fake reviews.
 
-Looking at online resources that discuss what a typical fake review might look like ([howtogeek.com](https://www.howtogeek.com/282802/how-to-spot-fake-reviews-on-amazon-yelp-and-other-sites/),_____________), they are frequently:
-
-1. brief
-1. positive
-1. uninformative
-1. use generic words
-
-This can also be descriptive of a review written by a top reviewer, but people who consistently write these low-quality reviews are more likely to be fake.  Further, products that have a higher rate of such reviews are more likely to be paying for reviews.  So detecting low-quality reviews would act as a first step in identifying fake reviews.
 
 <br>
 ## Dataset
@@ -83,38 +75,35 @@ When modeling the data, I separated the reviews into 200 smaller groups (just ov
 
 ## Potential Fake Reviews
 
-I modeled each review in the dataset, and for each product and reviewer, I found what percentage of their reviews were in the low-quality topic with the expectation that those that had higher percentages are more likely to be faked.  Plotting the 
+I modeled each review in the dataset, and for each product and reviewer, I found what percentage of their reviews were in the low-quality topic.  These are plotted here vs. the number of reviews written for each person in the dataset:
+
+<p align="center">
+<img src="/public/img/amazon/Low_Quality_Reviewers.png?raw=true"/>
+</p>
+
+There are 13 reviewers that have 100% low-quality, all of which wrote a total of 5 reviews.  It's not surprising that people who write more reviews are less likely to have a high percentage of low-quality reviews.
+
+Here I do the same for each product to find which products may have fake reviews.
+
+<p align="center">
+<img src="/public/img/amazon/Low_Quality_Products.png?raw=true"/>
+</p>
+
+The peak is at 2/3 of the reviews being low-quality, for which there are four products, each with a total of six reviews.  The
 
 
-
-
-
-
-
-# Ignore this, I'm testing formatting...
-
-
-But it's not just fake reviews that interfere with decision making.  People that give a star rating but don't give any explanation of anything about the product, how it worked, or the quality, are simply changing the rating without adding information. 
-
-
-
-But it's not just fake reviews that interfere with decision making, people that give high stars but don't give a good explanation of anything about the product
-
-
-
-Here are some examples of reviews in this cluster:
-
-This produce is well made is from a good company and works as stated very well.  This item came in a very short timne and was all I had expected
-
-This is the best batery for your casi.... do not try anything else.... you will regreat.
-
-great and on time and good cord got before Christmas and did not have to drive any were or fight traffic
-
-awesome stuff,,,,this is the best there is.  if u need thermal paste this is the stuff to get! great stuff! !
-
-good quality and price. recommended.
-
+One possible (or maybe likely) reason people do so many reviews at once with no reviews for long periods of time is they simply don't write the reviews as they buy things.  The list of products in their order history builds up, and they do all the reviews at once.
 
 
 
 https://www.amazon.com/gp/profile/amzn1.account.AEPL3VBEKQBLHUBGKX76BG72MZEQ
+
+
+
+## Potential Remedy
+
+By identifying low-quality reviews, I found that many people will write a large number of reviews at the same time, frequently giving 5 stars and using the same generic comment repeatedly to save time.  These are important to demonstrate that people are happy with the product even if they don't want to spend the time to write reviews.  However, by indiscriminantly giving 5 stars, it 
+
+
+
+
