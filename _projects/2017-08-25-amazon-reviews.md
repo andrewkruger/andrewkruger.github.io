@@ -72,8 +72,8 @@ Reading the examples showed phrases commonly used in reviews such as "This is so
 
 When modeling the data, I separated the reviews into 200 smaller groups (just over 8,000 reviews in each) and fit the model to each of those subsets.  These types of *common phrase* groups were not very predictable in what words were emphasized.  But one cluster for generic reviews remained consistent between review groups that had the three most important factors being a high star rating, high polarity, high subjectivity, along with words such as *perfect, great, love, excellent, product*.  The reviews from this topic, which I'll call the **low-quality** topic cluster, had exactly the qualities listed above that were expected for fake reviews.  I used this as the target topic that would be used to find potential fake reviewers and the products that used fake reviews.
 
-
-## Analyzing the Results
+<br>
+## Model Results
 
 I modeled each review in the dataset, and for each product and reviewer, I found what percentage of their reviews were in the low-quality topic.  These are plotted here vs. the number of reviews written for each person in the dataset:
 
