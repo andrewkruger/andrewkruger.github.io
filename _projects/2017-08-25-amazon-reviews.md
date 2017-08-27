@@ -130,8 +130,7 @@ Note that the products with more low-quality reviews have higher grades more oft
 
 I found that instead of writing reviews as products are being pruchased, many people appear to go through their purchase history and write many low-quality, quick reviews at the same time.  Doing this benefits the star rating system in that otherwise reviews may be more filled only people who sit and make longer reviews or people who are dissatisfied, leaving out a count of people who are just satisfied and don't have anything to say other than it works.  Although these reviews do not add descriptive information about the products' performance, these may simply indicate that people who purchased the product got what was expected, which is informative in itself.
 
-**This means that if a product has mostly high-star but low-quality reviews, this should not be taken as a sign that the reviews are fake.**
-
+**This means that if a product has mostly high-star but low-quality and generic reviews, this should not be taken as a sign that the reviews are fake and purchased by the company.**
 
 
 
