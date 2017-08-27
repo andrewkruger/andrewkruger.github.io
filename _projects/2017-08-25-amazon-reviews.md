@@ -110,6 +110,7 @@ https://www.amazon.com/gp/profile/amzn1.account.AEPL3VBEKQBLHUBGKX76BG72MZEQ
 </p>
 
 
+<br>
 ## Comparing to Fakespot
 
 [Fakespot.com](http://fakespot.com/) is a website that uses reviews and reviewers from Amazon products that were known to have purchased fake reviews for their proprietary models to predict whether a new product has fake reviews.  They rate the products by grade letter, saying that if 90% or more of the reviews are good quality it's an A, 80% or more is a B, etc.  
