@@ -118,7 +118,7 @@ https://www.amazon.com/gp/profile/amzn1.account.AEPL3VBEKQBLHUBGKX76BG72MZEQ
 Here is the grade distribution for the products I found had 50% low-quality reviews or more.
 
 <p align="center">
-<img src="/public/img/amazon/Low_Quality_Products.png?raw=true"/>
+<img src="/public/img/amazon/Review_Grades.png?raw=true"/>
 </p>
 
 
