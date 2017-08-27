@@ -31,7 +31,7 @@ To create a model that can detect low-quality reviews, I obtained an Amazon revi
 <img src="/public/img/amazon/Star_Frequency.png?raw=true"/>
 </p>
 
-Looking at the number of reviews for each product, 50% of the reviews have at most 10 reviews.  The product with the most has 4,915 reviews.
+Looking at the number of reviews for each product, 50% of the reviews have at most 10 reviews.  The product with the most has 4,915 reviews (the [SanDisk Ultra 64GB MicroSDXC Memory Card](https://www.amazon.com/SanDisk-Ultra-MicroSDXC-Memory-Adapter/dp/B007WTAJTO/ref=cm_cr_arp_d_product_top?ie=UTF8))
 
 <p align="center">
 <img src="/public/img/amazon/Reviews_per_product.png?raw=true"/>
@@ -48,7 +48,7 @@ For the number of reviews per reviewer, 50% have at most 6 reviews, and the pers
 
 For each review, I used [TextBlob](http://textblob.readthedocs.io/en/dev/index.html) to do sentiment analysis of the review text.  The polarity is a measure of how positive or negative the words in the text are, with -1 being the most negative, +1 being most positive, and 0 being neutral.  This package also rates the subjectivity of the text, ranging from 0 being objective to +1 being the most subjective.
 
-I then used a [count vectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) count the number of times words are used in the texts, and removed words from the text that are either too rare (used in less than 2% of the reviews) or too common (used in over 80% of the reviews).  I then transformed the count vectors into a [*term frequency-inverse document frequency* (tf-idf) vector](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html).  A *term frequency* is the simply the count of how many times a word is in the review text.  The term frequency can be normalized by dividing by the total number of words in the text.  The *inverse document frequency* is a weighting that depends on how frequently a word is found in all the reviews.  It follows the relationship $$log \frac{N}{d}$$ where $$N$$ is the total number of reviews and $$d$$ is the number of reviews (documents) that have a specific word in it.  If a word is more rare, this relationship gets larger, so the weighting on that word gets larger.  The tf-idf is a combination of these two frequencies.  This means if a word is rare in a specific review, tf-idf gets smaller because of the term frequency - but if that word is rarely found in the other reviews, the tf-idf gets larger because if the inverse document frequency.  Likewise, if a word is found a lot in a review, the tf-idf is larger because of the term frequency - but if it's also found most all reviews, the tf-idf gets small because of the inverse document frequency.  In this way it highlights unique words.
+I then used a [count vectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) count the number of times words are used in the texts, and removed words from the text that are either too rare (used in less than 2% of the reviews) or too common (used in over 80% of the reviews).  I then transformed the count vectors into a [*term frequency-inverse document frequency* (tf-idf) vector](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html).  A *term frequency* is the simply the count of how many times a word is in the review text.  The term frequency can be normalized by dividing by the total number of words in the text.  The *inverse document frequency* is a weighting that depends on how frequently a word is found in all the reviews.  It follows the relationship $$log(N/d)$$ where $$N$$ is the total number of reviews and $$d$$ is the number of reviews (documents) that have a specific word in it.  If a word is more rare, this relationship gets larger, so the weighting on that word gets larger.  The tf-idf is a combination of these two frequencies.  This means if a word is rare in a specific review, tf-idf gets smaller because of the term frequency - but if that word is rarely found in the other reviews, the tf-idf gets larger because if the inverse document frequency.  Likewise, if a word is found a lot in a review, the tf-idf is larger because of the term frequency - but if it's also found most all reviews, the tf-idf gets small because of the inverse document frequency.  In this way it highlights unique words.
 
 There are tens of thousands of words used in the reviews, so it is inefficient to fit a model all the words used.  Instead, dimensionality reduction can be performed with [Singular Value Decomposition (SVD)](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html).  As I illustrate in [a more detailed blog post](https://andrewkruger.github.io/2017/08/14/visualizing-matrix-transforms/), the SVD can be used to find latent relationships between features (words).  The principal components are a combination of the words, and we can limit what components are being used by setting eigenvalues to zero.  I limited my model to 500 components.
 
@@ -89,7 +89,11 @@ Here I do the same for each product to find which products may have fake reviews
 <img src="/public/img/amazon/Low_Quality_Products.png?raw=true"/>
 </p>
 
-The peak is at 2/3 of the reviews being low-quality, for which there are four products, each with a total of six reviews.
+
+The peak is at 2/3 of the reviews being low-quality, for which there are four products, each with a total of six reviews.  
+
+For higher numbers of reviews, lower rates of low-quality reviews are seen.  At first sight, this suggests that there may be a relationship between more reviews and better quality reviews that's not necessarily due to popularity of the product.  Perhaps products that more people review may be products that are easier to have things to say about.  However, this does not appear to be the case, the top reviewed is the [SanDisk MicroSDXC card](https://www.amazon.com/SanDisk-Ultra-MicroSDXC-Memory-Adapter/dp/B007WTAJTO/ref=cm_cr_arp_d_product_top?ie=UTF8), the next top two are discontinued products but the fourth top is an [HDMI cable](https://www.amazon.com/Mediabridge-HDMI-Cable-Feet-Hand-Tested/dp/B0019EHU8G/ref=cm_cr_arp_d_product_top?ie=UTF8), and next is a [Transcend SDHC card](https://www.amazon.com/Transcend-Class-SDHC-Card-TS8GSDHC10/dp/B002WE6D44/ref=cm_cr_arp_d_product_top?ie=UTF8).  It's not clear' 
+
 
 
 One possible (or maybe likely) reason people do so many reviews at once with no reviews for long periods of time is they simply don't write the reviews as they buy things.  The list of products in their order history builds up, and they do all the reviews at once.
@@ -99,6 +103,11 @@ One possible (or maybe likely) reason people do so many reviews at once with no 
 https://www.amazon.com/gp/profile/amzn1.account.AEPL3VBEKQBLHUBGKX76BG72MZEQ
 
 
+
+
+<p align="center">
+<iframe src='https://gfycat.com/ifr/EnlightenedBlondAsianporcupine' frameborder='0' scrolling='no' width='600' height='375' allowfullscreen></iframe>
+</p>
 
 ## Potential Remedy
 
