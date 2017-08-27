@@ -70,10 +70,10 @@ Other topics were more ambiguous.  For example, one cluster had words such as:
 
 Reading the examples showed phrases commonly used in reviews such as "This is something I...", "It worked as expected", and "What more can I say?".  So these types of clusters included less descript reviews that had common phrases.
 
-When modeling the data, I separated the reviews into 200 smaller groups (just over 8,000 reviews in each) and fit the model to each of those subsets.  These types of *common phrase* groups were not very predictable in what words were emphasized.  But one cluster for generic reviews remained consistent between review groups that had the three most important factors being a high star rating, high polarity, high subjectivity, and words such as *perfect, great, love, excellent, product*.  The reviews from this topic, which I'll call the **low-quality** topic cluster, had exactly the qualities listed above that were expected for fake reviews.  I used this as the target topic that would be used to find potential fake reviewers and the products that used fake reviews.
+When modeling the data, I separated the reviews into 200 smaller groups (just over 8,000 reviews in each) and fit the model to each of those subsets.  These types of *common phrase* groups were not very predictable in what words were emphasized.  But one cluster for generic reviews remained consistent between review groups that had the three most important factors being a high star rating, high polarity, high subjectivity, along with words such as *perfect, great, love, excellent, product*.  The reviews from this topic, which I'll call the **low-quality** topic cluster, had exactly the qualities listed above that were expected for fake reviews.  I used this as the target topic that would be used to find potential fake reviewers and the products that used fake reviews.
 
 
-## Potential Fake Reviews
+## Analyzing the Results
 
 I modeled each review in the dataset, and for each product and reviewer, I found what percentage of their reviews were in the low-quality topic.  These are plotted here vs. the number of reviews written for each person in the dataset:
 
@@ -89,7 +89,7 @@ Here I do the same for each product to find which products may have fake reviews
 <img src="/public/img/amazon/Low_Quality_Products.png?raw=true"/>
 </p>
 
-The peak is at 2/3 of the reviews being low-quality, for which there are four products, each with a total of six reviews.  The
+The peak is at 2/3 of the reviews being low-quality, for which there are four products, each with a total of six reviews.
 
 
 One possible (or maybe likely) reason people do so many reviews at once with no reviews for long periods of time is they simply don't write the reviews as they buy things.  The list of products in their order history builds up, and they do all the reviews at once.
