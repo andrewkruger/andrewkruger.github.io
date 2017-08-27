@@ -122,12 +122,11 @@ Here is the grade distribution for the products I found had 50% low-quality revi
 </p>
 
 
+Note that the products with more low-quality reviews have higher grades more often, indicating that they would not act as a good tracer for companies who are potentially buying fake reviews.
 
 
 
-## Potential Remedy
-
-By identifying low-quality reviews, I found that many people will write a large number of reviews at the same time, frequently giving 5 stars and using the same generic comment repeatedly to save time.  These are important to demonstrate that people are happy with the product even if they don't want to spend the time to write reviews.  However, by indiscriminantly giving 5 stars, it 
+## Summary
 
 
 
