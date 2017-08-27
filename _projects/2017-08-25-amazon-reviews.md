@@ -125,12 +125,14 @@ Here is the grade distribution for the products I found had 50% low-quality revi
 Note that the products with more low-quality reviews have higher grades more often, indicating that they would not act as a good tracer for companies who are potentially buying fake reviews.
 
 
-
+<br>
 ## Summary
 
 I found that instead of writing reviews as products are being pruchased, many people appear to go through their purchase history and write many low-quality, quick reviews at the same time.  Doing this benefits the star rating system in that otherwise reviews may be more filled only people who sit and make longer reviews or people who are dissatisfied, leaving out a count of people who are just satisfied and don't have anything to say other than it works.  Although these reviews do not add descriptive information about the products' performance, these may simply indicate that people who purchased the product got what was expected, which is informative in itself.
 
-**This means that if a product mainly has mainly positive but low-quality reviews, this should not be taken as a sign that the reviews are fake.**
+**This means that if a product mainly has mainly positive but low-quality reviews, this should not be taken as a sign that the reviews are fake.**  
+
+...In fact, there is potential that the opposite may be true.
 
 
 
