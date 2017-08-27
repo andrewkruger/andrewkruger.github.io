@@ -106,7 +106,8 @@ https://www.amazon.com/gp/profile/amzn1.account.AEPL3VBEKQBLHUBGKX76BG72MZEQ
 
 
 <p align="center">
-<iframe src='https://gfycat.com/ifr/EnlightenedBlondAsianporcupine' frameborder='0' scrolling='no' width='600' height='375' allowfullscreen></iframe>
+<div style='position:relative;padding-bottom:54%'><iframe src='https://gfycat.com/ifr/EnlightenedBlondAsianporcupine' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen></iframe></div>
+
 </p>
 
 ## Potential Remedy
