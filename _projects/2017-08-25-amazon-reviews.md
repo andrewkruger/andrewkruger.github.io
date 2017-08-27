@@ -81,18 +81,18 @@ I modeled each review in the dataset, and for each product and reviewer, I found
 <img src="/public/img/amazon/Low_Quality_Reviewers.png?raw=true"/>
 </p>
 
-There are 13 reviewers that have 100% low-quality, all of which wrote a total of 5 reviews.  It's not surprising that people who write more reviews are less likely to have a high percentage of low-quality reviews.
+There are 13 reviewers that have 100% low-quality, all of which wrote a total of 5 reviews.  This also shows that people who write more reviews are less likely to write low-quality ones (although, as discussed below, this is not the rule).
 
-Here I do the same for each product to find which products may have fake reviews.
+Here I do the same for each product.
 
 <p align="center">
 <img src="/public/img/amazon/Low_Quality_Products.png?raw=true"/>
 </p>
 
 
-The peak is at 2/3 of the reviews being low-quality, for which there are four products, each with a total of six reviews.  
+The peak is with four products that had 2/3 of their reviews being low-quality, each having a total of six reviews.  
 
-For higher numbers of reviews, lower rates of low-quality reviews are seen.  At first sight, this suggests that there may be a relationship between more reviews and better quality reviews that's not necessarily due to popularity of the product.  Perhaps products that more people review may be products that are easier to have things to say about.  However, this does not appear to be the case, the top reviewed is the [SanDisk MicroSDXC card](https://www.amazon.com/SanDisk-Ultra-MicroSDXC-Memory-Adapter/dp/B007WTAJTO/ref=cm_cr_arp_d_product_top?ie=UTF8), the next top two are discontinued products but the fourth top is an [HDMI cable](https://www.amazon.com/Mediabridge-HDMI-Cable-Feet-Hand-Tested/dp/B0019EHU8G/ref=cm_cr_arp_d_product_top?ie=UTF8), and next is a [Transcend SDHC card](https://www.amazon.com/Transcend-Class-SDHC-Card-TS8GSDHC10/dp/B002WE6D44/ref=cm_cr_arp_d_product_top?ie=UTF8).  It's not clear' 
+For higher numbers of reviews, lower rates of low-quality reviews are seen.  At first sight, this suggests that there may be a relationship between more reviews and better quality reviews that's not necessarily due to popularity of the product.  Perhaps products that more people review may be products that are easier to have things to say about.  However, this does not appear to be the case, as the top 5 review are the [SanDisk MicroSDXC card](https://www.amazon.com/SanDisk-Ultra-MicroSDXC-Memory-Adapter/dp/B007WTAJTO/ref=cm_cr_arp_d_product_top?ie=UTF8), Chromecast Streaming Media Player, [AmazonBasics HDMI cable](https://www.amazon.com/amazonbasics-high-speed-hdmi-cable-ethernet/dp/b003es5zuu), [Mediabridge HDMI cable](https://www.amazon.com/Mediabridge-HDMI-Cable-Feet-Hand-Tested/dp/B0019EHU8G/ref=cm_cr_arp_d_product_top?ie=UTF8), and a [Transcend SDHC card](https://www.amazon.com/Transcend-Class-SDHC-Card-TS8GSDHC10/dp/B002WE6D44/ref=cm_cr_arp_d_product_top?ie=UTF8).  This is similar to the products with the most 
 
 
 
@@ -107,8 +107,19 @@ https://www.amazon.com/gp/profile/amzn1.account.AEPL3VBEKQBLHUBGKX76BG72MZEQ
 
 <p align="center">
 <div style='position:relative;padding-bottom:54%'><iframe src='https://gfycat.com/ifr/EnlightenedBlondAsianporcupine' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen></iframe></div>
-
 </p>
+
+
+## Comparing to Fakespot
+
+[Fakespot.com](http://fakespot.com/) is a website that uses reviews and reviewers from Amazon products that were known to have purchased fake reviews for their proprietary models to predict whether a new product has fake reviews.  They rate the products by grade letter, saying that if 90% or more of the reviews are good quality it's an A, 80% or more is a B, etc.  
+
+Here is the grade distribution for the products I found had 50% low-quality reviews or more.
+
+<p align="center">
+<img src="/public/img/amazon/Low_Quality_Products.png?raw=true"/>
+</p>
+
 
 ## Potential Remedy
 
