@@ -103,10 +103,18 @@ One possible (or maybe likely) reason people do so many reviews at once with no 
 
 
 
+Here is a reviewer who used the phrase "on time and as advertised" in 250 reviews.  As you can see, he writes many uninformative 5-star reviews in a day with the same phrase.  
+
+
 
 <p align="center">
 <div style='position:relative;padding-bottom:54%'><iframe src='https://gfycat.com/ifr/EnlightenedBlondAsianporcupine' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen></iframe></div>
 </p>
+
+
+I spot checked many of these reviews, and did not see any that weren't a verified purchase.  The most likely explanation is that this person wants to write reviews, but is not willing to put in the time necessary to properly review all of these purchases.  While this is consistent with a vast majority of his reviews, not all the reviews are 5-stars and the lower-rated reviews are more informative.  It is likely that he just copy/pastes the phrase for products he didn't have a problem with, and then spends a little more time on the few products that didn't turn out to be good.
+
+
 
 
 <br>
