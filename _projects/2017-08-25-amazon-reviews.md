@@ -101,22 +101,17 @@ For higher numbers of reviews, lower rates of low-quality reviews are seen.  At 
 
 
 
-One possible (or maybe likely) reason people do so many reviews at once with no reviews for long periods of time is they simply don't write the reviews as they buy things.  The list of products in their order history builds up, and they do all the reviews at once.
+One possible (or maybe likely) reason people do so many reviews at once with no reviews for long periods of time is they simply don't write the reviews as they buy things.  The list of products in their order history builds up, and they do all the reviews at once.  As a good example, [here's a reviewer](https://www.amazon.com/gp/profile/amzn1.account.AHXA7P6LXSLNUZ6QH3ZBN5GSTOIA) who was flagged as having 100% generic reviews.  Note that the reviews are done in groupings by date, and while most of the reviews are either 4- or 5-stars, there is some variety.
 
+But there are others who don't write a unique review for each product.  This may be due to laziness, or simply that they have too many things to review that they don't want to write unique reviews.  As an extreme example found in one of the products that showed many low-quality reviews, here is a reviewer who used the phrase "on time and as advertised" in over 250 reviews.  As you can see, he writes many uninformative 5-star reviews in a single day with the same phrase (the date is in the top left).  
 
-
-
-
-
-As an extreme example found in one of the products that showed many low-quality reviews, here is a reviewer who used the phrase "on time and as advertised" in over 250 reviews.  As you can see, he writes many uninformative 5-star reviews in a single day with the same phrase (the date is in the top left).  
-
-
+<br>
 <p align="center">
 <div style='position:relative;padding-bottom:54%'><iframe src='https://gfycat.com/ifr/EnlightenedBlondAsianporcupine' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen></iframe></div>
 </p>
 
 <br>
-I spot checked many of these reviews, and did not see any that weren't a verified purchase.  The most likely explanation is that this person wants to write reviews, but is not willing to put in the time necessary to properly review all of these purchases.  While this is consistent with a vast majority of his reviews, not all the reviews are 5-stars and the lower-rated reviews are more informative.  It is likely that he just copy/pastes the phrase for products he didn't have a problem with, and then spends a little more time on the few products that didn't turn out to be good.
+I spot checked many of these reviews, and did not see any that weren't a verified purchase.  A likely explanation is that this person wants to write reviews, but is not willing to put in the time necessary to properly review all of these purchases.  While this is consistent with a vast majority of his reviews, not all the reviews are 5-stars and the lower-rated reviews are more informative.  It is likely that he just copy/pastes the phrase for products he didn't have a problem with, and then spends a little more time on the few products that didn't turn out to be good.
 
 However, this begs the question, what is the incentive to write all these reviews if no real effort is going to be given?  If there is reward for giving positive reviews to purchases, then these would qualify as "fake" as they are directly or indirectly being paid for by the company.  But let's instead turn to others who have created algorithms that spot fake reviews based on known fake reviews, and compare...
 
