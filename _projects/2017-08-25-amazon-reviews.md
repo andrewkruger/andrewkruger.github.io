@@ -8,7 +8,13 @@ description: >
 ---
 
 
-### Welcome! This project write-up is currently in progress.
+1. [Amazon Reviews](#amazon-reviews)
+1. [UCSD Dataset](#ucsd-dataset)
+1. [The Model](#the-model)
+1. [Model Results](#model-results)
+    - [Products](#products)
+    - [Reveiwers](#reviewers)
+1. [Summary](#summary)
 
 <br>
 ## Amazon Reviews
@@ -23,7 +29,7 @@ Here I will be using natural language processing to categorize and analyze Amazo
 
 
 <br>
-## Dataset
+## UCSD Dataset
 
 To create a model that can detect low-quality reviews, I obtained an Amazon review dataset on electronic products from [UC San Diego](http://jmcauley.ucsd.edu/data/amazon/).  The dataset contains 1,689,188 reviews from 192,403 reviewers across 63,001 products.  Most of the reviews are positive, with 60% of the ratings being 5-stars.
 
@@ -132,13 +138,13 @@ But there are others who don't write a unique review for each product.  For exam
 
 I spot checked many of these reviews, and did not see any that weren't a verified purchase.  A likely explanation is that this person wants to write reviews, but is not willing to put in the time necessary to properly review all of these purchases.  While this is consistent with a vast majority of his reviews, not all the reviews are 5-stars and the lower-rated reviews are more informative.  It is likely that he just copy/pastes the phrase for products he didn't have a problem with, and then spends a little more time on the few products that didn't turn out to be good.
 
-This begs the question, what is the incentive to write all these reviews if no real effort is going to be given?  If there is reward for giving positive reviews to purchases, then these would qualify as "fake" as they are directly or indirectly being paid for by the company.  
+This begs the question, what is the incentive to write all these reviews if no real effort is going to be given?  If there is reward for giving positive reviews to purchases, then these would qualify as "fake" as they are directly or indirectly being paid for by the company.  For example, there are reports of "Coupon Clubs" that tell members what to review what comments to downvote in exchange for Amazon coupons.  But again, the reviews detected by this model were all verified purchases.
 
 
 <br>
 ## Summary
 
-I found that instead of writing reviews as products are being pruchased, many people appear to go through their purchase history and write many low-quality, quick reviews at the same time.  Doing this benefits the star rating system in that otherwise reviews may be more filled only people who sit and make longer reviews or people who are dissatisfied, leaving out a count of people who are just satisfied and don't have anything to say other than it works.  Although these reviews do not add descriptive information about the products' performance, these may simply indicate that people who purchased the product got what was expected, which is informative in itself.
+I found that instead of writing reviews as products are being purchased, many people appear to go through their purchase history and write many low-quality, quick reviews at the same time.  Doing this benefits the star rating system in that otherwise reviews may be more filled only people who sit and make longer reviews or people who are dissatisfied, leaving out a count of people who are just satisfied and don't have anything to say other than it works.  Although these reviews do not add descriptive information about the products' performance, these may simply indicate that people who purchased the product got what was expected, which is informative in itself.
 
 **This means that if a product has mostly high-star but low-quality and generic reviews, this should not be taken as a sign that the reviews are fake and purchased by the company.**
 
