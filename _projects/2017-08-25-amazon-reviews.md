@@ -8,13 +8,13 @@ description: >
 ---
 
 
-1. [Amazon Reviews](#amazon-reviews)
-1. [UCSD Dataset](#ucsd-dataset)
-1. [The Model](#the-model)
-1. [Model Results](#model-results)
-    - [Products](#products)
-    - [Reveiwers](#reviewers)
-1. [Summary](#summary)
+    1. [Amazon Reviews](#amazon-reviews)
+    1. [UCSD Dataset](#ucsd-dataset)
+    1. [The Model](#the-model)
+    1. [Model Results](#model-results)
+        - [Products](#products)
+        - [Reveiwers](#reviewers)
+    1. [Summary](#summary)
 
 <br>
 ## Amazon Reviews
