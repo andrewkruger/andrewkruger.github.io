@@ -100,7 +100,6 @@ One possible (or maybe likely) reason people do so many reviews at once with no 
 
 
 
-https://www.amazon.com/gp/profile/amzn1.account.AEPL3VBEKQBLHUBGKX76BG72MZEQ
 
 
 
