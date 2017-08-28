@@ -103,7 +103,7 @@ One possible (or maybe likely) reason people do so many reviews at once with no 
 
 
 
-Here is a reviewer who used the phrase "on time and as advertised" in 250 reviews.  As you can see, he writes many uninformative 5-star reviews in a day with the same phrase.  
+Here is a reviewer who used the phrase "on time and as advertised" in over 250 reviews.  As you can see, he writes many uninformative 5-star reviews in a single day with the same phrase (the date is in the top left).  
 
 
 
