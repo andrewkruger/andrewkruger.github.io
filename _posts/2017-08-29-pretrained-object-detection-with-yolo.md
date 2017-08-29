@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pre-Trained Object Detection"
+title: "Pre-Trained Object Detection with YOLO"
 author: andrew
 tags: [blog]
 description: >
