@@ -23,7 +23,7 @@ Localized detections:
 </p>
 
 
-
+<br>
 Original image:
 
 <p align="center">
