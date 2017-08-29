@@ -12,7 +12,6 @@ If you have a project where you need to process files as they are made, you can 
 
 ~~~py
     import os
-    import time
     file_dir = '/path/to/directory/'
     keep_files = os.listdir(file_dir)
     keep_files_len = len(keep_files)
