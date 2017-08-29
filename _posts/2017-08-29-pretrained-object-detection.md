@@ -13,13 +13,13 @@ Below are images of objects that are recognized by a [*You Only Look Once* (YOLO
 Original image:
 
 <p align="center">
-<img src="/public/img/trucks.jpg?raw=true" alt="Field" style="width:300px"/>
+<img src="/public/img/trucks.jpg?raw=true" alt="Field" style="width:500px"/>
 </p>
 
 Localized detections:
 
 <p align="center">
-<img src="/public/img/predictions_trucks.png?raw=true" alt="Field" style="width:300px"/>
+<img src="/public/img/predictions_trucks.png?raw=true" alt="Field" style="width:500px"/>
 </p>
 
 
@@ -27,13 +27,13 @@ Localized detections:
 Original image:
 
 <p align="center">
-<img src="/public/img/bags.jpg?raw=true" alt="Field" style="width:300px"/>
+<img src="/public/img/bags.jpg?raw=true" alt="Field" style="width:500px"/>
 </p>
 
 Localized detections:
 
 <p align="center">
-<img src="/public/img/predictions_bags.png?raw=true" alt="Field" style="width:300px"/>
+<img src="/public/img/predictions_bags.png?raw=true" alt="Field" style="width:500px"/>
 </p>
 
 These detections were done simply following the step-by-step instructions found [here](https://pjreddie.com/darknet/yolo/).
