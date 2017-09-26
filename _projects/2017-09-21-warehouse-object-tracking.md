@@ -78,15 +78,7 @@ This video above shows the object detection as a shipment arrives.  It detects t
 
 The localizer is also capable of detecting Home Chef boxes regardless of the color of wrap used, or even multi-colored wrapping.
 
-<p align="center">
-<img src="/public/img/homechef/HC_Black.png?raw=true"/>
-<img src="/public/img/homechef/HC_Yellow.png?raw=true"/>
-<img src="/public/img/homechef/HC_Red.png?raw=true"/>
-<img src="/public/img/homechef/HC_Green.png?raw=true"/>
-<img src="/public/img/homechef/HC_Blue.png?raw=true"/>
-<img src="/public/img/homechef/HC_BlackRed.png?raw=true"/>
-<img src="/public/img/homechef/HC_BlackBlue.png?raw=true"/>
-</p>
+
 
 <div id="image-table"><table><tr>
 <td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
@@ -105,7 +97,7 @@ The localizer is also capable of detecting Home Chef boxes regardless of the col
 <img src="/public/img/homechef/HC_BlackRed.png?raw=true" style="width:300px">
 </td>
 <td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
-<img src="/public/img/cifar100/homechef/HC_BlackBlue.png?raw=true" style="width:300px">
+<img src="/public/img/homechef/HC_BlackBlue.png?raw=true" style="width:300px">
 </td></tr>
 </table></div>
 
