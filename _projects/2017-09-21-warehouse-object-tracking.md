@@ -153,7 +153,7 @@ This object tracker is also much faster than YOLO, so it saves processing time.
 
 ## Records
 
-The information collected can then be saved, including the time, whether it's an arrival or departure, which port (1 or 2), what type of boxes, and even a link to a video file of the event.
+The information collected can then be saved, including the time, whether it's an arrival or departure, which port (1 or 2), what type of boxes, and a link to a video file of the event.
 
 
 <p align="center">
