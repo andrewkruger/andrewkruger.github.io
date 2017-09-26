@@ -17,13 +17,13 @@ Home Chef is a company that delivers pre-packaged ingredients for meals.  They w
 #### Home Chef Boxes
 
 <p align="center">
-<img src="/public/img/homechef/Home_Chef_Boxes.jpg?raw=true"/>
+<img src="/public/img/homechef/Home_Chef_Boxes.jpg?raw=true" style="width:400px" />
 </p>
 
 #### Ice Pack Boxes
 
 <p align="center">
-<img src="/public/img/homechef/Ice_Packs_Boxes.jpg?raw=true"/>
+<img src="/public/img/homechef/Ice_Packs_Boxes.jpg?raw=true" style="width:400px" />
 </p>
 
 
@@ -34,8 +34,8 @@ I am not counting the number of boxes, but rather detecting what boxes are in a 
 I set up a webcam between two truck ports so I could view boxes coming in and leaving the warehouse.  By tracking whether boxes enter or exit from the left or right, it is possible to tell which truck is being loaded or unloaded. 
 
 <p align="center">
-<img src="/public/img/homechef/Webcam1.jpg?raw=true"/>
-<img src="/public/img/homechef/Webcam2.png?raw=true"/>
+<img src="/public/img/homechef/Webcam1.jpg?raw=true" style="width:400px" />
+<img src="/public/img/homechef/Webcam2.png?raw=true" style="width:400px" />
 </p>
 
 The webcam was set to constantly take images.  To save storage space and lower computing time, images were only kept if movement was detected.  This was done by counting the number of pixels that had their colors change from the previous image.  A threshold was made for the amount the color could change, and a threshold for the number of pixels that could change color, before it was considered motion.
