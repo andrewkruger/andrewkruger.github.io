@@ -14,7 +14,7 @@ layout: default
 
 <!-- Display projects tagged with display-order: 1 in their YAML front matter. -->
 
-{% for project in projects_list %}
+{% for project in projects_list reversed %}
   {% if project.display-order %}
     {% if project.display-order == 1 %}
       {% include projectbox.html %}
@@ -36,7 +36,7 @@ layout: default
 
 <!-- Display projects with no display order specified in their YAML front matter. -->
 
-{% for project in projects_list %}
+{% for project in projects_list reversed %}
   {% unless project.display-order %}
     {% include projectbox.html %}
     <br>
