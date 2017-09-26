@@ -109,6 +109,7 @@ It can also distinguish between Home Chef and Ice Pack boxes, even in examples w
 <img src="/public/img/homechef/Ice_Packs_Compare.png?raw=true" style="width:400px" />
 </p>
 
+<br>
 ## Supplemental Computer Vision
 
 The YOLO localizer is built on the darknet neural network framework, which is optimized for GPU but slow on a CPU (typically 6 seconds per image on a MacBook).  It is possible to optimize YOLO for a CPU, and there are examples available to use (i.e. cpuNet) that are able to do 15 fps for one class with a smaller neural network.  However, we may want to scale this to a large number of classes, and run this on a small computer or Raspberry Pi, but still maintain high accuracy and speed.  I thus investigated the use of other computer vision algorithms that might be used to supplement YOLO.  
@@ -149,8 +150,9 @@ Once boxes have been identified and bounding boxes are found, their motion can t
 </p>
 <br>
 
-This object tracker is also much faster than YOLO, so it saves processing time.
+This object tracker is also much faster than YOLO, saving processing time.
 
+<br>
 ## Records
 
 The information collected can then be saved, including the time, whether it's an arrival or departure, which port (1 or 2), what type of boxes, and a link to a video file of the event.
