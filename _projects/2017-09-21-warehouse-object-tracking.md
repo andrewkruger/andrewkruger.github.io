@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Tracking Warehouse Objects for Home Chef"
+title: "Warehouse Shipment Tracking for Home Chef"
 author: andrew
 tags: [projects]
 img: homechef/Header.png
