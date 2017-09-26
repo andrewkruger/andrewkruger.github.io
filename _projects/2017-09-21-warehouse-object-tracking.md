@@ -157,7 +157,7 @@ The information collected can then be saved, including the time, whether it's an
 
 
 <p align="center">
-<img src="/public/img/homechef/Records.png?raw=true"/>
+<img src="/public/img/homechef/Records.png?raw=true" style="width:400px" />
 </p>
 
 This level of information was not previously possible without object recognition and computer vision.
