@@ -127,14 +127,14 @@ This can be used to detect where there is motion in the image, and which directi
 
 
 <p align="center">
-<img src="/public/img/homechef/Sequence1.png?raw=true"/>
+<img src="/public/img/homechef/Sequence1.png?raw=true" style="width:450px" />
 </p>
 
 However, if there is no longer motion on the left, but there is upward motion in the center, this is an optimal time to use YOLO to detect whether there are boxes or not.
 
 <p align="center">
-<img src="/public/img/homechef/Sequence2.png?raw=true"/>
-<img src="/public/img/homechef/Sequence3.png?raw=true"/>
+<img src="/public/img/homechef/Sequence2.png?raw=true" style="width:450px" />
+<img src="/public/img/homechef/Sequence3.png?raw=true" style="width:450px" />
 </p>
 
 Logical sequences were created for different possible situations.  When exiting, motion is first detected in the center and the boxes are immediately identified, then which port the boxes exit through is determined.  Another possible situation is when entering, the forklift turns around in the foreground before exiting.  In this case, the boxes are sometimes behind the forklift before there is no more motion at the entry port.  So in this case, it worked best to detect the boxes when the forklift and boxes were spanning between the two entry areas.
