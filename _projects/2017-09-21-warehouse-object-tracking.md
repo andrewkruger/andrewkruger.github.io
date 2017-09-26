@@ -1,9 +1,9 @@
 ---
 layout: project
-title: "Identifying Low-Quality and Potentially Fake Amazon Reviews"
+title: "Tracking Warehouse Objects for Home Chef"
 author: andrew
 tags: [projects]
-img: amazon/project.png
+img: homechef/Header.png
 description: >
 ---
 
