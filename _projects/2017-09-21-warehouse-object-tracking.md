@@ -74,7 +74,7 @@ I labeled 750 shipments of Home Chef boxes and 250 shipments of Ice Packs.  Ther
 
 
 
-This video above shows the object detection as a shipment arrives.  It detects the forklift, pallet jacks, and Home Chef boxes in the background.  It detects the incoming Home Chef boxes as soon as the corner comes into view, and the person driving the forklift.  It continues to label the forklift, even when it is almost entirely obstructed by the Home Chef boxes.  This shows it is feasible to use YOLO to detect multiple types of boxes stacked in the same shipment if given enough training images.
+This video above shows the object detection as a shipment arrives.  It detects the forklift, pallet jacks, and Home Chef boxes in the background.  It detects the incoming Home Chef boxes as soon as the corner comes into view, and the person driving the forklift.  It continues to label the forklift, even when it is almost entirely obstructed by the Home Chef boxes and/or wall.  This shows it is feasible to use YOLO to detect multiple types of boxes stacked in the same shipment if given enough training images.
 
 The localizer is also capable of detecting Home Chef boxes regardless of the color of wrap used, or even multi-colored wrapping.
 
@@ -87,6 +87,28 @@ The localizer is also capable of detecting Home Chef boxes regardless of the col
 <img src="/public/img/homechef/HC_BlackRed.png?raw=true"/>
 <img src="/public/img/homechef/HC_BlackBlue.png?raw=true"/>
 </p>
+
+<div id="image-table"><table><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/homechef/HC_Black.png?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/homechef/HC_Yellow.png?raw=true" style="width:300px">
+</td></tr><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/homechef/HC_Red.png?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/homechef/HC_Green.png?raw=true" style="width:300px">
+</td></tr><tr>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/homechef/HC_BlackRed.png?raw=true" style="width:300px">
+</td>
+<td style="padding:5px; border:1px solid #ffffff; background-color:#fff;">
+<img src="/public/img/cifar100/homechef/HC_BlackBlue.png?raw=true" style="width:300px">
+</td></tr>
+</table></div>
+
 
 It can also distinguish between Home Chef and Ice Pack boxes, even in examples where they are the most similar shape and color.
 
