@@ -8,7 +8,6 @@ description: >
 ---
 
 
-
 ## Home Chef
 
 Home Chef is a company that delivers pre-packaged ingredients for meals.  They were founded in 2013 in Chicago, IL, and have already expanded to selling 2.5 million meals per month to people in 48 states.  With this expansion comes a need for automation, so I took on the challenge of tracking what boxes are in shipments that are arriving and departing from their warehouse.  This was largely a demonstration of what can be tracked, and I started out by detecting and tracking two types of boxes.
