@@ -105,8 +105,8 @@ The localizer is also capable of detecting Home Chef boxes regardless of the col
 It can also distinguish between Home Chef and Ice Pack boxes, even in examples where they are the most similar shape and color.
 
 <p align="center">
-<img src="/public/img/homechef/Home_Chef_Compare.png?raw=true"/>
-<img src="/public/img/homechef/Ice_Packs_Compare.png?raw=true"/>
+<img src="/public/img/homechef/Home_Chef_Compare.png?raw=true" style="width:400px" />
+<img src="/public/img/homechef/Ice_Packs_Compare.png?raw=true" style="width:400px" />
 </p>
 
 ## Supplemental Computer Vision
