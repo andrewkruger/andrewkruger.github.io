@@ -10,7 +10,7 @@ layout: default
 
 <p>The following are projects I worked on as part of the Metis Data Science Bootcamp.</p>
 
-{% assign projects_list = site.projects %}
+{% assign projects_list = site.projects sort_descending=true %}
 {% for project in projects_list %}
   {% include projectbox.html %}
   <br>
