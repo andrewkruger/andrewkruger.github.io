@@ -16,7 +16,7 @@ description: >
 The landmarks are indicated with red dots:
 
 <p align="center">
-<iframe src='https://gfycat.com/ifr/IlliterateMetallicAmericanindianhorse' frameborder='0' scrolling='no' width='600' height='330' allowfullscreen></iframe>
+<iframe src='https://gfycat.com/ifr/RegularDefinitiveAntlion' frameborder='0' scrolling='no' width='600' height='330' allowfullscreen></iframe>
 </p>
 
 
@@ -26,7 +26,7 @@ The landmarks can be used to track specific parts of the face.  Here I'm only sh
 
 
 <p align="center">
-<iframe src='https://gfycat.com/ifr/IndolentNextEelelephant' frameborder='0' scrolling='no' width='600' height='330' allowfullscreen></iframe>
+<iframe src='https://gfycat.com/ifr/IncompleteYellowishDog' frameborder='0' scrolling='no' width='600' height='330' allowfullscreen></iframe>
 </p>
 
 
